@@ -12,6 +12,8 @@
   		<typeAlias type="com.iu.e1.spa.SpaVO" alias="SpaVO"/>
   		<typeAlias type="com.iu.e1.hire.HireVO" alias="HireVO"/>
   		<typeAlias type="com.iu.e1.member.MemberVO" alias="MemberVO"/>
+  		<typeAlias type="com.iu.e1.inquiry.InquiryVO" alias="InquiryVO"/>
+  		<typeAlias type="com.iu.e1.qna.QnaVO" alias="QnaVO"/>
   		
   	</typeAliases>
   </configuration>
