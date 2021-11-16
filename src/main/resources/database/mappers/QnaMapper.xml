@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.iu.e1.qna.QnaRepository">
+  
+	<insert id="setInsert" parameterType="QnaVO" useGeneratedKeys="true" keyProperty="num">
+		insert into qna (num, title, category, contents)
+		values (#{num}, #{title}, #{category}, #{contents})
+	</insert>
+	
+	<select id="getSelectList" parameterType="QnaVO" resultType="QnaVO">
+		select * from qna
+	</select>
+	
+	<select id="getSelectOne" parameterType="QnaVO" resultType="QnaVO">
+		select * from qna where num=#{num}
+	</select>
+	
+	<update id="setUpdate" parameterType="QnaVO">
+		update qna set title=#{title}, category=#{category}, contents=#{contents} 
+		where num=#{num};
+	</update>
+  
+  </mapper>

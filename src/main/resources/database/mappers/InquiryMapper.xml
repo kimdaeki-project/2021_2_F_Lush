@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.iu.e1.inquiry.InquiryRepository">
+  
+  	<insert id="setInsert" parameterType="InquiryVO" useGeneratedKeys="true" keyProperty="num">
+  		insert into inquiry (num, title, category, writer, contents, regDate, status)
+		values (#{num}, #{title}, #{category}, #{writer}, #{contents}, now(), #{status})
+  	</insert>
+  	
+  	<select id="getSelectList" parameterType="InquiryVO" resultType="InquiryVO">
+  		select * from inquiry
+  	</select>
+  
+  </mapper>
