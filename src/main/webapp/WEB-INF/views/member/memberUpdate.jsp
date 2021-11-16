@@ -11,7 +11,7 @@
 	<h1>MemberUpdate Page</h1>
 	
 	<form action="./memberUpdate" method="post">
-		id : <input type="text" name="id" value="${memberVO.id}"><br>
+		id : <input type="text" name="id" readonly="readonly" value="${memberVO.id}"><br>
 		pw : <input type="text" name="pw" value="${memberVO.pw}"><br>
 		name : <input type="text" name="name" value="${memberVO.name}"><br>
 		nickName : <input type="text" name="nickName" value="${memberVO.nickName}"><br>
