@@ -15,6 +15,7 @@
 		<h3>Contents : ${qnaVO.contents}</h3>
 		
 		<a href="./update?num=${qnaVO.num}">수정하기</a>
+		<a href="./delete?num=${qnaVO.num}">삭제하기</a>
 	</body>
 
 </html>

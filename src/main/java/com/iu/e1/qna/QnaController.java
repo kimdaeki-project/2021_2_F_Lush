@@ -63,4 +63,10 @@ public class QnaController {
 		return "redirect:./selectOne?num="+qnaVO.getNum();
 	}
 	
+	@GetMapping("delete")
+	public String setDelete(QnaVO qnaVO) throws Exception {
+		int result = qnaService.setDelete(qnaVO);
+		return "redirect:./selectList";
+	}
+	
 }

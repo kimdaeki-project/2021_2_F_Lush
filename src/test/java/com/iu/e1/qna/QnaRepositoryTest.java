@@ -39,7 +39,7 @@ class QnaRepositoryTest {
 		assertNotNull(qnaVO);
 	}
 	
-	@Test
+	//@Test
 	void setUpdateTest() throws Exception {
 		QnaVO qnaVO = new QnaVO();
 		qnaVO.setTitle("update_test");
@@ -51,4 +51,12 @@ class QnaRepositoryTest {
 		assertNotEquals(0, result);
 	}
 
+	@Test
+	void setDeleteTest() throws Exception {
+		QnaVO qnaVO = new QnaVO();
+		qnaVO.setNum(3);
+		int result = qnaRepository.setDelete(qnaVO);
+		assertNotEquals(0, result);
+	}
+	
 }

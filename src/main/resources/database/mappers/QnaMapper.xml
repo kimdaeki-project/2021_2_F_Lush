@@ -20,7 +20,11 @@
 	
 	<update id="setUpdate" parameterType="QnaVO">
 		update qna set title=#{title}, category=#{category}, contents=#{contents} 
-		where num=#{num};
+		where num=#{num}
 	</update>
+	
+	<delete id="setDelete" parameterType="QnaVO">
+		delete from qna where num=#{num}
+	</delete>
   
   </mapper>

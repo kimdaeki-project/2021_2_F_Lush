@@ -15,4 +15,6 @@ public interface QnaRepository {
 	
 	public int setUpdate(QnaVO qnaVO) throws Exception;
 	
+	public int setDelete(QnaVO qnaVO) throws Exception;
+	
 }

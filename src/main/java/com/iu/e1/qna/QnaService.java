@@ -27,4 +27,8 @@ public class QnaService {
 		return qnaRepository.setUpdate(qnaVO);
 	}
 	
+	public int setDelete(QnaVO qnaVO) throws Exception {
+		return qnaRepository.setDelete(qnaVO);
+	}
+	
 }
