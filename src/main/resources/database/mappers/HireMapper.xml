@@ -17,6 +17,7 @@
   	<update id="setUpdate" parameterType="HireVO">
   		update hire set
   		title=#{title}, writer=#{writer}, regDate=#{regDate}, contents=#{contents}
+  		where num = #{num}
   	</update>
   	
   	<select id="getSelectOne" parameterType="HireVO" resultType="HireVO">

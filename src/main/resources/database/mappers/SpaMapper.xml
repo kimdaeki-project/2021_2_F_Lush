@@ -19,6 +19,7 @@
   		update spa set
   		name = #{name}, price = #{price}, amount = #{amount}, voucherNumber = #{voucherNumber}
   		, bookingDate = #{bookingDate}
+  		where name = #{name}
   	</update>
   	
   	<select id="getSelectOne" parameterType="SpaVO" resultType="SpaVO">
