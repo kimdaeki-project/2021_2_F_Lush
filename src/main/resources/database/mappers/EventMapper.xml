@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iu.e1.event.EventRepository">
+
+   <!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ관리자 페이지 시작ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+   <insert id="setInsertEvent" parameterType="EventVO" useGeneratedKeys="true" keyProperty="num">
+      insert into event values(#{num}, #{title}, #{term}, #{contents}, 0, 0, now())
+   </insert>
+   
+   <insert id="setInsertWinner" parameterType="EventVO" useGeneratedKeys="true" keyProperty="num">
+      insert into event values(#{num}, #{title}, null, #{contents}, 0, 1, now())
+   </insert>
+   
+   <delete id="setDelete" parameterType="EventVO">
+      delete from event where num=#{num}
+   </delete>
+   
+    <update id="setUpdate" parameterType="EventVO">
+      update event set title=#{title}, contents=#{contents} where num=#{num}
+   </update>
+   <!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ관리자 페이지 끝ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+   
+   <select id="getSelectEventList" resultType="EventVO">
+      select * from event where state=0
+   </select>
+   
+   <select id="getSelectWinnerList" resultType="EventVO">
+      select * from event where state=1
+   </select>
+   
+   <select id="getSelectOne" parameterType="EventVO" resultType="EventVO">
+      select * from event where num=#{num}
+   </select>
+   
+   <update id="setHitsUpdate" parameterType="EventVO">
+      update event set hits=hits+1 where num=#{num}
+   </update>
+</mapper>
