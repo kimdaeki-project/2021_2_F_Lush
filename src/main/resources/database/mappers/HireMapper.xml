@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+  <mapper namespace="com.iu.e1.hire.HireRepository">
+     <insert id="setInsert" parameterType="HireVO">
+        insert into hire
+        values(0, #{title}, #{writer}, #{regDate}, #{contents}, 0)
+     </insert>
+     
+     <delete id="setDelete" parameterType="HireVO">
+        delete from hire
+        where num = #{num}
+     </delete>
+     
+     <update id="setUpdate" parameterType="HireVO">
+        update hire set
+        title=#{title}, writer=#{writer}, regDate=#{regDate}, contents=#{contents}
+        where num = #{num}
+     </update>
+     
+     <select id="getSelectOne" parameterType="HireVO" resultType="HireVO">
+        select * from hire
+        where num = #{num}
+     </select>
+     
+     <select id="getSelectList" parameterType="HireVO" resultType="HireVO">
+        select * from hire
+     </select>
+  </mapper>

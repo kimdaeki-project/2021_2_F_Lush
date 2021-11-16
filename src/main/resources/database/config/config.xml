@@ -8,5 +8,10 @@
   		<typeAlias type="com.iu.e1.product.ProductVO" alias="ProductVO"/>
   		<typeAlias type="com.iu.e1.campaign.CampaignVO" alias="CampaignVO"/>
   		<typeAlias type="com.iu.e1.notice.NoticeVO" alias="NoticeVO"/>
+  		<typeAlias type="com.iu.e1.event.EventVO" alias="EventVO"/>
+  		<typeAlias type="com.iu.e1.spa.SpaVO" alias="SpaVO"/>
+  		<typeAlias type="com.iu.e1.hire.HireVO" alias="HireVO"/>
+  		<typeAlias type="com.iu.e1.member.MemberVO" alias="MemberVO"/>
+  		
   	</typeAliases>
   </configuration>

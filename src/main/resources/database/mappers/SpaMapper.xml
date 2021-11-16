@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.iu.e1.spa.SpaRepository">
+     <insert id="setInsert" parameterType="SpaVO">
+        insert into spa
+        values(#{name}, #{price}, #{amount}, #{voucherNumber}, #{bookingDate})
+     </insert>
+     
+     <delete id="setDelete" parameterType="SpaVO">
+        delete from spa
+        where name = #{name}
+     </delete>
+     
+     <update id="setUpdate" parameterType="SpaVO">
+        update spa set
+        name = #{name}, price = #{price}, amount = #{amount}, voucherNumber = #{voucherNumber}
+        , bookingDate = #{bookingDate}
+        where name = #{name}
+     </update>
+     
+     <select id="getSelectOne" parameterType="SpaVO" resultType="SpaVO">
+        select * from spa
+        where name = #{name}
+     </select>
+     
+     <select id="getSelectList" resultType="SpaVO">
+        select * from spa
+     </select>
+  </mapper>
