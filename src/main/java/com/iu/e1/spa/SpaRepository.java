@@ -13,6 +13,9 @@ public interface SpaRepository {
 	// Delete
 	public int setDelete(SpaVO spaVO) throws Exception;
 	
+	// Update
+	public int setUpdate(SpaVO spaVO) throws Exception;
+	
 	// Select(글 1개 조회)
 	public SpaVO getSelectOne(SpaVO spaVO) throws Exception;
 	

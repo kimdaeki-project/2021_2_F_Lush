@@ -21,6 +21,7 @@
 		role : <input type="text" name="role" value="${memberVO.role}"><br>
 		
 		<button type="submit">UPDATE</button>
+		<a href="../../">GO HOME</a>
 	</form>
 </body>
 </html>

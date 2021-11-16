@@ -19,6 +19,11 @@ public class SpaService {
 		return spaRepository.setDelete(spaVO);
 	}
 	
+	public int setUpdate(SpaVO spaVO) throws Exception{
+		return spaRepository.setUpdate(spaVO);
+	}
+	
+	
 	public SpaVO getSelectOne(SpaVO spaVO) throws Exception{
 		return spaRepository.getSelectOne(spaVO);
 	}

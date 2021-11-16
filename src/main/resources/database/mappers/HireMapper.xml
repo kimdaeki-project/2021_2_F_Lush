@@ -14,6 +14,11 @@
   		where num = #{num}
   	</delete>
   	
+  	<update id="setUpdate" parameterType="HireVO">
+  		update hire set
+  		title=#{title}, writer=#{writer}, regDate=#{regDate}, contents=#{contents}
+  	</update>
+  	
   	<select id="getSelectOne" parameterType="HireVO" resultType="HireVO">
   		select * from hire
   		where num = #{num}

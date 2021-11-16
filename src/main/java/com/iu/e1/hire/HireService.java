@@ -18,6 +18,10 @@ public class HireService {
 		return hireRepository.setDelete(hireVO);
 	}
 	
+	public int setUpdate(HireVO hireVO) throws Exception{
+		return hireRepository.setUpdate(hireVO);
+	}
+	
 	public HireVO getSelectOne(HireVO hireVO) throws Exception{
 		return hireRepository.getSelectOne(hireVO);
 	}

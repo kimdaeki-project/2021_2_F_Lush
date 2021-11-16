@@ -17,5 +17,6 @@
 	<h3>bookingDate : ${spaVO.bookingDate}</h3>
 	
 	<a href="./delete?name=${spaVO.name}">DELETE</a>
+	<a href="./update?name=${spaVO.name}">UPDATE</a>
 </body>
 </html>

@@ -71,16 +71,16 @@ public class MemberController {
 	@GetMapping("memberUpdate")
 	public String setUpdate(MemberVO memberVO, Model model) throws Exception{
 		memberVO = memberService.getSelectOne(memberVO);		
-		model.addAttribute("memberVO", memberVO);
-		System.out.println(memberVO.getId());
+		model.addAttribute("memberVO", memberVO);		
 		return "member/memberUpdate";
 	}
 	
 	// 회원정보업데이트
 	@PostMapping("memberUpdate")
-	public String setUpdate(MemberVO memberVO) throws Exception{
+	public String setUpdate(MemberVO memberVO, HttpSession session) throws Exception{
 		int result = memberService.setUpdate(memberVO);
-		return "redirect: ./myPage";
+		session.invalidate();
+		return "redirect: ../../../";
 	}
 	
 }

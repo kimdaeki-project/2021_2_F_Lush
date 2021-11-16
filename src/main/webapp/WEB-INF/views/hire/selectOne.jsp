@@ -16,7 +16,7 @@
 	<h3>regDate : ${hireVO.regDate}</h3>	
 	<h3>contents : ${hireVO.contents}</h3>
 	
-	
+	<a href="./update?num=${hireVO.num}">UPDATE</a>
 	<a href="./delete?num=${hireVO.num}">DELETE</a>
 </body>
 </html>

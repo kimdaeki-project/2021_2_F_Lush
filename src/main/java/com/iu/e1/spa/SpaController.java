@@ -37,6 +37,20 @@ public class SpaController {
 		return "redirect: ./list";
 	}
 	
+	//update
+	@GetMapping("update")
+	public String setUpdate(SpaVO spaVO, Model model) throws Exception{
+		spaVO = spaService.getSelectOne(spaVO);
+		model.addAttribute("spaVO", spaVO);
+		return "spa/update";
+	}
+	
+	@PostMapping("update")
+	public String setUpdate(SpaVO spaVO) throws Exception{
+		int result = spaService.setUpdate(spaVO);
+		return "redirect: ./list";
+	}
+	
 	// selectOne
 	@GetMapping("selectOne")
 	public ModelAndView getSelectOne(SpaVO spaVO) throws Exception{

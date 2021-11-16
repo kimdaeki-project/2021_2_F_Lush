@@ -12,6 +12,9 @@ public interface HireRepository {
 	// delete
 	public int setDelete(HireVO hireVO) throws Exception;
 	
+	// update
+	public int setUpdate(HireVO hireVO) throws Exception;
+	
 	// selectOne
 	public HireVO getSelectOne(HireVO hireVO) throws Exception;
 	

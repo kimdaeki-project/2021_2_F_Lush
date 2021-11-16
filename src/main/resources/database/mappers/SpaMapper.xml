@@ -15,6 +15,12 @@
   		where name = #{name}
   	</delete>
   	
+  	<update id="setUpdate" parameterType="SpaVO">
+  		update spa set
+  		name = #{name}, price = #{price}, amount = #{amount}, voucherNumber = #{voucherNumber}
+  		, bookingDate = #{bookingDate}
+  	</update>
+  	
   	<select id="getSelectOne" parameterType="SpaVO" resultType="SpaVO">
   		select * from spa
   		where name = #{name}
