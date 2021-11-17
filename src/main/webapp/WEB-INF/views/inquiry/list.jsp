@@ -20,12 +20,15 @@
 			<tr>
 				<td>${inquiryVO.regDate}</td>
 				<td>${inquiryVO.category}</td>
-				<td>${inquiryVO.title}</td>
+				<td><a href="./selectOne?num=${inquiryVO.num}">${inquiryVO.title}</a></td>
 				<td>${inquiryVO.status}</td>
 			</tr>
 		</c:forEach>
 		
 	</table>
+	
+	<a href="./insert">1:1 문의하기</a>
+	
 	</body>
 
 </html>

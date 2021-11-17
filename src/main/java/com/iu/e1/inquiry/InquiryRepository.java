@@ -11,4 +11,9 @@ public interface InquiryRepository {
 	
 	public List<InquiryVO> getSelectList() throws Exception;
 	
+	public InquiryVO getSelectOne(InquiryVO inquiryVO) throws Exception;
+	
+	public int setUpdate(InquiryVO inquiryVO) throws Exception;
+	
+	public int setDelete(InquiryVO inquiryVO) throws Exception;
 }

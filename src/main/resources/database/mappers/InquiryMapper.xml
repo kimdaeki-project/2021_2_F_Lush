@@ -13,5 +13,19 @@
   	<select id="getSelectList" parameterType="InquiryVO" resultType="InquiryVO">
   		select * from inquiry
   	</select>
+  	
+  	<select id="getSelectOne" parameterType="InquiryVO" resultType="InquiryVO">
+  		select * from inquiry where num=#{num}
+  	</select>
+  	
+  	<update id="setUpdate" parameterType="InquiryVO">
+  		update inquiry 
+  		set title=#{title}, category=#{category}, writer=#{writer}, contents=#{contents}, status=#{status}
+  		where num=#{num}
+  	</update>
+  	
+  	<delete id="setDelete" parameterType="InquiryVO">
+  		delete from inquiry where num=#{num}
+  	</delete>
   
   </mapper>
