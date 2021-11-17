@@ -4,16 +4,39 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
   <mapper namespace="com.iu.e1.product.ProductRepository">
-  	<select id="productList" resultType="ProductVO">
+  	
+  	<select id="productList" parameterType="Pager" resultType="ProductVO">
   		select * from product
+  		where
+  		<choose>
+  			<when test="kind == 'name'">name</when>
+  			<when test="kind == 'category'">category</when>
+  			<when test="kind == 'hashTag'">hashTag</when>
+  		</choose>
+  		like concat('%', #{search}, '%')
+  		order by num desc
+  		limit #{startRow}, #{perPage}
   	</select>
+  	
+  	
+  	<select id="getTotalCount" resultType="Long" parameterType="Pager">
+  		select count(num) from product
+  		where
+  		<choose>
+  			<when test="kind == 'name'">name</when>
+  			<when test="kind == 'category'">category</when>
+  			<when test="kind == 'hashTag'">hashTag</when>
+  		</choose>
+  		like concat('%' ,#{search}, '%')
+  	</select>
+  	
   	
   	<select id="productSelect" parameterType="ProductVO" resultType="ProductVO">
   		select * from product where num=#{num}
   	</select>
   	
   	<insert id="productInsert" parameterType="ProductVO">
-  		insert into product values(#{num}, #{category}, #{name}, #{hashTag}, #{price}, #{weight}, #{photo}, #{heart})
+  		insert into product values(#{num}, #{category}, #{name}, #{hashTag}, #{amount} ,#{price}, #{weight}, #{photo}, #{heart})
   	</insert>
   	
   	<delete id="productDelete" parameterType="ProductVO">

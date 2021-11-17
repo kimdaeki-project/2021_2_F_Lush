@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.iu.e1.notice.NoticeService;
+import com.iu.e1.util.Pager;
 
 @Controller
 @RequestMapping("/product/**")
@@ -21,14 +22,15 @@ public class ProductController {
 	private ProductService productService;
 	
 	@GetMapping("productList")
-	public ModelAndView productList()throws Exception{
+	public ModelAndView productList(Pager pager)throws Exception{
 		
 		ModelAndView mv = new ModelAndView();
 		
-		List<ProductVO> ar = productService.productList();
+		List<ProductVO> ar = productService.productList(pager);
 		
 		mv.setViewName("product/list");
 		mv.addObject("productList", ar);
+		mv.addObject("pager", pager);
 		
 		return mv;	
 		

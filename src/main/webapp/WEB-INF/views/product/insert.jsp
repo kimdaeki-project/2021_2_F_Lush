@@ -24,6 +24,10 @@
            <input type="text" class="form-control" name="hashTag" id="hashTag">
          </div>
          <div class="">
+            <label for="amount">Amount :</label>            
+           <input type="text" class="form-control" name="amount" id="amount">
+         </div>
+         <div class="">
             <label for="price">Price :</label>            
            <input type="text" class="form-control" name="price" id="price">
          </div>
