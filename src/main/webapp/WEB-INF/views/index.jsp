@@ -12,7 +12,7 @@
 </head>
 <body>
 	<c:import url="./main/mainHeader.jsp"></c:import>
-	
+	<c:import url="./main/mainFooter.jsp"></c:import>
 
 
 </body>

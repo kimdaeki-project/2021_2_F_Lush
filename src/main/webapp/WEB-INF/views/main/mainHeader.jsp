@@ -37,7 +37,6 @@ a {
 	height: 100px;
 	width: 100%;
 	background: #000;
-	position: fixed;
 	z-index: 10;
 }
 
@@ -192,7 +191,7 @@ a {
 			</ul>
 		</div>
 	</div>
-	
+</div>
 
 </body>
 </html>
