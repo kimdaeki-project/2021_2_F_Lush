@@ -13,12 +13,14 @@
 	<h1>Product List Page</h1>
 	<form action="./productList" id="frm">
 
-		<input type="hidden" name="pn" value="1" id="pn"> <select
-			name="kind" id="kind">
-			<option class="s" value="name">name</option>
-			<option class="s" value="category">category</option>
-			<option class="s" value="hashTag">hashTag</option>
-		</select> <input type="text" name="search" id="search">
+		<input type="hidden" name="pn" value="1" id="pn"> 
+			<select
+				name="kind" id="kind">
+				<option class="s" value="name">name</option>
+				<option class="s" value="category">category</option>
+				<option class="s" value="hashTag">hashTag</option>
+			</select> 
+		<input type="text" name="search" id="search">
 
 		<button type="submit" id="btn">SEARCH</button>
 

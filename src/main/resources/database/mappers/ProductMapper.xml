@@ -10,8 +10,8 @@
   		where
   		<choose>
   			<when test="kind == 'name'">name</when>
-  			<when test="kind == 'category'">category</when>
-  			<when test="kind == 'hashTag'">hashTag</when>
+  			<when test="kind == 'category'">category</when>  			
+  			<otherwise>hashTag</otherwise>
   		</choose>
   		like concat('%', #{search}, '%')
   		order by num desc
@@ -24,8 +24,8 @@
   		where
   		<choose>
   			<when test="kind == 'name'">name</when>
-  			<when test="kind == 'category'">category</when>
-  			<when test="kind == 'hashTag'">hashTag</when>
+  			<when test="kind == 'category'">category</when>  			
+  			<otherwise>hashTag</otherwise>
   		</choose>
   		like concat('%' ,#{search}, '%')
   	</select>
