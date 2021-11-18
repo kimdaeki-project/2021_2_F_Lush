@@ -9,6 +9,7 @@ public class ProductVO {
 	private String category;
 	private String name;
 	private String hashTag;
+	private Integer amount;
 	private Integer price;
 	private Double weight;
 	private String photo;
