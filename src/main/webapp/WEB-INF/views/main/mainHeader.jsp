@@ -6,6 +6,22 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
+@font-face {
+	font-family: 'notokrB';
+	src: url('/resources/fonts/NotoSansKR-Bold.otf') format('opentype');
+}
+
+@font-face {
+   font-family: 'notokrM';
+   src: url('/resources/fonts/NotoSansKR-Medium.otf') format('opentype');
+}
+
+@font-face {
+   font-family: 'notokrR';
+   src: url('/resources/fonts/NotoSansKR-Regular.otf') format('opentype');
+}
+
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
 	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
@@ -34,10 +50,10 @@ a {
 }
 
 #header {
+	display : block;
 	height: 100px;
 	width: 100%;
 	background: #000;
-	position: fixed;
 	z-index: 10;
 }
 
@@ -192,7 +208,7 @@ a {
 			</ul>
 		</div>
 	</div>
-	
+	</div>
 
 </body>
 </html>
