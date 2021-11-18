@@ -16,6 +16,7 @@
   		<typeAlias type="com.iu.e1.qna.QnaVO" alias="QnaVO"/>
   		<typeAlias type="com.iu.e1.util.Pager" alias="Pager"/>
   		<typeAlias type="java.lang.Long" alias="Long"/>
+  		<typeAlias type="com.iu.e1.shopInfo.ShopInfoVO" alias="ShopInfoVO"/>
   		
   	</typeAliases>
   </configuration>
