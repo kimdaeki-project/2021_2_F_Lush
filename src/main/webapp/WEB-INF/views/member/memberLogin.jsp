@@ -665,7 +665,7 @@ button em {
                            </button>
                            <div class="  login_menu">
                               <button type="button" class="skinbtn " id="btnJoinMember">
-                                 <em>회원가입</em>
+                                 <a href="./joinCheck"><em>회원가입</em></a>
                               </button>
                               <button type="button" class="skinbtn " id="btnFindId">
                                  <em>아이디 찾기</em>

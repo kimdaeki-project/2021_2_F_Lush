@@ -168,7 +168,7 @@ a {
               <li><a href="#" class="openMask" viewpop=".pop_w01"><img src="https://lush.co.kr/data/skin/front/howling/_msc/images/header/icon_top_search.png"></a></li>
               <li><a href="../order/cart.php"><img src="https://lush.co.kr/data/skin/front/howling/_msc/images/header/icon_top_cart.png"> <span>0</span></a></li>
               <li class="mypage">
-                <a href="#">
+                <a href="./member/memberLogin">
                     <img src="https://lush.co.kr/data/skin/front/howling/_msc/images/header/icon_top_mypage.png" alt="">
                   </a>
                  <!-- ajax 수정  <div class="pop_mypage">
