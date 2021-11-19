@@ -134,9 +134,9 @@ input.checkbox {
 	display: block;
 	min-height: 20px;
 	padding: 0 0 0 27px;
-	background: #fff
+	/* background: #fff
 		url("https://www.lush.co.kr/data/skin/front/howling/img/etc/check-off.png")
-		no-repeat left top;
+		no-repeat left top; */
 }
 
 .join .terms .all-agree label.on {
@@ -331,9 +331,9 @@ input.checkbox {
 	min-width: 20px;
 	min-height: 20px;
 	padding: 0 0 0 27px;
-	background: #fff
+	/* background: #fff
 		url("https://www.lush.co.kr/data/skin/front/howling/img/etc/check-off.png")
-		no-repeat 1px top;
+		no-repeat 1px top; */
 }
 
 .join .terms .terms-view .consignment-box table td div {
@@ -489,7 +489,7 @@ thead {
 				</div>
 				<div class="terms">
 					<form id="formTerms" name="formTerms" method="post"
-						action="../member/join.php">
+						action="./memberJoin2">
 						<input type="hidden" name="token"
 							value="MTYzNzE5OTA3OTUyODA2MDA2MDk2MDg2Nzg1NjQ3MzgyODY0ODE0NjEx">
 						<input type="hidden" name="mode" value="chkRealName"> <input
