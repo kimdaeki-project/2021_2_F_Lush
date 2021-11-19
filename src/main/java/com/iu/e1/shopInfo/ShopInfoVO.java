@@ -12,6 +12,7 @@ public class ShopInfoVO {
 	private String address;
 	private String announce;
 	private String youtube;
+	private String photo;
 	
 
 }

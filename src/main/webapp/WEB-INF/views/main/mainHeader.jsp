@@ -55,6 +55,7 @@ a {
 	width: 100%;
 	background: #000;
 	z-index: 10;
+	position: fixed;
 }
 
 .top_gnbmenu > li {
