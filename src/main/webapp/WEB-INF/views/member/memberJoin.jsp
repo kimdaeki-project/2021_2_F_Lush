@@ -877,7 +877,7 @@ thead {
 							</button>
 							<button class="btnicon btn_wt btn_l w280 ja-next"
 								id="btnNextStep" type="button">
-								<a href="./memberJoin2"><em>다음단계</em></a>
+								<em>다음단계</em>
 							</button>
 						</div>
 					</form>
