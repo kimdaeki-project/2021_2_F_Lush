@@ -469,7 +469,7 @@
 									<div class="item slick-slide slick-current slick-active" data-slick-index="0" 
 										aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide10" 
 										style="width: 1250px; height: 500px; 
-										background: url(&quot;../../resources/img/banner/slider/624a352d4da7b3c32f77c95dd8a3ac3d_11027.jpg&quot;) center top no-repeat;"></div>
+										background: url(&quot;../../resources/img/banner/slider/slider_1.jpg&quot;) center top no-repeat;"></div>
 								</div>
 							</div>
 						</div>						
@@ -491,9 +491,9 @@
 						
 						<ul>
 							<li><a href="#"><img alt="러쉬 스파 압구정점" 
-									src="../../resources/img/banner/1c22c579beee9c06e3fb185747f57d9e_88862.jpg" title="러쉬 스파 압구정점"></a></li>
+									src="../../resources/img/banner/banner_2.jpg" title="러쉬 스파 압구정점"></a></li>
 							<li><a href="#"><img alt="러쉬 스파 경리단길점" 
-									src="../../resources/img/banner/7764bed2bf8043ef09baf6aa142ed22e_37027.jpg" title="러쉬 스파 경리단길점"></a></li>
+									src="../../resources/img/banner/banner_1.jpg" title="러쉬 스파 경리단길점"></a></li>
 						</ul>
 					</div>
 					<div class="mt70"></div>

@@ -53,8 +53,8 @@ a {
 	height: 100px;
 	width: 100%;
 	background: #000;
+	z-index: 10;
 	position: fixed;
-	z-index: 10;	
 }
 
 .top_gnbmenu > li {

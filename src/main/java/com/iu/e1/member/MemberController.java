@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/member/**")
@@ -17,16 +18,27 @@ public class MemberController {
    private MemberService memberService;
    
    // 회원가입
-   @GetMapping("memberJoin")
+   @GetMapping("memberJoin2")
    public String setInsert() throws Exception{
-      return "member/memberJoin";
+      return "member/memberJoin2";
    }
    
    // 회원가입
-   @PostMapping("memberJoin")
+   @PostMapping("memberJoin2")
    public String setInsert(MemberVO memberVO) throws Exception{
       int result = memberService.setInsert(memberVO);
       return "redirect:../";      
+   }
+   
+   // check page
+   @GetMapping("joinCheck")
+   public String setCheck() throws Exception{
+      return "member/joinCheck";
+   }
+   
+   @GetMapping("memberJoin")
+   public String setmemberJoin() throws Exception{
+      return "member/memberJoin";
    }
    
    // 로그인

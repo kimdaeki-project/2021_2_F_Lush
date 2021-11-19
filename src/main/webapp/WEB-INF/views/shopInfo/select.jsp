@@ -13,6 +13,11 @@
 }
 
 @font-face {
+	font-family: 'notokrM';
+	src: url('/resources/fonts/NotoSansKR-Medium.otf') format('opentype');
+}
+
+@font-face {
 	font-family: 'HelveticaNeue-Heavy';
 	src: url('/resources/fonts/HelveticaNeue-Heavy.otf') format('opentype');
 }
@@ -86,6 +91,12 @@
 	border-bottom: 1px solid #ddd;
 }
 
+.section-body-this {
+    width: 980px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .skinbtn.default.boardview-del, .skinbtn.default.boardview-modify, .skinbtn.default.boadview-reply, .skinbtn.default.boardview-list{
     height: 40px;
     line-height: 38px;
@@ -125,6 +136,97 @@
     border-radius: 0;
 }
 
+.cs-page .other_list .other_list_tit {
+    padding-bottom: 25px;
+    text-align: center;
+    font-size: 32px;
+    color: #000;
+    font-family: "notokrB";
+}
+
+.cs-page .type-gallery.shop_boad_list {
+    margin-top: 20px;
+}
+
+.shop_boad_list .list ul {
+    overflow: hidden;
+    width: 100%;
+}
+
+.item-display .list ul {
+    padding-top: 10px;
+}
+
+.item-display .list ul li .thumbnail {
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    height: 0;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 100%;
+}
+
+.shop_boad_list .list ul li {
+    float: left;
+    width: 275px;
+   
+}
+
+.item-display .list ul li .thumbnail > a {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.cs-page .other_list {
+    margin-top: 120px;
+}
+
+.list-ul{
+	display: flex;
+	justify-content: space-between;
+}
+
+.cs-page .item-display.type-gallery .list ul li .txt {
+    padding: 0 15px 0;
+}
+
+.cs-page .item-display.type-gallery.shop_boad_list .list ul li .txt {
+    padding-top: 15px;
+}
+
+.cs-page .item-display.type-gallery.shop_boad_list .list ul li .txt a > strong {
+    font-size: 20px;
+    color: #333;
+    font-weight: normal;
+    font-family: 'notokrM';
+}
+
+.item-display .list ul li {
+    display: inline-block;
+    padding: 0 0 60px;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.item-display .list ul li .thumbnail {
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    height: 0;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 100%;
+}
+
+.cs-page .type-gallery.item-display .list ul li .thumbnail {
+    padding-bottom: 70%;
+}
+
 </style>
 </head>
 <body>
@@ -134,8 +236,9 @@
 			<div class="contents-inner cs-page">
 				<div class="admin-wrap">
 					<div class="shop-tit">SHOP INFORMATION</div>
+					<div class="shop-desc">가까운 러쉬 매장에서 느끼는 향기로운 경험!</div>
 				</div>
-				<div class="shop-desc">가까운 러쉬 매장에서 느끼는 향기로운 경험!</div>
+				
 				<div class="section">
 					<div class="section-body section-body-this">
 						<div class="board-view">
@@ -170,7 +273,7 @@
 								<div class="textfield shop_textfield">
 									<div style="margin: 10px 0 10px 0">
 										<img
-											src="https://lush.co.kr/data/board/upload/shop/650a374c015777f6"
+											src="${shopInfo.photo}"
 											style="max-width: 980px">
 									</div>
 									<b> <strong><span
@@ -241,11 +344,12 @@
 										style="left: -230px; top: 373px; position: absolute;">
 										<div class="gtx-trans-icon"></div>
 									</div>
+									<c:if test="${shopInfo.youtube !=null}">
 									<iframe width="1080" height="720" src="${shopInfo.youtube}"
 										title="YouTube video player" frameborder="0"
 										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 										allowfullscreen=""></iframe>
-
+									</c:if>
 									<div align="center" style="text-align: center;">
 										<br>
 									</div>
@@ -265,6 +369,34 @@
 						</div>
 					</div>
 				</div>
+				
+				<div class="other_list">
+	<div class="other_list_tit">다른 매장 보기</div>
+<div class="section">
+        <div class="item-display type-gallery shop_boad_list">
+            <div class="list">
+                <ul class="list-ul">
+					<c:forEach items="${shopInfos}" begin="1" end="4" var="shopInfos" varStatus="i">
+					<li class="list-li">
+						
+						<div class="thumbnail">	
+						<img src="${shopInfos.photo}" width="275" height="230" class="js-image-load">
+						</div>
+						<div class="txt"><a href="./select?num=${shopInfos.num}"><strong>${shopInfos.name}</strong></a></div>
+						
+						
+					
+					</li>
+					</c:forEach>
+					
+					</ul>
+            </div>
+        </div>
+
+   
+</div>
+</div>	
+				
 			</div>
 		</div>
 	</div>

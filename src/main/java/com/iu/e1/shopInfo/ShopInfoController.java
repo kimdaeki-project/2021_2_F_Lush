@@ -28,7 +28,9 @@ public class ShopInfoController {
 	@GetMapping("select")
 	public ModelAndView shopInfoSelect(ShopInfoVO shopInfoVO)throws Exception{
 		ModelAndView mv = new ModelAndView();
+		List<ShopInfoVO> ar = shopInfoService.shopInfoList();
 		shopInfoVO = shopInfoService.shopInfoSelect(shopInfoVO);
+		mv.addObject("shopInfos", ar);
 		mv.addObject("shopInfo", shopInfoVO);
 		mv.setViewName("shopInfo/select");
 		return mv;
