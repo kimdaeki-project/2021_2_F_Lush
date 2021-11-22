@@ -15,5 +15,9 @@ public class EventVO {
    private Integer hits;
    private int state;
    private Date regDate;
-
+   private String photo;
+   private String text3;
+   private String text4;
+   private String evtSection1;
+   private String evtSection2;
 }
