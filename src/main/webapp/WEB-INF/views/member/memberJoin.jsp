@@ -134,15 +134,15 @@ input.checkbox {
 	display: block;
 	min-height: 20px;
 	padding: 0 0 0 27px;
-	background: #fff
+	/* background: #fff
 		url("https://www.lush.co.kr/data/skin/front/howling/img/etc/check-off.png")
-		no-repeat left top;
+		no-repeat left top; */
 }
 
 .join .terms .all-agree label.on {
-	background: #fff
+	/* background: #fff
 		url("https://www.lush.co.kr/data/skin/front/howling/img/etc/check-on.png")
-		no-repeat left top;
+		no-repeat left top; */
 }
 
 .join .terms .terms-view {
@@ -170,13 +170,13 @@ input.checkbox {
 }
 
 .join .terms .terms-view p label.on {
-	font-weight: bold;
+	font-weight: bold;	
 }
 
 .join .terms .terms-view p label.on {
-	background: #fff
+	/* background: #fff
 		url("https://www.lush.co.kr/data/skin/front/howling/img/etc/check-on.png")
-		no-repeat left top;
+		no-repeat left top; */
 }
 
 .join .terms .terms-view p label {
@@ -185,9 +185,9 @@ input.checkbox {
 	line-height: 20px;
 	padding: 0 0 0 27px;
 	font-size: 16px;
-	background: #fff
+	/* background: #fff
 		url("https://www.lush.co.kr/data/skin/front/howling/img/etc/check-off.png")
-		no-repeat left top;
+		no-repeat left top; */
 }
 
 label {
@@ -331,9 +331,9 @@ input.checkbox {
 	min-width: 20px;
 	min-height: 20px;
 	padding: 0 0 0 27px;
-	background: #fff
+	/* background: #fff
 		url("https://www.lush.co.kr/data/skin/front/howling/img/etc/check-off.png")
-		no-repeat 1px top;
+		no-repeat 1px top; */
 }
 
 .join .terms .terms-view .consignment-box table td div {
@@ -461,13 +461,23 @@ thead {
 	text-align: center;
 }
 
+.dn {
+	display: none !important;
+}
+
 .join .terms .msg span {
 	display: inline-block;
 	min-height: 17px;
 	padding: 0 0 0 19px;
-	background: #fff url("https://www.lush.co.kr/data/skin/front/howling/img/icon/caution-1.png") no-repeat left 4px;
+	background: #fff
+		url("https://www.lush.co.kr/data/skin/front/howling/img/icon/caution-1.png")
+		no-repeat left 4px;
 	color: #3e3d3c;
 	line-height: 20px;
+}
+
+.form-element label.on {
+	/* background: #fff url("https://www.lush.co.kr/data/skin/front/howling/img/etc/check-on.png") no-repeat 1px top; */
 }
 </style>
 </head>
@@ -515,14 +525,13 @@ thead {
 
 						<div class="terms-view">
 							<p>
-								<input type="checkbox" class="checkbox require" id="termsAgree1"
-									name="agreementInfoFl" value="n"> <label
-									for="termsAgree1" class=""> <span><strong>(필수)</strong></span>
+								<input type="checkbox" class="checkbox require c1"
+									id="termsAgree1" name="agreementInfoFl" value="n"> <label
+									for="termsAgree1" class="t1"> <span><strong>(필수)</strong></span>
 									이용약관
 								</label> <a href="../service/agreement.php?code=001001002"
 									target="_blank">전체보기</a>
 							</p>
-
 							<div style="overflow-y: scroll; height: 180px;">
 								LUSH 웹사이트에 오신 것을 환영합니다.<br> <br> 가입하시기 전에 아래의 이용약관을
 								반드시 읽어보시기 바랍니다.<br> <br> 제 1 조 (목적)<br> 본 약관은
@@ -771,9 +780,9 @@ thead {
 						</div>
 						<div class="terms-view">
 							<p>
-								<input type="checkbox" class="checkbox require" id="termsAgree2"
-									name="privateApprovalFl" value="n"> <label
-									for="termsAgree2" class=""> <span><strong>(필수)</strong></span>
+								<input type="checkbox" class="checkbox require c1"
+									id="termsAgree2" name="privateApprovalFl" value="n"> <label
+									for="termsAgree2" class="t2"> <span><strong>(필수)</strong></span>
 									개인정보 수집 및 이용
 								</label> <a href="../service/agreement.php?code=001003" target="_blank">전체보기</a>
 							</p>
@@ -793,7 +802,7 @@ thead {
 						<!--  -->
 						<div class="terms-view">
 							<p>
-								<input type="checkbox" class="checkbox" id="termsAgree3"
+								<input type="checkbox" class="checkbox c1" id="termsAgree3"
 									value="n"> <label for="termsAgree3"> <span
 									class="option"><strong>(선택)</strong></span> 개인정보 수집 및 이용
 								</label> <a href="../service/agreement.php?code=001006002"
@@ -840,7 +849,7 @@ thead {
 						<!--  -->
 						<!--  -->
 						<p class="msg dn">
-							<span> (필수) 이용약관 을 체크해주세요.</span>
+							<span></span>
 						</p>
 						<!--  -->
 						<div class="select-certification">
@@ -849,17 +858,17 @@ thead {
 								<fieldset>
 									<legend>본인 인증방법 선택폼</legend>
 									<!--  -->
-									<span class="form-element"> <input type="radio"
+									<!-- <span class="form-element"> <input type="radio"
 										name="RnCheckType" id="authIpin" value="ipin" class="radio">
 										<label class="choice" for="authIpin">아이핀 본인인증</label>
-									</span>
+									</span> -->
 									<iframe id="ifrmRnCheck" name="ifrmRnCheck"
 										style="width: 500px; height: 500px; display: none;"></iframe>
 									<!--  -->
 									<!--  -->
-									<span class="form-element"> <input type="radio"
+									<span class="form-element"> <input type="checkbox"
 										name="RnCheckType" id="authCellphone" value="authCellPhone"
-										class="radio"> <label class="choice"
+										class="cellPhone"> <label class="choice"
 										for="authCellphone">휴대폰 본인인증</label>
 									</span>
 									<iframe id="ifrmHpauth" name="ifrmHpauth"
@@ -877,7 +886,7 @@ thead {
 							</button>
 							<button class="btnicon btn_wt btn_l w280 ja-next"
 								id="btnNextStep" type="button">
-								<a href="./memberJoin2"><em>다음단계</em></a>
+								<em>다음단계</em>
 							</button>
 						</div>
 					</form>
@@ -888,177 +897,66 @@ thead {
 	</div>
 	<c:import url="../main/mainFooter.jsp"></c:import>
 	<script type="text/javascript">
-		$(document)
-				.ready(
-						function() {
-							var body = $('body'), $formTerms = $('#formTerms');
 
-							$('#btnNextStep')
-									.click(
-											function() {
-												var pass = true;
-												/*
-												 * 필수 동의 항목 검증
-												 */
-												$(':checkbox.require').each(function(idx, item) {
-													var $item = $(item);
-													if (!$item.prop('checked')) {
-													pass = false;
-																		$('p.msg', $formTerms).removeClass('dn').find('span').text($item.next().text()+ "을 체크해주세요.");
-																		.delay(function() {$item.focus();
-																		},
-																						1000);
-																		return false;
-																	}
-																});
-												if (pass) {
-													$('p.msg').addClass('dn');
-													/*
-													 * 실명인증 검증
-													 */
-													if ($('input[name="RnCheckType"]').length > 0) {
-														switch ($(
-																'input[name="RnCheckType"]:checked')
-																.val()) {
-														case 'ipin':
-															var popupWindow = window
-																	.open(
-																			"",
-																			"popupCertKey",
-																			"top=100, left=200, status=0, width=417, height=490");
-															ifrmRnCheck.location.href = "/member/ipin/ipin_main.php?callType=joinmember";
-															break;
-														case 'authCellPhone':
-															var protocol = location.protocol;
-															var callbackUrl = "https://www.lush.co.kr:443/member/authcellphone/dreamsecurity_result.php";
-															ifrmHpauth.location.href = protocol
-																	+ "//hpauthdream.godo.co.kr/module/NEW_hpauthDream_Main.php?callType=joinmember&shopUrl="
-																	+ callbackUrl
-																	+ "&cpid=kcp_A89GP";
-															break;
-														default:
-															alert("본인인증이 필요합니다.");
-															$(
-																	'input[name="RnCheckType"]:first')
-																	.focus();
-															break;
-														}
-														return false;
-													} else {
-														$formTerms.submit();
-													}
-												}
-											});
-
-							/*
-							 * 전체 동의 체크박스 이벤트
-							 */
-							$('#allAgree', $formTerms)
-									.change(
-											function(e) {
-												e.preventDefault();
-												var $target = $(e.target), $checkbox = $(':checkbox'), $label = $checkbox
-														.siblings('label');
-												if ($target.prop('checked') === true) {
-													$checkbox.prop('checked',
-															true).val('y');
-													$label.addClass('on');
-												} else {
-													$checkbox.prop('checked',
-															false).val('n');
-													$label.removeClass('on');
-												}
-											});
-
-							/*
-							 * 이전단계 버튼 이벤트
-							 */
-							$('#btnPrevStep', $formTerms).click(function(e) {
-								e.preventDefault();
-								window.location.href = '/member/joinCheck'
-							});													
-
-							/*
-							 * 약관 체크박스 이벤트
-							 */
-							$('.terms-view :checkbox', $formTerms)
-									.change(
-											function(e) {
-												e.preventDefault();
-												$('p.msg').addClass('dn');
-												var $target = $(e.target), $label = $target
-														.siblings('label'), $termsView = $target
-														.closest('.terms-view');
-												var isTermsAgreeSelect = (e.target.id === 'termsAgree4')
-														|| (e.target.id === 'termsAgree4')
-														|| (e.target.id === 'termsAgree5');
-												var isTargetChecked = $target
-														.prop('checked') === true;
-
-												if (isTargetChecked) {
-													if (isTermsAgreeSelect) {
-														$termsView
-																.find(
-																		'.consignment-box label')
-																.addClass('on');
-														$termsView
-																.find(
-																		'.consignment-box :checkbox')
-																.prop(
-																		'checked',
-																		true);
-														$termsView
-																.find(
-																		'.consignment-box :checkbox')
-																.val('y');
-													} else {
-														$target.val('y');
-														$label.addClass('on');
-													}
-												} else {
-													if (isTermsAgreeSelect) {
-														$termsView
-																.find(
-																		'.consignment-box label')
-																.removeClass(
-																		'on');
-														$termsView
-																.find(
-																		'.consignment-box :checkbox')
-																.prop(
-																		'checked',
-																		false);
-														$termsView
-																.find(
-																		'.consignment-box :checkbox')
-																.val('n');
-													} else {
-														$target.val('n');
-														$label
-																.removeClass('on');
-													}
-												}
-
-												//console.log($(".terms-view :checkbox").length + " " + $(".terms-view :checkbox:checked").length);
-
-												//튜닝 추가 2018-12-07 Start
-												if ($(".terms-view :checkbox").length == $(".terms-view :checkbox:checked").length) {
-													$("#allAgree").prop(
-															'checked', true);
-													$("#allAgree").siblings(
-															'label').addClass(
-															'on');
-												} else {
-													$("#allAgree").prop(
-															'checked', false);
-													$("#allAgree").siblings(
-															'label')
-															.removeClass('on');
-												}
-												;
-												//튜닝 추가 2018-12-07 End
-											});
-						});
+		$("#allAgree").click(function(){
+			console.log('check');
+			$("#termsAgree1").prop("checked", $("#allAgree").prop("checked"));
+			$("#termsAgree2").prop("checked", $("#allAgree").prop("checked"));
+			$("#termsAgree3").prop("checked", $("#allAgree").prop("checked"));
+			$("#privateApprovalOption_23").prop("checked", $("#allAgree").prop("checked"));
+		});
+		
+		$("#privateApprovalOption_23").click(function(){
+			$("#termsAgree3").prop("checked", $("#privateApprovalOption_23").prop("checked"));				
+		});
+		
+		$("#termsAgree3").click(function(){
+			$("#privateApprovalOption_23").prop("checked", $("#termsAgree3").prop("checked"));				
+		});	
+		
+		$(".c1").click(function(){
+			let result = true;
+			$(".c1").each(function(v1, v2){
+				if(!$(v2).prop("checked")){
+					result = false;
+					console.log(v1, $(v2).prop("checked"));
+					//break; 는 esch문 안에서 사용x
+				}
+			});
+			$("#allAgree").prop("checked", result);	
+		});
+		
+		$(".ja-next").click(function(){
+			var popupX = (document.body.offsetWidth / 2) - (400 / 2);			
+			var popupY= (window.screen.height / 2) - (500 / 2);
+			
+			if($("#allAgree").prop("checked")){
+				if(!$(".cellPhone").prop("checked")){
+					alert("본인인증 방법을 선택해주세요.");
+				}else{
+					window.open('../certify/pnCheck', 'check', 'status=no, height=300, width=400, left=500, top=400');
+				}
+			}else if($("#termsAgree1").prop("checked") && $("#termsAgree2").prop("checked")){				
+				if(!$(".cellPhone").prop("checked")){
+					alert("본인인증 방법을 선택해주세요.");
+				}else{
+					location.href = "./memberJoin2";
+				}
+			}else{
+				console.log("a");
+				if(!$("#termsAgree1").prop("checked")){
+					var r = $(".t1").text();
+					console.log(r);
+					 $('p.msg').removeClass('dn').find('span').text(r + "을 체크해주세요.");
+				}else if(!$("#termsAgree2").prop("checked")){
+					var r = $(".t2").text();
+					console.log(r);
+					 $('p.msg').removeClass('dn').find('span').text(r + "을 체크해주세요.");
+				}
+			}		
+		});
+		
+		
 	</script>
 </body>
 </html>
