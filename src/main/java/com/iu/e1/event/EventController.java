@@ -64,7 +64,8 @@ public class EventController {
    public ModelAndView getSelectOne(EventVO eventVO) throws Exception {
       ModelAndView mv = new ModelAndView();
       eventVO = eventService.getSelectOne(eventVO);
-
+      List<EventVO> ar = eventService.getSelectEventList();
+      mv.addObject("eventList", ar);
       mv.setViewName("event/select");
       mv.addObject("eventVO", eventVO);
 

@@ -14,33 +14,39 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/introduce/**")
 public class IntroduceController {
 
-   @GetMapping("LushIntroduce")
-   public String lushIntroduce() throws Exception {
-      return "introduce/LushIntroduce";
+	@GetMapping("LushScout")
+	public String lushScout() throws Exception {
+		return "introduce/Scout";
 
-   }
-   
-   @GetMapping("LushHistory")
-   public String lushHistory() throws Exception {
-      return "introduce/LushHistory";
+	}
 
-   }
-   
-   @GetMapping("LushIdeology")
-   public String lushIdeology() throws Exception {
-      return "introduce/LushIdeology";
+	@GetMapping("LushIntroduce")
+	public String lushIntroduce() throws Exception {
+		return "introduce/LushIntroduce";
 
-   }
-   
-   @GetMapping("LushCommunity")
-   public String lushCommunity() throws Exception {
-      return "introduce/Community";
+	}
 
-   }
-   
-   @GetMapping("LushCorporategift")
-   public String lushCorporategift() throws Exception {
-      return "introduce/Corporategift";
+	@GetMapping("LushHistory")
+	public String lushHistory() throws Exception {
+		return "introduce/LushHistory";
 
-   }
+	}
+
+	@GetMapping("LushIdeology")
+	public String lushIdeology() throws Exception {
+		return "introduce/LushIdeology";
+
+	}
+
+	@GetMapping("LushCommunity")
+	public String lushCommunity() throws Exception {
+		return "introduce/Community";
+
+	}
+
+	@GetMapping("LushCorporategift")
+	public String lushCorporategift() throws Exception {
+		return "introduce/Corporategift";
+
+	}
 }

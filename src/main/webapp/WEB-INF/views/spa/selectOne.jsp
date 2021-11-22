@@ -65,51 +65,51 @@
             <%--------------- 상품페이지 ---------------%>
             <div class="goods-view">
             
-            	<%--------------- 카테고리 ---------------%>
-            	<div class="location">
-           			<div class="path">
-           				<h3 class="dn">현재 위치</h3>
-           				<span>홈</span>
-           				
-           				<!-- 토글1 -->
-           				<div class="navi">
-           					<div class="this">
-           						<a href="#">LUSH SPA</a>
-           						<div>
-           							<a href="#">러쉬</a>
-           							<a href="#">LUSH SPA</a>
-           						</div>
-           					</div>
-           				</div>
-           				<!-- 토글2 -->
-           				<div class="navi">
-							<div class="this">
-								<a href="#">SPA</a>
-								<div>
-									<a href="#">SPA</a>
-								</div>
-							</div>
-						</div>
-						<!-- 토글3 -->
-						<div class="navi">
-							<div class="this">
-								<a href="#">TREATMENTS</a>
-								<div>
-									<a href="#">TREATMENTS</a>
-								</div>
-							</div>
-						</div>
-           			</div> <%-- path end --%>
-       			</div> <%-- location end --%>
-           			
-       			<%--------------- 상품주문 영역 ---------------%>
-           		<div class="goods">
-           			<%--------------- 주문영역 이미지 ---------------%>
-            		<div class="image">
-            			<div class="thumbnail">
-            				<a href="#zoom-layer" class="zoom-layer-open btn-open-layer" id="mainImage">
-            					<img src="../../resources/img/goods/tangled_hair_treatment.jpg"
-            						width="380" alt="탱글드 헤어 트리트먼트" title="탱글드 헤어 트리트먼트" class="middle"></a>
+               <%--------------- 카테고리 ---------------%>
+               <div class="location">
+                    <div class="path">
+                       <h3 class="dn">현재 위치</h3>
+                       <span>홈</span>
+                       
+                       <!-- 토글1 -->
+                       <div class="navi">
+                          <div class="this">
+                             <a href="#">LUSH SPA</a>
+                             <div>
+                                <a href="#">러쉬</a>
+                                <a href="#">LUSH SPA</a>
+                             </div>
+                          </div>
+                       </div>
+                       <!-- 토글2 -->
+                       <div class="navi">
+                     <div class="this">
+                        <a href="#">SPA</a>
+                        <div>
+                           <a href="#">SPA</a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- 토글3 -->
+                  <div class="navi">
+                     <div class="this">
+                        <a href="#">TREATMENTS</a>
+                        <div>
+                           <a href="#">TREATMENTS</a>
+                        </div>
+                     </div>
+                  </div>
+                    </div> <%-- path end --%>
+                </div> <%-- location end --%>
+                    
+                <%--------------- 상품주문 영역 ---------------%>
+                 <div class="goods">
+                    <%--------------- 주문영역 이미지 ---------------%>
+                  <div class="image">
+                     <div class="thumbnail">
+                        <a href="#zoom-layer" class="zoom-layer-open btn-open-layer" id="mainImage">
+                           <img src="../../resources/img/goods/tangled_hair_treatment.jpg"
+                              width="380" alt="탱글드 헤어 트리트먼트" title="탱글드 헤어 트리트먼트" class="middle"></a>
                      </div>
                      <div class="more-thumbnail">
                         <div class="slide">
@@ -139,64 +139,64 @@
                   
                   <%--------------- 주문영역 주문 ---------------%>
                   <form name="frmView" id="frmView" method="post">
-                  	<input type="hidden" name="mode" value="get_benefit">
-                  	<input type="hidden" name="scmNo" value="1">
-                  	<input type="hidden" name="cartMode" value="">
-                  	<input type="hidden" name="set_goods_price" value="70000">
-                  	<input type="hidden" name="set_goods_fixedPrice" id="set_goods_fixedPrice" value="0.00">
-                  	<input type="hidden" name="set_goods_mileage" value="0">
-                  	<input type="hidden" name="set_goods_stock" value="∞">
-                  	<input type="hidden" name="set_coupon_dc_price" value="70000.00">
-                  	<input type="hidden" name="set_goods_total_price" id="set_goods_total_price" value="0">
-                  	<input type="hidden" name="set_option_price" id="set_option_price" value="0">
-                  	<input type="hidden" name="set_option_text_price" id="set_option_text_price" value="0">
-                  	<input type="hidden" name="set_add_goods_price" id="set_add_goods_price" value="0">
-                  	<input type="hidden" name="set_total_price" value="70000">
-                  	<input type="hidden" name="mileageFl" value="c">
-                  	<input type="hidden" name="mileageGoods" value="0.00">
-                  	<input type="hidden" name="mileageGoodsUnit" value="percent">
-                  	<input type="hidden" name="goodsDiscountFl" value="n">
-                  	<input type="hidden" name="goodsDiscount" value="0.00">
-                  	<input type="hidden" name="goodsDiscountUnit" value="percent">
-                  	<input type="hidden" name="taxFreeFl" value="t">
-                  	<input type="hidden" name="taxPercent" value="10.0">
-                  	<input type="hidden" name="scmNo" value="1">
-                  	<input type="hidden" name="brandCd" value="001">
-                  	<input type="hidden" name="cateCd" value="002001001">
-                  	<input type="hidden" id="set_dc_price" value="0">
-                  	<input type="hidden" name="spaPreNo" value="130">
-                  	<input type="hidden" id="goodsOptionCnt" value="1">
-                  	
-                  		<div class="info">
-                  			<div class="info_wrap">
-                  				<div class="goods_icons" style="display: none;"></div>
-                  				<%-- 주문영역 제품명 --%>
-                  				<div goods-header>
-                  					<div class="top">
-                  						<div class="tit">
-                  							<h2> 탱글드 헤어 트리트먼트</h2>
-                  							<span></span>
-                  						</div>
-                  						<div class="hashtag">#두피트리트먼트 #기분좋은낮잠처럼</div>
-                  					</div>
-                  					<div class="sns">
-                  						<a class="normal-btn small1 target-sns-share">
-                  							<em>공유<img class="arrow" src="../../resources/img/etc/bl_arrow.png" alt=""></em>
-                  						</a>
-                  						
-                  					</div>
-                  				</div>
-                  			</div>
-                  		</div>
-                  	
+                     <input type="hidden" name="mode" value="get_benefit">
+                     <input type="hidden" name="scmNo" value="1">
+                     <input type="hidden" name="cartMode" value="">
+                     <input type="hidden" name="set_goods_price" value="70000">
+                     <input type="hidden" name="set_goods_fixedPrice" id="set_goods_fixedPrice" value="0.00">
+                     <input type="hidden" name="set_goods_mileage" value="0">
+                     <input type="hidden" name="set_goods_stock" value="∞">
+                     <input type="hidden" name="set_coupon_dc_price" value="70000.00">
+                     <input type="hidden" name="set_goods_total_price" id="set_goods_total_price" value="0">
+                     <input type="hidden" name="set_option_price" id="set_option_price" value="0">
+                     <input type="hidden" name="set_option_text_price" id="set_option_text_price" value="0">
+                     <input type="hidden" name="set_add_goods_price" id="set_add_goods_price" value="0">
+                     <input type="hidden" name="set_total_price" value="70000">
+                     <input type="hidden" name="mileageFl" value="c">
+                     <input type="hidden" name="mileageGoods" value="0.00">
+                     <input type="hidden" name="mileageGoodsUnit" value="percent">
+                     <input type="hidden" name="goodsDiscountFl" value="n">
+                     <input type="hidden" name="goodsDiscount" value="0.00">
+                     <input type="hidden" name="goodsDiscountUnit" value="percent">
+                     <input type="hidden" name="taxFreeFl" value="t">
+                     <input type="hidden" name="taxPercent" value="10.0">
+                     <input type="hidden" name="scmNo" value="1">
+                     <input type="hidden" name="brandCd" value="001">
+                     <input type="hidden" name="cateCd" value="002001001">
+                     <input type="hidden" id="set_dc_price" value="0">
+                     <input type="hidden" name="spaPreNo" value="130">
+                     <input type="hidden" id="goodsOptionCnt" value="1">
+                     
+                        <div class="info">
+                           <div class="info_wrap">
+                              <div class="goods_icons" style="display: none;"></div>
+                              <%-- 주문영역 제품명 --%>
+                              <div goods-header>
+                                 <div class="top">
+                                    <div class="tit">
+                                       <h2> 탱글드 헤어 트리트먼트</h2>
+                                       <span></span>
+                                    </div>
+                                    <div class="hashtag">#두피트리트먼트 #기분좋은낮잠처럼</div>
+                                 </div>
+                                 <div class="sns">
+                                    <a class="normal-btn small1 target-sns-share">
+                                       <em>공유<img class="arrow" src="../../resources/img/etc/bl_arrow.png" alt=""></em>
+                                    </a>
+                                    
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     
                   </form>
                </div> <%-- goods end --%>
                <div class="adpic_detail"></div>
                <script type="text/javascript"></script>
                   
-       		</div> <%-- goods-view end --%>
-           			
-       			
+             </div> <%-- goods-view end --%>
+                    
+                
                            
             
             </div>
