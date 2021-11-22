@@ -9,7 +9,7 @@
 	<meta charset="UTF-8">
 	<title>러쉬 </title>
 	<style type="text/css" rel="stylesheet">
-	
+		
 		#wrap { display: block; /* width: 100%; min-width:100%; */ margin: 0 auto; }
 		#container { display: block; width:100%; /* min-width:1000px; */ max-width:1180px; min-height: 500px;  vertical-align: top; }
 		#container.goodsv_container { display: block; width:100%; min-width:100%; max-width:100%; }
@@ -21,6 +21,26 @@
 		#content .view:after{content:''; display:block; clear:both;}
 		
 		.mt70{ margin-top:70px; }
+		
+		.cg-main > h3 { display:block; float:left; width:100%; padding: 30px 0; color: #000; font-size: 11px; text-align: center; }
+		.cg-main .weekly-best { margin: 0 auto; padding: 0 0; border: 0; }
+		
+		.cg-main{display:block; max-width:1180px; margin:0 auto;}
+		.cg-main > h2{display:block; text-align:left; padding: 50px 0 10px 5px; color: #111; font-size: 16px; letter-spacing:2px; border-bottom: 1px solid #dddddd; }
+		
+		.cg-main .lower-category {padding: 10px 0; border: none; border-top: none; font-size: 0; text-align:left; }
+		.cg-main .lower-category li { display: inline-block; width: auto; padding:0; text-align: center; vertical-align: middle; }
+		.cg-main .lower-category li span { display: block;   padding:0 16px; margin:0;font-size: 14px; }
+		.cg-main .lower-category li:first-child span{padding-left:0;}
+		.cg-main .lower-category li span a { display: inline-block; padding:10px 0; font-size: 14px; color: #8f8f8f; }
+		.cg-main .lower-category li span a img { max-width: 100%; max-height: 20px; }
+		.cg-main .lower-category li span:hover {  color:#000; }
+		.cg-main .lower-category li span:hover a{ color:#000; text-decoration:none;}
+		.cg-main .lower-category li span.on{  color:#000; }
+		.cg-main .lower-category li span.on a{ color:#000; }
+		.cg-main .lower-category li span em { }
+		.cg-main .lower-category li span:hover em,
+		.cg-main .lower-category li span.on em{ color:#000;  }
 		
 		.cg-main {}
 		.cg-main > h2 {
@@ -377,15 +397,15 @@
 					.spa_visual .slick-dots li button{font-size:0;}
 				
 					.spa_main_container{width:1180px;margin:0 auto;padding:;}
-					.spa_banners{position:relative;}
-					.spa_banners .banner_spa_use{position:absolute;top:0;left:0;width:280px;height:340px;display:table;border-collapse:collapse;box-sizing:border-box;}
-					.spa_banners .banner_spa_use a{display:table-cell;padding:0;}
-					.spa_banners .banner_spa_use dt span{display:block;font-size:17px;color:#bfbfbf;}
-					.spa_banners .banner_spa_use dt em{display:block;font-size:40px;line-height:50px;font-family : "notokrB";color:#333;}
-					.spa_banners .banner_spa_use dd{padding-top:15px;font-size:16px;line-height:24px;color:#333;}
-					.spa_banners .banner_spa_use dd span{display:block;padding-top:50px;font-size:14px;color:#333;}
-					.spa_banners ul{ text-align:right;}
-					.spa_banners ul li{display:inline-block;margin-left:20px;}
+					.spa_sub_banners{position:relative;}
+					.spa_sub_banners .banner_spa_use{position:absolute;top:0;left:0;width:280px;height:340px;display:table;border-collapse:collapse;box-sizing:border-box;}
+					.spa_sub_banners .banner_spa_use a{display:table-cell;padding:0;}
+					.spa_sub_banners .banner_spa_use dt span{display:block;font-size:17px;color:#bfbfbf;}
+					.spa_sub_banners .banner_spa_use dt em{display:block;font-size:40px;line-height:50px;font-family : "notokrB";color:#333;}
+					.spa_sub_banners .banner_spa_use dd{padding-top:15px;font-size:16px;line-height:24px;color:#333;}
+					.spa_sub_banners .banner_spa_use dd span{display:block;padding-top:50px;font-size:14px;color:#333;}
+					.spa_sub_banners ul{ text-align:right;}
+					.spa_sub_banners ul li{display:inline-block;margin-left:20px;}
 				</style>
 				
 				<%--------------- 메인 배너 영역 ---------------%>
@@ -483,16 +503,16 @@
 				<%--------------- 자세히보기, 매장 정보보기 영역 ---------------%>
 				<div class="spa_main_container">
 					
-					<div class="spa_banners mt70">
+					<div class="spa_sub_banners mt70">
 						<div class="banner_spa_use">
 							<a href="#"><img alt="" 
 								src="../../resources/img/sub/banner_spa_about.jpg"></a>
 						</div>
 						
 						<ul>
-							<li><a href="#"><img alt="러쉬 스파 압구정점" 
+							<li><a href="../shopInfo/list"><img alt="러쉬 스파 압구정점" 
 									src="../../resources/img/banner/banner_2.jpg" title="러쉬 스파 압구정점"></a></li>
-							<li><a href="#"><img alt="러쉬 스파 경리단길점" 
+							<li><a href="../shopInfo/list"><img alt="러쉬 스파 경리단길점" 
 									src="../../resources/img/banner/banner_1.jpg" title="러쉬 스파 경리단길점"></a></li>
 						</ul>
 					</div>
@@ -547,7 +567,41 @@
 							</div>
 							
 							<div class="spa_list_wrap">
-								<style type="text/css"></style>
+								<style type="text/css">
+									.item-display .list ul.prdList li { padding:0 0;}
+									.item-display .list ul.prdList li .space{ display: block; position:relative; padding:0 5px 30px 5px;}
+									.item-display .list ul.prdList li .box{ display: block; position:relative;}
+									.item-display .list ul.prdList li .thumbnail{ position:relative; }
+									.item-display .list ul.prdList li .thumbnail .soldout-img{ display:inline-block; position:absolute; bottom:0; right:0;  }
+								
+									.item-display .list ul.prdList li .thumbnail .soldout-img { display:block; position:absolute; top:0; left:0; z-index:1; width:100%; height:100%; background-color: rgba(255, 255, 255, 0.6); background-position:0 0; background-repeat:no-repeat; text-indent:-9999px; }
+								
+									.item-display .list ul.prdList li .prdinfo{position:relative;display:block; padding:30px 0 0 0; text-align:center;}
+									.item-display .list ul.prdList li .conditions {position:absolute;top:0;left:0;width:100%;  text-align:center; }
+									.item-display .list ul.prdList li .hot {vertical-align:top; }
+									.item-display .list ul.prdList li .hot img{padding:2px;vertical-align:top; }
+									.item-display .list ul.prdList li .soldout-img{vertical-align:top;display:inline-block; font-size:0;width:42px;height:23px;background-repeat:no-repeat ;margin:2px;}
+									.item-display .list ul.prdList li .txt { display:block; padding:0 0 0 0; color:#1e1e1e; text-align:center; line-height:20px; }
+									.item-display .list ul.prdList li .txt a { display: block; margin: 0; text-decoration:none; }
+									.item-display .list ul.prdList li .txt .prdName{ display:block; padding: 0;  color:#333; line-height:22px;font-size:16px; max-height:40px; text-overflow:ellipsis; overflow:hidden;}
+									.item-display .list ul.prdList li .txt .shotdesc{ display:block; padding: 0; color:#8f8f8f; line-height:20px;  max-height:20px; font-size:14px; text-overflow:ellipsis; overflow:hidden; }
+								
+									.item-display .list ul.prdList li .price { display:block; line-height:30px; margin-top:10px; padding: 0; text-align:center; color:#333;font-size:16px; }
+									.item-display .list ul.prdList li .price del { color: #999999; }
+									.item-display .list ul.prdList li .price .cost strong {  font-weight:normal; }
+								
+								
+									.item-display .list ul.prdList li .dc_rate{display:block; position:absolute; left:5px; top:5px; width:40px; height:40px; background:#bebebe; border-radius:100%; }
+									.item-display .list ul.prdList li .dc_rate span{ display:block; width:100%; height:100%; line-height:40px; color:#FFFFFF; font-size:14px; text-align:center;}
+								
+									.item-display .list ul.prdList li .box.soldout .thumbnail .prdimg{position:relative;}
+									.item-display .list ul.prdList li .box.soldout .thumbnail .prdimg:after{width:100%;height:100%;background: #fff;opacity:0.5;content:'';display:block;position:absolute;top:0;bottom:0;left:0;right:0;  }
+									.item-display .list ul.prdList li .box.soldout .conditions .hot{display:none;}
+								
+									@media screen and (max-width: 1217px) {
+										.item-display .list ul.prdList li .thumbnail .prdimg img{ width:100%;}
+									}
+								</style>
 								<div class="item-display type-gallery type-gallery_">
 									
 									<div class="list">
@@ -671,7 +725,7 @@
 																<span class="prdimg"><img 
 																	data-original="/data/goods/18/11/48/1000000087/1000000087_main_010.jpg" 
 																	width="280" alt="하드 데이즈 나이트 트리트먼트" title="하드 데이즈 나이트 트리트먼트" class="middle gd_image_lazy" 
-																	src="/data/goods/18/11/48/1000000087/1000000087_main_010.jpg" style="display: inline;"></span>
+																	src="../../resources/img/goods/night_treatment.jpg" style="display: inline;"></span>
 															</a>
 															<span class="choice -moslow">
 																<a href="../goods/goods_view.php?goodsNo=1000000087" target="_blank" class="btn-open-win -moslow" type="button" data-goods-no="1000000087">
@@ -720,7 +774,7 @@
 																<span class="prdimg"><img 
 																	data-original="/data/goods/18/11/48/1000000086/1000000086_main_029.jpg" 
 																	width="280" alt="테일러 메이드" title="테일러 메이드" class="middle gd_image_lazy" 
-																	src="/data/goods/18/11/48/1000000086/1000000086_main_029.jpg" style="display: inline;"></span>
+																	src="../../resources/img/goods/taylor_made.jpg" style="display: inline;"></span>
 															</a>
 															<span class="choice -moslow">
 																<a href="../goods/goods_view.php?goodsNo=1000000086" target="_blank" class="btn-open-win -moslow" type="button" data-goods-no="1000000086">
@@ -769,7 +823,7 @@
 																<span class="prdimg"><img 
 																	data-original="/data/goods/18/11/48/1000000085/1000000085_main_03.jpg" 
 																	width="280" alt="발리데이션 페이셜" title="발리데이션 페이셜" class="middle gd_image_lazy" 
-																	src="/data/goods/18/11/48/1000000085/1000000085_main_03.jpg" style="display: inline;"></span>
+																	src="../../resources/img/goods/validation.jpg" style="display: inline;"></span>
 															</a>
 															<span class="choice -moslow">
 																<a href="../goods/goods_view.php?goodsNo=1000000085" target="_blank" class="btn-open-win -moslow" type="button" data-goods-no="1000000085">
@@ -818,7 +872,7 @@
 																<span class="prdimg"><img 
 																	data-original="/data/goods/18/11/48/1000000084/1000000084_main_046.jpg" 
 																	width="280" alt="더 스펠" title="더 스펠" class="middle gd_image_lazy" 
-																	src="/data/goods/18/11/48/1000000084/1000000084_main_046.jpg" style="display: inline;"></span>
+																	src="../../resources/img/goods/spell.jpg" style="display: inline;"></span>
 															</a>
 															<span class="choice -moslow">
 																<a href="../goods/goods_view.php?goodsNo=1000000084" target="_blank" class="btn-open-win -moslow" type="button" data-goods-no="1000000084">
@@ -865,8 +919,8 @@
 															data-image-add2="/data/goods/18/11/48/1000000083/1000000083_add2_033.jpg">
 															<a href="../goods/goods_view.php?goodsNo=1000000083">
 																<span class="prdimg"><img data-original="/data/goods/18/11/48/1000000083/1000000083_main_093.jpg" 
-																	width="280" alt="더 컴포터?" title="더 컴포터?" class="middle gd_image_lazy" 
-																	src="/data/goods/18/11/48/1000000083/1000000083_main_093.jpg" style="display: inline;"></span>
+																	width="280" alt="더 컴포터?" title="더 컴포터" class="middle gd_image_lazy" 
+																	src="../../resources/img/goods/comforter.jpg" style="display: inline;"></span>
 															</a>
 															<span class="choice -moslow">
 																<a href="../goods/goods_view.php?goodsNo=1000000083" target="_blank" class="btn-open-win -moslow" type="button" data-goods-no="1000000083">
@@ -914,7 +968,7 @@
 															<a href="../goods/goods_view.php?goodsNo=1000000082">
 																<span class="prdimg"><img data-original="/data/goods/18/11/48/1000000082/1000000082_main_036.jpg" 
 																	width="280" alt="더 굿 아워" title="더 굿 아워" class="middle gd_image_lazy" 
-																	src="/data/goods/18/11/48/1000000082/1000000082_main_036.jpg" style="display: inline;"></span>
+																	src="../../resources/img/goods/good_hour.jpg" style="display: inline;"></span>
 															</a>
 															<span class="choice -moslow">
 																<a href="../goods/goods_view.php?goodsNo=1000000082" target="_blank" class="btn-open-win -moslow" type="button" data-goods-no="1000000082">
@@ -963,7 +1017,7 @@
 																<span class="prdimg"><img 
 																	data-original="/data/goods/18/11/48/1000000081/1000000081_main_072.jpg" 
 																	width="280" alt="더 사운드 배쓰" title="더 사운드 배쓰" class="middle gd_image_lazy" 
-																	src="/data/goods/18/11/48/1000000081/1000000081_main_072.jpg" style="display: inline;"></span>
+																	src="../../resources/img/goods/sound_bath.jpg" style="display: inline;"></span>
 															</a>
 															<span class="choice -moslow">
 																<a href="../goods/goods_view.php?goodsNo=1000000081" target="_blank" class="btn-open-win -moslow" type="button" data-goods-no="1000000081">
@@ -1012,7 +1066,7 @@
 																<span class="prdimg"><img 
 																	data-original="/data/goods/18/11/48/1000000080/1000000080_main_019.jpg" 
 																	width="280" alt="시네스티지아" title="시네스티지아" class="middle gd_image_lazy" 
-																	src="/data/goods/18/11/48/1000000080/1000000080_main_019.jpg" style="display: inline;"></span>
+																	src="../../resources/img/goods/sinest.jpg" style="display: inline;"></span>
 															</a>
 															<span class="choice -moslow">
 																<a href="../goods/goods_view.php?goodsNo=1000000080" target="_blank" class="btn-open-win -moslow" type="button" data-goods-no="1000000080">
@@ -1061,7 +1115,7 @@
 																<span class="prdimg"><img 
 																	data-original="/data/goods/18/11/48/1000000079/1000000079_main_03.jpg" 
 																	width="280" alt="더 플래니츠" title="더 플래니츠" class="middle gd_image_lazy" 
-																	src="/data/goods/18/11/48/1000000079/1000000079_main_03.jpg" style="display: inline;"></span>
+																	src="../../resources/img/goods/planet.jpg" style="display: inline;"></span>
 															</a>
 															<span class="choice -moslow">
 																<a href="../goods/goods_view.php?goodsNo=1000000079" target="_blank" class="btn-open-win -moslow" type="button" data-goods-no="1000000079">
@@ -1110,7 +1164,7 @@
 																<span class="prdimg"><img 
 																	data-original="/data/goods/18/07/31/434/434_main_039.jpg" 
 																	width="280" alt="카마" title="카마" class="middle gd_image_lazy" 
-																	src="/data/goods/18/07/31/434/434_main_039.jpg" style="display: inline;"></span>
+																	src="../../resources/img/goods/kama.jpg" style="display: inline;"></span>
 															</a>
 															<span class="choice -moslow">
 																<a href="../goods/goods_view.php?goodsNo=434" target="_blank" class="btn-open-win -moslow" type="button" data-goods-no="434">
@@ -1159,7 +1213,7 @@
 																<span class="prdimg"><img 
 																	data-original="/data/goods/17/01/05/222/222_main_03.jpg" 
 																	width="280" alt="테일즈 오브 배쓰" title="테일즈 오브 배쓰" class="middle gd_image_lazy" 
-																	src="/data/goods/17/01/05/222/222_main_03.jpg" style="display: inline;"></span>
+																	src="../../resources/img/goods/tales_bath.jpg" style="display: inline;"></span>
 															</a>
 															<span class="choice -moslow">
 																<a href="../goods/goods_view.php?goodsNo=222" target="_blank" class="btn-open-win -moslow" type="button" data-goods-no="222">

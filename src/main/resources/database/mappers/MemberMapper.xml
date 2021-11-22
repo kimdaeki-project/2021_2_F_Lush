@@ -7,7 +7,7 @@
   <mapper namespace="com.iu.e1.member.MemberRepository">
      <insert id="setInsert" parameterType="MemberVO">
         insert into member
-        values(#{id}, #{pw}, #{name}, #{nickName}, #{email}, #{phone}, #{address}, #{role})
+        values(#{id}, #{pw}, #{name}, #{nickName}, #{email}, #{phone}, #{address}, 0)
      </insert>
      
      <delete id="setDelete" parameterType="MemberVO">
