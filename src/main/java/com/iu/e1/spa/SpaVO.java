@@ -11,4 +11,8 @@ public class SpaVO {
    private Integer amount;
    private String voucherNumber;
    private Date bookingDate;
+   private String photo;
+   private String details;
+   private String reviews;
+   private String guide;
 }
