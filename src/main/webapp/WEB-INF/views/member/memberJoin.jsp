@@ -934,7 +934,7 @@ thead {
 				if(!$(".cellPhone").prop("checked")){
 					alert("본인인증 방법을 선택해주세요.");
 				}else{
-					window.open('../certify/pnCheck', 'check', 'status=no, height=300, width=400, left=500, top=400');
+					window.open('../certify/pnCheck', 'check', 'status=no, height=400, width=600, left=600, top=400');
 				}
 			}else if($("#termsAgree1").prop("checked") && $("#termsAgree2").prop("checked")){				
 				if(!$(".cellPhone").prop("checked")){

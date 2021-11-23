@@ -10,13 +10,13 @@ import net.nurigo.java_sdk.exceptions.CoolsmsException;
 public class CertifyService {
 
    public static void certifiedPhoneNumber(String phoneNumber, String cerNum) {
-      String api_key = "NCS0JQDOERTZ6DKL";
-      String api_secret = "WQIZK0TBPWOAA6UEA1XYHMBP7L63Z6H7";
+      String api_key = "NCSJDJDZGRT9BWIT";
+      String api_secret = "L8SQF1FSXZXCCKDCXQMMZUPWW10UXFRG";
       Message coolsms = new Message(api_key, api_secret);
       
       HashMap<String, String> params = new HashMap<String, String>();
       params.put("to", phoneNumber);
-      params.put("from", "01087681876");
+      params.put("from", "01099546040");
       params.put("type", "SMS");
       params.put("text", "휴대폰인증 테스트 메이지 : 인증번호는" + "[" + cerNum + "]"+"입니다.");
       params.put("app_version", "test app 1.2");

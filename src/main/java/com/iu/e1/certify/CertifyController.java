@@ -17,7 +17,7 @@ public class CertifyController {
       return "certify/pnCheck";
    }
 
-   @PostMapping("message")
+   @PostMapping("pnCheck2")
    public ModelAndView testMessage(String phonNumber) {
       Random rand = new Random();
       String numStr = "";
@@ -30,7 +30,7 @@ public class CertifyController {
 
       ModelAndView mv = new ModelAndView();
       mv.addObject("numStr", numStr);
-      mv.setViewName("test/Test2");
+      mv.setViewName("certify/pnCheck2");
       //numStr이 인증번호 > 파라미터로 넘겨야댐 jsp로
 
       return mv;
