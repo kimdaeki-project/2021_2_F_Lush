@@ -17,6 +17,11 @@ public class MemberController {
    @Autowired
    private MemberService memberService;
    
+   @GetMapping("joinFinish")
+	public String joinFinish() throws Exception{
+		return "member/joinFinish";
+	}
+   
    // 회원가입
    @GetMapping("memberJoin2")
    public String setInsert() throws Exception{
@@ -75,7 +80,11 @@ public class MemberController {
    
    // MyPage
    @GetMapping("myPage")
-   public String getMyPage() throws Exception{
+   public String getMyPage(MemberVO memberVO, HttpSession session) throws Exception{
+	   if(memberVO != null) {
+	         session.setAttribute("member", memberVO);
+	      }
+	   
       return "member/myPage";
    }
    
