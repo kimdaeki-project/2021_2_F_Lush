@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import com.iu.e1.util.Pager2;
+
 @Mapper
 public interface EventRepository {
 
@@ -17,10 +19,14 @@ public interface EventRepository {
 
    public List<EventVO> getSelectEventList() throws Exception;
    
-   public List<EventVO> getSelectWinnerList() throws Exception;
+   public List<EventVO> getSelectWinnerList(Pager2 pager2) throws Exception;
    
    public EventVO getSelectOne(EventVO eventVO) throws Exception;
    
    public int setHitsUpdate(EventVO eventVO) throws Exception;
+   
+   public int getCountWinnerList()throws Exception;
+   
+   public List<EventVO> getSelectFinishList() throws Exception;
 
 }

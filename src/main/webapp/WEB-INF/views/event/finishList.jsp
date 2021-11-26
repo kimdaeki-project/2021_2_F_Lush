@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -212,7 +211,13 @@ button em {
     left: 0;
     bottom: 0;
     width: 100%;
+
 }
+
+img {
+        filter: brightness(50%);
+    }
+
 
 .list-event .list-item-info {
     text-align: center;
@@ -230,7 +235,7 @@ button em {
 }
 
 .list_info_t{
-	color: #000000;
+	color: #8f8f8f;
 }
 
 .list-event .se{
@@ -240,7 +245,7 @@ button em {
 
 .list-event .se .text3 {
 	padding: 5px 0 0;
-    color: #000;
+    color: #8f8f8f;
     font-size: 16px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -257,7 +262,7 @@ button em {
 
 .list-event .list-item-info .text3 {
     padding: 5px 0 0;
-    color: #000;
+    color: #8f8f8f;
     font-size: 16px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -269,6 +274,7 @@ button em {
     color: #8f8f8f;
     font-size: 16px;
 }
+
 
 
 </style>
@@ -323,10 +329,9 @@ button em {
 				        <div class="list-event m2" align="center" style="width:100%">
 				        	<ul class="ul-list">
 				        		 
-				        		<c:forEach items="${eventList}" var="eventVO" varStatus="i">
+				        		<c:forEach items="${finishList}" var="eventVO" varStatus="i">
 				         	<c:choose>
-				         			<c:when test="${i.count eq 3}">
-				         			
+				         			<c:when test="${i.count%3 eq 0}">
 				         		  <li class="list-item se">
 						        
 						             <span class="thumb"><img src="${eventVO.photo}" class="js-image-load"></span>	
@@ -370,5 +375,6 @@ button em {
 
    <a href="./Eventinsert">Insert</a>
    <c:import url="../main/mainFooter.jsp"></c:import>
+
 </body>
 </html>

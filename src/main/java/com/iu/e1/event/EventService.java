@@ -5,11 +5,18 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.iu.e1.util.Pager2;
+
 @Service
 public class EventService {
 
    @Autowired
    private EventRepository eventRepository;
+   
+   public List<EventVO> getSelectFinishList()throws Exception{
+	   
+	   return eventRepository.getSelectFinishList();
+   }
 
    public int setInsertEvent(EventVO eventVO) throws Exception {
       int result = eventRepository.setInsertEvent(eventVO);
@@ -37,9 +44,13 @@ public class EventService {
       return ar;
    }
 
-   public List<EventVO> getSelectWinnerList() throws Exception {
-      List<EventVO> ar = eventRepository.getSelectWinnerList();
-
+   public List<EventVO> getSelectWinnerList(Pager2 pager2) throws Exception {
+	  pager2.makeRow();
+	  List<EventVO> ar = eventRepository.getSelectWinnerList(pager2);
+      
+      
+      pager2.makeNum(Long.valueOf(eventRepository.getCountWinnerList()));
+     
       return ar;
    }
    
@@ -49,4 +60,10 @@ public class EventService {
       
       return eventRepository.getSelectOne(eventVO);
       }
+   
+   public int getCountWinnerList()throws Exception{
+	   
+	   int result = eventRepository.getCountWinnerList();
+	   return result;
+   }
 }

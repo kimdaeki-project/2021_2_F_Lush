@@ -11,7 +11,7 @@
    </insert>
    
    <insert id="setInsertWinner" parameterType="EventVO" useGeneratedKeys="true" keyProperty="num">
-      insert into event values(#{num}, #{title}, null, #{contents}, 0, 1, now())
+      insert into event(num, title, contents, hits, state, regDate) values(#{num}, #{title}, #{contents}, 0, 1, now());
    </insert>
    
    <delete id="setDelete" parameterType="EventVO">
@@ -23,12 +23,25 @@
    </update>
    <!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ관리자 페이지 끝ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
    
-   <select id="getSelectEventList" resultType="EventVO">
-      select * from event where state=0
+   <select id="getSelectFinishList" resultType="EventVO">
+   		select * from event where state=2
    </select>
    
-   <select id="getSelectWinnerList" resultType="EventVO">
-      select * from event where state=1
+   
+   
+   <select id="getSelectEventList" resultType="EventVO">
+      	select * from event where state=0
+   </select>
+   
+   <select id="getSelectWinnerList" resultType="EventVO" parameterType="Pager2">
+      select * from event 
+      where state=1 
+      order by num desc
+      limit #{startRow}, #{perPage}
+   </select>
+   
+   <select id="getCountWinnerList" resultType="Integer">
+   		select count(*) from event where state=1
    </select>
    
    <select id="getSelectOne" parameterType="EventVO" resultType="EventVO">

@@ -1,6 +1,7 @@
 package com.iu.e1.event;
 
 
+import java.sql.Clob;
 import java.sql.Date;
 
 import lombok.Data;

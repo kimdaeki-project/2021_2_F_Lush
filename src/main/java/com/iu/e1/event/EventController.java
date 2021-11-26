@@ -10,12 +10,22 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.iu.e1.util.Pager2;
+
 @Controller
 @RequestMapping("/event/**")
 public class EventController {
 
    @Autowired
    private EventService eventService;
+   
+   @GetMapping("finishList")
+   public ModelAndView getSelectFinishList(ModelAndView mv)throws Exception{
+	   List<EventVO> ar = eventService.getSelectFinishList();
+	   mv.setViewName("event/finishList");
+	   mv.addObject("finishList", ar);
+	   return mv;
+   }
 
    @GetMapping("Eventinsert")
    public String setInsertEvent() throws Exception {
@@ -51,11 +61,14 @@ public class EventController {
    }
 
    @GetMapping("WinnerList")
-   public ModelAndView getSelectWinnerList(ModelAndView mv) throws Exception {
+   public ModelAndView getSelectWinnerList(ModelAndView mv, Pager2 pager2) throws Exception {
 
-      List<EventVO> ar = eventService.getSelectWinnerList();
+      List<EventVO> ar = eventService.getSelectWinnerList(pager2);
+      int result = eventService.getCountWinnerList();
+      mv.addObject("count", result);
       mv.setViewName("winner/WinnerList");
       mv.addObject("winnerList", ar);
+      mv.addObject("pager2", pager2);
 
       return mv;
    }
