@@ -5,8 +5,8 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
   <mapper namespace="com.iu.e1.member.MemberRepository">
-  	<update id="pwReset">
-  		update member set pw=#{pw} where 
+  	<update id="pwReset" parameterType="String">
+  		update member set pw=#{pw} where id=#{id}
   	</update>
   
   	<select id="find_pw" parameterType="MemberVO" resultType="MemberVO">

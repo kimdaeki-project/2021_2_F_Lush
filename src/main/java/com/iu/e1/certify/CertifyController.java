@@ -42,7 +42,7 @@ public class CertifyController {
    }
 
    @PostMapping("pwCheck2")
-   public ModelAndView pwCheckMessage(String phonNumber, String pw) {
+   public ModelAndView pwCheckMessage(String phonNumber, String id) {
       Random rand = new Random();
       String numStr = "";
       for (int i = 0; i < 6; i++) {
@@ -51,11 +51,11 @@ public class CertifyController {
       }
       
       CertifyService.certifiedPhoneNumber(phonNumber, numStr);
-      System.out.println(pw);
+      System.out.println(id);
       System.out.println(numStr);
       ModelAndView mv = new ModelAndView();
       mv.addObject("numStr", numStr);
-      mv.addObject("pwCheck", pw);
+      mv.addObject("pwCheck", id);
       mv.setViewName("certify/pwCheck2");
       //numStr이 인증번호 > 파라미터로 넘겨야댐 jsp로
 

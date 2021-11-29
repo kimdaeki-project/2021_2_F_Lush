@@ -87,7 +87,7 @@ body {
 	</div>	
 	<div class="form">
 		<form action="./pwCheck2" method="post">		
-		<input type="text" name="pw" style="display: none;" id="cpwCheck" value="">		
+		<input type="text" name="id" style="display: none;" id="cpwCheck" value="">		
 			<div class="phone">
 				전화번호 입력 : <input type="text" name="phonNumber">
 			</div>

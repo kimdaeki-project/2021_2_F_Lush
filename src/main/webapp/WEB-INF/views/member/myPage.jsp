@@ -192,6 +192,12 @@ a {
     padding: 30px 30px 30px 20px;
 }
 
+.mypage-summary:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
 .member-info {
     float: left;
     width: 480px;
@@ -224,6 +230,432 @@ img {
     font-size: 16px;
     font-family: "notokrM";
     color: #303030;
+}
+
+.member-grade-text .l-text .strong {
+    color: #3e3d3c;
+}
+
+.layer-grade-benefit {
+    top: 154px;
+    left: 352px;
+    position: absolute;
+    z-index: 100;
+    width: 300px;
+    height: auto;
+    background: #fff;
+    border: 1px solid #555;
+}
+
+.dn {
+    display: none !important;
+}
+
+.favor-layer .wrap > strong {
+    display: block;
+    height: 27px;
+    padding: 13px 0 0 17px;
+    background: #f4f4f4;
+    color: #222;
+}
+
+.layer-grade-benefit .table2 {
+    margin: 10px;
+}
+
+.table2 {
+    padding: 20px 0;
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.layer-grade-benefit .wrap .table2 table {
+    width: 100%;
+}
+
+colgroup {
+    display: table-column-group;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.layer-grade-benefit .wrap .table2 table td, .layer-grade-benefit .wrap .table2 table th {
+    padding: 10px;
+    border-bottom: 0;
+    font-size: 12px;
+}
+
+.table2 > table > tbody > tr > th {
+    padding: 10px 0;
+    color: #8f8f8f;
+    font-weight: normal;
+    text-indent: 8px;
+}
+
+.va-t {
+    vertical-align: top;
+}
+.ta-l {
+    text-align: left;
+}
+
+.layer-grade-benefit .wrap .table2 table tr + tr th, .layer-grade-benefit .wrap .table2 table tr + tr td {
+    border-top: 1px solid #e8e8e8;
+}
+
+.favor-layer .wrap .close {
+    display: block;
+    position: absolute;
+    top: 11px;
+    right: 12px;
+    width: 18px;
+    height: 18px;
+    text-indent: -9999px;
+    background: url(../img/btn/layer-close.png) no-repeat left top;
+}
+button {
+    font-family: "notokrR";
+}
+button {
+    cursor: pointer; 
+    border: none;
+    outline: none;
+}
+
+.member-points {
+    float: right;
+    width: 440px;
+    overflow: hidden;
+}
+
+.inner {
+    margin: 0 auto;
+}
+
+.icon-ticket {
+    width: 42px;
+    height: 34px;
+    background: url("https://www.lush.co.kr/data/skin/front/howling/img/etc/mypage_icons.png") 0 0 no-repeat;
+    background-position: 0 0;
+}
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.point-item .icon + p {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.point-item .inner > div {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.point-item .inner > div > a {
+    color: #333;
+}
+
+.point-item .number {
+    padding-right: 4px;
+}
+
+.inner:after, .inner_wrap:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.member-points .point-item {
+    float: left;
+    width: 33.3334%;
+    text-align: center;
+}
+
+.icon-duckzzi {
+    width: 33px;
+    height: 34px;
+    background: url("https://www.lush.co.kr/data/skin/front/howling/img/etc/mypage_icons.png") 0 0 no-repeat;
+    background-position: -135px 0;
+}
+
+.icon-qna {
+    width: 35px;
+    height: 34px;
+    background: url("https://www.lush.co.kr/data/skin/front/howling/img/etc/mypage_icons.png") 0 0 no-repeat;
+    background-position: -264px 0;
+}
+
+.section + .section {
+    margin: 80px 0 0;
+}
+
+.section-header {
+    margin: 0 0 10px 0;
+    position: relative;
+}
+
+.mypage .h2 {
+    display: inline-block;
+    vertical-align: middle;
+    color: #111;
+}
+
+.mypage .h2 + .sub-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    color: #787878;
+    margin: 2px 0 0 10px;
+}
+
+.order-step {
+    border: 1px solid #e3e3e3;
+    /* border-top: 1px solid #717171; */
+    padding: 20px 20px 20px 0;
+}
+.clear {
+    zoom: 1;
+}
+
+.order-step ol {
+    float: left;
+    margin-left: 40px;
+}
+
+.order-step ol li {
+    float: left;
+    width: 105px;
+    text-align: center;
+    position: relative;
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.order-step li .num {
+    margin: 10px 0 0;
+    text-align: center;
+    display: inline-block;
+    /* padding: 6px 11px; */
+    background: #f3f3f3;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.order-step li .num span {
+    font-size: 14px;
+    font-family: 'notokrB';
+    color: #8f8f8f;
+}
+
+.order-step li .text {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+.order-step li .icon {
+    display: none;
+}
+.order-step .icon-arr1-r {
+    width: 10px;
+    height: 22px;
+    background: url("https://www.lush.co.kr/data/skin/front/howling/img/etc/icon-arr.png") no-repeat top right;
+}
+
+.order-step li + li .icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: -9px;
+}
+
+.clear:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.order-total-status {
+    overflow: hidden;
+    padding: 2px 50px 2px 70px;
+    border-left: 1px solid #e3e3e3;
+    width: 100px;
+    float: right;
+}
+
+.order-total-status > .item {
+    padding: 4px 0;
+}
+
+.order-total-status .item .title {
+    font-weight: bold;
+}
+
+.order-total-status .item .num {
+    float: right;
+    color: #7d7d7d;
+}
+
+.order-total-status .item .num span {
+    margin: 0 4px;
+    font-size: 14px;
+}
+
+.section + .section {
+    margin: 80px 0 0;
+}
+
+.section-header {
+    margin: 0 0 10px 0;
+    position: relative;
+}
+
+.mypage .h2 {
+    display: inline-block;
+    vertical-align: middle;
+    color: #111;
+}
+
+.mypage .h2 + .sub-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    color: #787878;
+    margin: 2px 0 0 10px;
+}
+
+.section-header .option {
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+a {
+    color: #1e1e1e;
+}
+
+element.style {
+    vertical-align: top;
+    margin: 7px 0 0 3px;
+}
+
+img {
+    border: none; 
+}
+
+.table1 > table {
+    width: 100%;
+    border-top: 1px solid #000;
+}
+
+colgroup {
+    display: table-column-group;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.table1 > table > thead > tr > th {
+    padding: 15px 0;
+    border-bottom: 1px solid #e7e7e7;
+    font-weight: normal;
+    color: #8f8f8f;
+}
+
+table, th, td {
+    margin: 0;
+    /* padding: 0; */
+    border-spacing: 0;
+    border: 0;
+    border-collapse: collapse;
+    vertical-align: middle;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.table1.type1 .goods-board td {
+    height: 75px;
+    padding: 15px 0;
+}
+.table1 .no-data, .table1.type1 .no-data {
+    text-align: center;
+    color: #797979;
+}
+.table1 > table > tbody > tr > td {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+iv .no-data {
+ 
+    line-height: 60px;
+ 
+}
+
+td {
+    display: table-cell; 
+}
+
+.table1 > table {
+    width: 100%;
+    border-top: 1px solid #000;
+}
+
+.section-header.type1 {
+    margin: 0 0 30px 0;
+    padding: 0 0 13px 0;
+    border-bottom: 1px solid #0b0b0b;
+}
+
+.item-display .list {
+    position: relative;
+}
+
+div .no-data {
+    height: 86px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.layer-wrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
 }
 </style>
 </head>

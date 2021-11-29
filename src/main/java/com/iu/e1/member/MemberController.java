@@ -50,7 +50,8 @@ public class MemberController {
    }
    
    @GetMapping("pwReset")
-   public String pwReset() throws Exception{
+   public String pwReset(String name) throws Exception{
+	   System.out.println(name);
 	   return "member/pwReset";
    }
    

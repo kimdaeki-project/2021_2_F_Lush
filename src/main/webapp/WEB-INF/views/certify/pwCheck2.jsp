@@ -71,6 +71,7 @@
 
 	<div class="top"></div>
 	<div class="numStr">${numStr}</div>	
+	<div class="a" style="display: none;">${pwCheck}</div>
 	<div class="check2">휴대폰본인확인(문자)</div>
 	<div class="form">
 		인증번호 입력 : <input type="text" name="number" class="number">
@@ -78,19 +79,27 @@
 	</div>
 	
 
-	<script type="text/javascript">
-		console.log($('.a').text());
+	<script type="text/javascript">		
 		$(".btn").click(function() {
 			var a = $(".numStr").text();
 			var b = $(".number").val();
+			const name = $('.a').text();
 			console.log(a);
 			console.log(b);
+			console.log(name);
 			if (a != b) {
 				alert("인증번호가 일치하지 않습니다.\n재인증 부탁드립니다.")
-				window.location.href = './pnCheck'; 				
+				window.location.href = './pwCheck'; 				
 			} else {
 				alert("인증이 완료되었습니다.")
-				opener.parent.location='../member/pwReset';
+				$.ajax({
+					type: "GET",
+					url: "/member/pwReset",
+					data: {name:name},
+					success: function(result){
+						console.log(result);
+					}
+				})
 				window.close();
 				
 			}
