@@ -204,6 +204,18 @@ button em {
 	padding-left: 8px;
 	margin: 0 0 0 10px;
 }
+
+.login_menu .skinbtn + .skinbtn:after {
+    position: absolute;
+    top: 50%;
+    left: -2px;
+    display: block;
+    width: 1px;
+    height: 10px;
+    margin-top: -5px;
+    background: #8f8f8f;
+    content: '';
+}
 </style>
 </head>
 <body>
@@ -250,12 +262,8 @@ button em {
 							<p class="dn caution-msg1">일치하는 회원정보가 없습니다. 다시 입력해 주세요.</p>
 						</div>
 						<div class="btn login_menu">
-							<button class="skinbtn fi-pw find-id btn-find-password">
-								<em>비밀번호 찾기</em>
-							</button>
-							<button class="skinbtn fi-login find-id btn-login">
-								<em>로그인하기</em>
-							</button>
+							<a href="/member/find_pw" class="skinbtn ">비밀번호 찾기</a> <a
+								href="/member/memberLogin" class="skinbtn ">로그인 하기</a>							
 						</div>
 					</div>
 				</form>

@@ -204,6 +204,33 @@ button em {
 	padding-left: 8px;
 	margin: 0 0 0 10px;
 }
+
+.member.find-pw-page .box {
+	padding-top: 42px;
+}
+
+.member.find-pw-page .box .btn {
+	border-top: none;
+	margin: 20px 0 0;
+	padding: 0;
+}
+
+.member .box .btn {
+	font-size: 0;
+	text-align: center;
+}
+
+.login_menu .skinbtn + .skinbtn:after {
+    position: absolute;
+    top: 50%;
+    left: -2px;
+    display: block;
+    width: 1px;
+    height: 10px;
+    margin-top: -5px;
+    background: #8f8f8f;
+    content: '';
+}
 </style>
 </head>
 <body>
@@ -215,10 +242,10 @@ button em {
 		<!-- 본문 시작 : start -->
 		<div id="content">
 
-			<div class="member">
-				<h2>아이디찾기</h2>
+			<div class="member find-pw-page">
+				<h2>비밀번호 찾기</h2>
 
-				<form id="formFindId" method="post" action="./find_pw2"
+				<form id="formFindPW" method="post" action="./find_pw2"
 					novalidate="novalidate">
 					<div class="box">
 						<div id="divFindId">
@@ -231,35 +258,30 @@ button em {
 											<span class="icon"><img
 												src="https://www.lush.co.kr/data/skin/front/howling/img/etc/icon_id.png"
 												alt=""></span> <input type="text" class="text" id="userId"
-												name="id" placeholder="이름"> <label
-												for="name"></label>
+												name="id" placeholder="아이디"> <label for="name"></label>
 										</div>
-									</div>									
+									</div>
 								</div>
 								<button type="submit" class="skinbtn point2 l-login fi-id">
-									<em>아이디 찾기</em>
+									<em>다음</em>
 								</button>
 							</div>
 							<p class="dn caution-msg1">일치하는 회원정보가 없습니다. 다시 입력해 주세요.</p>
 						</div>
 						<div class="btn login_menu">
-							<button class="skinbtn fi-pw find-id btn-find-password">
-								<em>비밀번호 찾기</em>
-							</button>
-							<button class="skinbtn fi-login find-id btn-login">
-								<em>로그인하기</em>
-							</button>
+							<a href="/member/joinCheck" class="skinbtn "> 회원가입</a> <a
+								href="/member/find_id" class="skinbtn ">아이디 찾기</a>
 						</div>
 					</div>
 				</form>
 			</div>
 
 
-		
+
 		</div>
 		<!-- 본문 끝 : end -->
 
 	</div>
-<c:import url="../main/mainFooter.jsp"></c:import>
+	<c:import url="../main/mainFooter.jsp"></c:import>
 </body>
 </html>

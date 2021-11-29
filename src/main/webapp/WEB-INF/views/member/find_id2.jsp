@@ -121,6 +121,17 @@ button {
     outline: none;
 }
 
+.login_menu .skinbtn+.skinbtn:after {
+	position: absolute;
+	top: 50%;
+	left: -2px;
+	display: block;
+	width: 1px;
+	height: 10px;
+	margin-top: -5px;
+	background: #8f8f8f;
+	content: '';
+}
 </style>
 </head>
 <body>

@@ -49,6 +49,13 @@ public class MemberController {
 	   return "member/find_pw";
    }
    
+   @GetMapping("pwReset")
+   public String pwReset() throws Exception{
+	   return "member/pwReset";
+   }
+   
+   
+   
    @GetMapping("joinFinish")
 	public String joinFinish() throws Exception{
 		return "member/joinFinish";

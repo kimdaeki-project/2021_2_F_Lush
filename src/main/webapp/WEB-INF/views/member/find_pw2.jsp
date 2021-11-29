@@ -181,9 +181,9 @@ caption, legend {
 		<div id="content">
 			<div class="member find-pw-page">
 				<h2>비밀번호 찾기</h2>
-
+				<div style="display: none;" id="ppwCheck">${memberVO.pw}</div>
 				<div class="box" id="divAuth">
-					<form name="formAuth" id="formAuth" method="post" action=""
+					<form name="formAuth" id="formAuth" method="post" action="../certify/pwCheck2"
 						novalidate="novalidate">
 						<input type="hidden" name="act" value="Y"> <input
 							type="hidden" name="rncheck" value="none"> <input
@@ -264,8 +264,11 @@ caption, legend {
 		$(".radio").click(function(){
 			const a = $(this).val();
 			$(".skinbtn").click(function(){
+				const pw = $('#ppwCheck').text();
+				console.log(pw);
 				if(a == "authCellphone"){
-					window.open('../certify/pnCheck', 'check', 'status=no, height=400, width=600, left=600, top=400');
+					window.open('../certify/pwCheck', 'check', 'status=no, height=400, width=600, left=600, top=400');					
+					 
 				}	
 			})								
 		});
