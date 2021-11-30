@@ -747,7 +747,7 @@ div .no-data {
 								<img src="https://www.lush.co.kr/data/icon/group_image/ico_member_upload1.png" alt="">
 							</div>
 							<div class="member-grade-text">
-								<p>${member.name}님의</p>
+								<p>${memberVO.name}님의</p>
 								<p class="l-text">
 									회원등급은 <span class="strong">일반회원등급</span> 입니다.
 								</p>
