@@ -7,7 +7,7 @@
   <mapper namespace="com.iu.e1.spa.SpaRepository">
      <insert id="setInsert" parameterType="SpaVO">
         insert into spa
-        values(#{name}, #{price}, #{amount}, #{voucherNumber}, #{bookingDate})
+        values(#{name}, #{price}, #{amount}, #{voucherNumber}, #{bookingDate}, #{hashtag})
      </insert>
      
      <delete id="setDelete" parameterType="SpaVO">
@@ -18,13 +18,13 @@
      <update id="setUpdate" parameterType="SpaVO">
         update spa set
         name = #{name}, price = #{price}, amount = #{amount}, voucherNumber = #{voucherNumber}
-        , bookingDate = #{bookingDate}
+        , bookingDate = #{bookingDate}, hashtag = #{hashtag}
         where name = #{name}
      </update>
      
      <select id="getSelectOne" parameterType="SpaVO" resultType="SpaVO">
         select * from spa
-        where name = #{name}
+        where num = #{num}
      </select>
      
      <select id="getSelectList" resultType="SpaVO">
