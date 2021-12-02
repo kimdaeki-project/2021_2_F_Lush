@@ -159,6 +159,7 @@ img {
     color: #FBE85E;
 }
 
+
 #footer .newsletter {
     margin-top: 63px;
     color: #fff;

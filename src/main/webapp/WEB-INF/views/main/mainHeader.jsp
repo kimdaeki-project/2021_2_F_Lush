@@ -54,7 +54,7 @@ a {
 	height: 100px;
 	width: 100%;
 	background: #000;
-	z-index: 10;
+	z-index: 3;
 	position: fixed;
 }
 
@@ -200,7 +200,7 @@ a {
 				<li class="menu02 menu_brand"><a href="/campaign/insert"
 					style="margin-right: 40px;">러쉬 소개</a></li>
 				<li class="menu03"><a
-					href="#"
+					href="/shopInfo/list"
 					style="margin-right: 20px;">매장 안내</a></li>
 				<li class="menu04"><a href="/spa/list"
 					style="margin-right: 13px;">스파</a></li>

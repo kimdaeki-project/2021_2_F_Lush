@@ -4,10 +4,57 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
   <mapper namespace="com.iu.e1.shopInfo.ShopInfoRepository">
-  	<select id="shopInfoList" resultType="ShopInfoVO">
-		select * from shopInfo
+  	<select id="shopInfoList" parameterType="Pager2" resultType="ShopInfoVO">
+		select * from 
+			(select num n, si.* from
+					(select * from shopinfo
+					where
+					
+					<choose>
+						<when test="kind == 'name'">
+							UPPER(name)
+						</when>
+						<otherwise>
+							UPPER(address)
+						</otherwise>
+					</choose>
+					
+					like upper('%' || #{search} || '%')
+					order by num desc
+					)
+				si
+				)a
+			where n limit #{startRow}, #{perPage}	
 	</select>
-
+	
+	<select id="getCount" resultType="Integer">
+			select count(*) from shopinfo
+	</select>
+	
+	<select id="getInfoList" parameterType="Pager2" resultType="ShopInfoVO">
+		select * from 
+			(select num n, si.* from
+					(select * from shopinfo
+					where
+					
+					<choose>
+						<when test="kind == 'name'">
+							UPPER(name)
+						</when>
+						<otherwise>
+							UPPER(address)
+						</otherwise>
+					</choose>
+					
+					like upper('%' || #{search} || '%')
+					order by num desc
+					)
+				si
+				)a
+			where n limit #{startRow}, #{perPage}
+	</select>
+	
+	
 	<select id="shopInfoSelect" resultType="ShopInfoVO">
 		select * from shopInfo where num=#{num}
 	</select>

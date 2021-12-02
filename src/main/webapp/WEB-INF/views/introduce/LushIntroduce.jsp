@@ -173,6 +173,7 @@ img {
    border: 1px solid #000;
    padding: 19px 61px 13px;
    letter-spacing: 1.3px;
+   color: #717171;
 }
 </style>
          <div class="brand-visual">

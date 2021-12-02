@@ -130,13 +130,13 @@ img {
     padding-bottom: 90px;
 }
 
-.sct_area02 .tab a.selected {
+.sct_area02 .tab button.selected {
     border-color: #146802;
     color: #146802;
     font-family: 'notokrB';
 }
 
-.sct_area02 .tab a {
+.sct_area02 .tab button {
     display: inline-block;
     width: 140px;
     margin: 0 146px 0 168px;
@@ -543,6 +543,95 @@ dl:after, dt:after, dd:after {
     display: inline-block;
     width: 11px;
 }
+
+.duczzi_js_area {
+    padding-bottom: 90px;
+    border-bottom: 1px solid #f5cc79;
+    background: url('https://lush.co.kr/data/skin/front/howling/img/scout/scout_jealush_bg02.png') no-repeat 96% 120px;
+}
+
+.sct_area02 .partbx {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.sct_area02 .partbx .tit {
+    float: left;
+    padding-left: 118px;
+}
+
+.sct_area02 .duczzi_js_area .partbx .cn {
+    padding-top: 0;
+}
+
+.sct_area02 .partbx .cn {
+    float: right;
+    width: 630px;
+}
+
+.check_tit {
+    padding-left: 20px;
+    background: url('https://lush.co.kr/data/skin/front/howling/img/scout/scout_check.png') no-repeat 0 6px;
+    font-family: 'notokrM';
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.check_tit.empty {
+    margin-top: 25px;
+}
+
+.sct_area02 .partbx.info02 {
+    margin-top: 80px;
+}
+
+.sct_area02 .partbx .sub-tit {
+    float: left;
+    padding-left: 148px;
+}
+
+.jealush_noti_area {
+    position: relative;
+    padding-left: 543px;
+}
+
+.mt70 {
+    margin-top: 70px;
+}
+
+.jealush_noti_area dt {
+    position: absolute;
+    top: 0;
+    left: 109px;
+    font-size: 18px;
+    color: #000;
+}
+
+.jealush_noti_area dd {
+    overflow: hidden;
+    width: 100%;
+    color: #353535;
+}
+
+.jealush_noti_area dd p {
+    float: left;
+    width: 280px;
+    margin-bottom: 10px;
+}
+
+.jealush_noti_area dd p:before {
+    content: '-';
+    display: inline-block;
+    width: 11px;
+}
+
+.jealush_noti_area dd p.even {
+    float: left;
+    width: 340px;
+}
+
 </style>
 </head>
 <body>
@@ -573,8 +662,8 @@ dl:after, dt:after, dd:after {
                   <div id="tabs">
                      <div id="ntab01" style="">
                         <div class="tab">
-                           <a href="javascript:tab_view(1)" class="selected"><span>덕찌</span><span>PROGRAM</span></a>
-                           <a href="javascript:tab_view(2)"><span>젤러쉬</span> MEMBER</a>
+                           <button class="1btn selected"><span>덕찌</span><br><span>PROGRAM</span></button>
+                           <button class="2btn"><span>젤러쉬</span><br><span>MEMBER</span></button>
                         </div>
                         <div class="duczzi_pg_area">
                            <div class="partbx">
@@ -929,15 +1018,14 @@ dl:after, dt:after, dd:after {
                      </div>
                      <div id="ntab02" style="display: none;">
                         <div class="tab">
-                           <a href="javascript:tab_view(1)"><span>덕찌</span><span>PROGRAM</span></a>
-                           <a href="javascript:tab_view(2)" class="selected"><span>젤러쉬</span>
-                              MEMBER</a>
+                           <button class="1btn selected"><span>덕찌</span><br><span>PROGRAM</span></button>
+                           <button class="2btn"><span>젤러쉬</span><br><span>MEMBER</span></button>
                         </div>
                         <div class="duczzi_js_area">
                            <div class="partbx jealush">
                               <div class="tit">
                                  <img
-                                    src="/data/skin/front/howling/img/scout/scout_jealushi01.png"
+                                    src="https://lush.co.kr/data/skin/front/howling/img/scout/scout_jealushi01.png"
                                     alt="">
                               </div>
                               <div class="cn mt30">
@@ -948,7 +1036,7 @@ dl:after, dt:after, dd:after {
                            <div class="partbx info01">
                               <div class="sub-tit">
                                  <img
-                                    src="/data/skin/front/howling/img/scout/scout_jealushi02.png"
+                                    src="https://lush.co.kr/data/skin/front/howling/img/scout/scout_jealushi02.png"
                                     alt="">
                               </div>
                               <div class="cn">
@@ -963,7 +1051,7 @@ dl:after, dt:after, dd:after {
                            <div class="partbx info02">
                               <div class="sub-tit mt10">
                                  <img
-                                    src="/data/skin/front/howling/img/scout/scout_jealushi03.png"
+                                    src="https://lush.co.kr/data/skin/front/howling/img/scout/scout_jealushi03.png"
                                     alt="">
                               </div>
                               <div class="cn">
@@ -1005,6 +1093,25 @@ dl:after, dt:after, dd:after {
       <!-- 본문 끝 : end -->
 
    </div>
+   
+   <script type="text/javascript">
+   
+   
+   $(".1btn").click(function(){
+	   $('#ntab01').css("display", "");
+	   $('#ntab02').css("display", "none");
+	   $('.1btn').addClass("selected");
+	   $('.2btn').removeClass("selected");
+   });
+   
+   $(".2btn").click(function(){
+	   $('#ntab02').css("display", "");
+	   $('#ntab01').css("display", "none");
+	   $('.1btn').removeClass("selected");
+	   $('.2btn').addClass("selected");
+   });
+   </script>
+   
    <c:import url="../main/mainFooter.jsp"></c:import>
 
 

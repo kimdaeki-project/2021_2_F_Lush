@@ -77,13 +77,22 @@ public class Pager2 {
 	      return perPage;
 	   }
 	   
-	   public String getSearch() {
-	      if(this.search == null) {
-	         this.search = "";
-	      }
-	      return this.search;
-	   }
+	   public String getKind() {
+			return kind;
+		}
+		public void setKind(String keyword) {
+			this.kind = kind;
+		}
+		public String getSearch() {
+			if(this.search==null) {
+				this.search="";
+			}
+			return search;
+		}
+		public void setSearch(String search) {
+			this.search = search;
+		}
    
-  
+	   
    
 }
