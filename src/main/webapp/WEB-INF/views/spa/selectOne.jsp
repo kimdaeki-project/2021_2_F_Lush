@@ -9,6 +9,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<style type="text/css">
 		body #container {
 			color: #333;
@@ -147,6 +148,16 @@
 			padding: 6px 0;
 			background: #fff;
 			border: 1px solid #3e3d3c;
+		}
+		
+		.location .navi .this:hover div {
+			display: block;
+		}
+		
+		.location .navi .this div::selection {
+		    background: #000000;
+		    color: #fff;
+		    text-shadow: none;
 		}
 		
 		.location .navi .this div a {
@@ -385,6 +396,11 @@
 		.sns-share-layer .wrap>div ul li img {
 			width: 35px;
 			height: 35px;
+		}
+		
+		.sns-share-layer .wrap > div ul li span {
+		    display: inline-block;
+		    padding: 5px 0 0;
 		}
 		
 		.sns-share-layer .wrap>div .copyurl {
@@ -1331,9 +1347,129 @@
 		    background: rgba(0,0,0,0.3);
 		}
 		
-		/* 상품상세정보 */
+		#zoom-layer {
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 100;
+			overflow-y: auto;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.3);
+		}
 		
+		#zoom-layer .wrap {
+		    position: relative;
+		    width: 920px;
+		    height: 666px;
+		    min-height: 662px;
+		    padding: 0 19px;
+		    background: #fff;
+		    border: 3px solid #555;
+		}
 		
+		#zoom-layer .wrap .ctt {
+		    position: relative;
+		}
+		
+		#zoom-layer .wrap .txt {
+		    overflow: hidden;
+		    padding: 13px 0;
+		    border-bottom: 1px solid #717171;
+		}
+		
+		#zoom-layer .wrap .txt h4 {
+		    float: left;
+		    padding: 0 0 0 4px;
+		    color: #000;
+		    font-size: 18px;
+		}
+		
+		#zoom-layer .wrap .txt p {
+		    float: left;
+		    padding: 5px 0 0 10px;
+		    color: #777;
+		}
+		
+		#zoom-layer .wrap .view {
+		    display: table;
+		    padding: 30px 0 0 31px;
+		}
+		
+		#zoom-layer .wrap .view .detail {
+		    display: block;
+		    float: left;
+		    width: 560px;
+		    height: 550px;
+		    overflow: auto;
+		    vertical-align: middle;
+		    text-align: center;
+		}
+		
+		#zoom-layer .wrap .view .detail img {
+		    max-width: 560px;
+		    vertical-align: middle;
+		}
+		
+		#zoom-layer .wrap .view .list {
+		    float: left;
+		    position: relative;
+		    width: 70px;
+		    height: 550px;
+		    margin: 0 0 0 117px;
+		}
+		
+		#zoom-layer .wrap .view .list .slide {
+		    overflow: hidden;
+		    height: 485px;
+		    margin: 33px 0 0;
+		}
+		
+		#zoom-layer .wrap .view .list .prev {
+		    top: 0;
+		    background: url(../../resources/img/etc/vertical_prev.png) no-repeat left top;
+		}
+		
+		#zoom-layer .wrap .view .list .prev, #zoom-layer .wrap .view .list .next {
+		    display: block;
+		    position: absolute;
+		    left: 50%;
+		    margin-left: -13px;
+		    width: 26px;
+		    height: 15px;
+		}
+		
+		#zoom-layer .wrap .view .list .next {
+		    bottom: 0;
+		    background: url(../../resources/img/etc/vertical_next.png) no-repeat left top;
+		}
+		
+		#zoom-layer .wrap .view .list .prev, #zoom-layer .wrap .view .list .next {
+		    display: block;
+		    position: absolute;
+		    left: 50%;
+		    margin-left: -13px;
+		    width: 26px;
+		    height: 15px;
+		}
+		
+		#zoom-layer .wrap .close {
+		    display: block;
+		    position: absolute;
+		    top: 18px;
+		    right: 0;
+		    width: 20px;
+		    height: 20px;
+		    text-indent: -9999px;
+		    background: url(../resources/img/etc/zl_close.png) no-repeat left top;
+		}
+		
+		button {
+		    cursor: pointer;
+		    background: none;
+		    border: none;
+		    outline: none;
+		}
 		
 		
 		
@@ -1379,6 +1515,7 @@
 				<%--------------- 상품 주문 ---------------%>
 				<div class="goods-view">
 
+						
 					<%--------------- 상품 주문 : 카테고리 ---------------%>
 					<div class="location">
 						<div class="path">
@@ -1390,7 +1527,7 @@
 								<div class="this">
 									<a href="/spa/list">LUSH SPA</a>
 									<div class="drop">
-										<a href="#">러쉬</a>
+										<a href="../product/productList">러쉬</a>
 										<a href="/spa/list">LUSH SPA</a>
 									</div>
 								</div>
@@ -1408,7 +1545,7 @@
 							<div class="navi">
 								<div class="this">
 									<a href="/spa/list">TREATMENTS</a>
-									<div class="drop">
+									<div>
 										<a href="/spa/list">TREATMENTS</a>
 									</div>
 								</div>
@@ -1418,21 +1555,17 @@
 					</div>
 					<%-- location end --%>
 					
-					<script type="text/javascript">
-						$(document).on('mouseover', '.location .navi .this', function(){
-							$('.drop').slideDown(200);
-						});
-					</script>
-					
 					<%--------------- 상품 주문 : 제품 ---------------%>
 					<div class="goods">
 						<%--------------- 상품 주문/제품  : 이미지 ---------------%>
 						<div class="image">
+							<!-- 큰썸네일 -->
 							<div class="thumbnail">
 								<a href="#zoom-layer" class="zoom-layer-open btn-open-layer"
 									id="mainImage"> <img src="${spaVO.photo_detail_b}" width="380"
 									alt="${spaVO.name}" title="${spaVO.name}" class="middle"></a>
 							</div>
+							<!-- 작은썸네일 -->
 							<div class="more-thumbnail">
 								<div class="slide">
 									<div
@@ -1511,12 +1644,68 @@
 											</div>
 											<div class="hashtag">${spaVO.hashtag}</div>
 										</div>
+										
 										<div class="sns">
-											<a class="normal-btn small1 target-sns-share"> <em>공유<img
+											<a class="normal-btn small1 target-sns-share">
+												<em>공유<img
 													class="arrow" src="../../resources/img/etc/bl_arrow.png"
-													alt=""></em>
+													alt="">
+												</em>
 											</a>
+											
+											<div class="sns-share-layer dn">
+												<div class="wrap">
+													<strong>SNS 공유하기</strong>
+													<div>
+														<ul>
+															<li>
+																<a href="https://www.facebook.com/sharer/sharer.php?display=popup&amp;redirect_uri=http%3A%2F%2Fwww.facebook.com&amp;u=https%3A%2F%2Fwww.lush.co.kr%3A443%2Fgoods%2Fgoods_view.php%3FgoodsNo%3D1000001808&amp;t=%ED%83%B1%EA%B8%80%EB%93%9C+%ED%97%A4%EC%96%B4+%ED%8A%B8%EB%A6%AC%ED%8A%B8%EB%A8%BC%ED%8A%B8%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94.+%ED%94%84%EB%A0%88%EC%89%AC+%ED%95%B8%EB%93%9C%EB%A9%94%EC%9D%B4%EB%93%9C+%EC%BD%94%EC%8A%A4%EB%A9%94%ED%8B%B1+%EB%9F%AC%EC%89%AC%EC%BD%94%EB%A6%AC%EC%95%84%EC%9E%85%EB%8B%88%EB%8B%A4." 
+																	data-width="750" data-height="300" data-sns="facebook" class="btn-social-popup">
+																	<img src="../../resources/img/etc/sns_facebook.png"><br>
+																	<span>페이스북</span></a>
+															</li>
+															<li>
+																<a href="https://twitter.com/intent/tweet?text=%ED%83%B1%EA%B8%80%EB%93%9C+%ED%97%A4%EC%96%B4+%ED%8A%B8%EB%A6%AC%ED%8A%B8%EB%A8%BC%ED%8A%B8%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94.+%ED%94%84%EB%A0%88%EC%89%AC+%ED%95%B8%EB%93%9C%EB%A9%94%EC%9D%B4%EB%93%9C+%EC%BD%94%EC%8A%A4%EB%A9%94%ED%8B%B1+%EB%9F%AC%EC%89%AC%EC%BD%94%EB%A6%AC%EC%95%84%EC%9E%85%EB%8B%88%EB%8B%A4.&amp;url=https%3A%2F%2Fwww.lush.co.kr%3A443%2Fgoods%2Fgoods_view.php%3FgoodsNo%3D1000001808" 
+																	data-width="500" data-height="250" data-sns="twitter" class="btn-social-popup">
+																	<img src="../../resources/img/etc/sns_twitter.png"><br>
+																	<span>트위터</span></a>
+															</li>
+															<li>
+																<a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.lush.co.kr%3A443%2Fgoods%2Fgoods_view.php%3FgoodsNo%3D1000001808&amp;description=%5B%EB%9F%AC%EC%89%AC%EC%BD%94%EB%A6%AC%EC%95%84%5D+%ED%83%B1%EA%B8%80%EB%93%9C+%ED%97%A4%EC%96%B4+%ED%8A%B8%EB%A6%AC%ED%8A%B8%EB%A8%BC%ED%8A%B8FRESH+HANDMADE+COSMETIC+LUSH+KOREA&amp;media=https%3A%2F%2Flush.co.kr%3A443%2F%2Fdata%2Fgoods%2F21%2F06%2F26%2F1000001808%2F1000001808_detail_089.jpg" 
+																	data-width="750" data-height="570" data-sns="pinterest" class="btn-social-popup">
+																	<img src="../../resources/img/etc/sns_pinterest.png"><br>
+																	<span>핀터레스트</span></a>
+															</li>
+															<li>
+																<a href="javascript:shareStory();" 
+																id="shareKakaoStoryBtn" data-sns="kakaostory">
+																<img src="../../resources/img/etc/sns_kakaostory.png"><br>
+																<span>카카오스토리</span></a>
+															</li>
+														</ul>
+														
+														<div class="copyurl">
+															<input type="text" value="https://www.lush.co.kr:443/goods/goods_view.php?goodsNo=1000001808" 
+																class="text field-b" style="width:196px;margin-right:8px;margin-left:0;">
+															<button type="button" class="gd_clipboard skinbtn point2" 
+																data-clipboard-text="https://www.lush.co.kr:443/goods/goods_view.php?goodsNo=1000001808" 
+																title="상품주소">
+																<em class="h28">URL복사</em>
+															</button>	
+														</div>
+													</div>
+													<button type="button" class="close target-sns-share" title="닫기">닫기</button>
+												</div>
+											</div>
+											<script>
+												$(document).ready(function(){
+													$('.target-sns-share').click(function(){
+														$('.sns-share-layer').toggleClass("dn");
+													});
+												});
+											</script>
 										</div>
+										
 										<a href="#option_display_area" id="wishBtn"
 											class="top_zzim btn-add-wish"> <em>찜하기</em>
 										</a>
@@ -1536,50 +1725,18 @@
 											Good to Know
 											<span class="toggle_w">
 											<script>
-												$(document).ready(function(){
-													$('.toggle_btn').click(function(){
-															$('.toggle_content').toggle();
-													});
-													$('.toggle_close').click(function(){
-															$('.toggle_content').hide();
-													});
-													$('.sns > a').click(function(){
-															$('.toggle_content').hide();
-													});
-												});
+												
 											</script>
 												<span class="toggle_btn"></span>
-												<div class="toggle_content" style="width: 500px;">
+												<div class="toggle_content" style="width: 500px; display: none;">
 													<a href="#;" class="toggle_close">닫기</a>
 													<div class="inner">
-														<style>
-															.goodToKnow>table>tbody>tr>td {
-																height: 60px;
-																font-size: 13px;
-																font-weight: 600;
-															}
-															
-															.goodToKnow>table>tbody>tr>td>span {
-																font-size: 12px;
-																font-weight: 500;
-															}
-															
-															.goodToKnowImg {
-																text-align: center;
-																width: 92px;
-															}
-															
-															.goodToKnowImg>img {
-																/*width: 55px;*/
-																
-															}
-														</style>
 														<div class="goodToKnow" style="width: 100%;">
 															<table style="width: 100%; border-collapse: collapse;">
 																<tbody>
 																	<tr>
 																		<td class="goodToKnowImg"><img
-																			src="/data/skin/front/howling/img/lush/vegan_92x60.png"
+																			src="../../resources/img/goods/know/vegan.png"
 																			alt="비건(Vegan)"></td>
 																		<td>비건(Vegan)<br> 
 																			<span>동물성 원료를 전혀 포함하지 않은 영국 비건협회 인증된 제품입니다.</span>
@@ -1587,7 +1744,7 @@
 																	</tr>
 																	<tr>
 																		<td class="goodToKnowImg"><img
-																			src="/data/skin/front/howling/img/lush/vegetarian2_92x60.png"
+																			src="../../resources/img/goods/know/vegetarian.png"
 																			alt="베지터리언(Vegetarian)"></td>
 																		<td>베지테리언(Vegetarian)<br> 
 																			<span>우유, 달걀, 꿀을 제외한 동물성 원료를 포함하지 않은 영국 베지테리언 협회 인증 제품입니다.</span>
@@ -1595,7 +1752,7 @@
 																	</tr>
 																	<tr>
 																		<td class="goodToKnowImg"><img
-																			src="/data/skin/front/howling/img/lush/special-suitable_vegan_92x60.png"
+																			src="../../resources/img/goods/know/suitable_vegan.png"
 																			alt="비건/베지터리언에게 적합한 제품(Suitable for Vegans / Suitable for Vegetarian)">
 																		</td>
 																		<td>비건/베지테리언에게 적합한 제품(Suitable for Vegans / Suitable for Vegetarians)<br> 
@@ -1604,7 +1761,7 @@
 																	</tr>
 																	<tr>
 																		<td class="goodToKnowImg"><img
-																			src="/data/skin/front/howling/img/lush/selfpreserving_92x60.png"
+																			src="../../resources/img/goods/know/selfpreserving.png"
 																			alt="셀프-프리저빙(Self-Preserving)"></td>
 																		<td>셀프-프리저빙(Self-Preserving)<br>
 																			<span>자연에서 얻은 원재료로 스스로 보존 가능한 제품입니다.</span>
@@ -1616,6 +1773,19 @@
 													</div>
 												</div>
 											</span>
+											<script>
+												$(document).ready(function(){
+													$('.toggle_btn').click(function(){
+														$('.toggle_content').toggle();
+													});
+													$('.toggle_close').click(function(){
+														$('.toggle_content').hide();
+													});
+													$('.sns > a').click(function(){
+														$('.toggle_content').hide();
+													});
+												});
+											</script>
 										</div>
 
 										<ul>
@@ -1879,26 +2049,41 @@
 				            <div class="ctt">
 				                <div class="txt">
 				                    <h4>이미지 확대보기</h4>
-				                    <p>탱글드 헤어 트리트먼트</p>
+				                    <p>${spaVO.name}</p>
 				                </div>
 				                <div class="view">
 				                    <div class="detail" id="magnifyImage">
-				                        <img src="/data/goods/21/06/26/1000001808/1000001808_magnify_041.jpg" width="500" alt="탱글드 헤어 트리트먼트" title="탱글드 헤어 트리트먼트" class="middle">
+				                        <img src="${spaVO.photo_detail_b}" width="500" alt="${spaVO.name}" title="${spaVO.name}" class="middle">
 				                    </div>
 				                    <div class="list">
 				                        <div class="slide">
 				                            <div class="slider-image-magnify slick-initialized slick-slider slick-vertical">
-				                                <div aria-live="polite" class="slick-list" style="height: 500px;"><div class="slick-track" role="listbox" style="opacity: 1; height: 100px; transform: translate3d(0px, 0px, 0px);"><div class="swiper-slide slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide10" style="width: 0px;"> <a href="javascript:change_image('0','magnify');" tabindex="0"><img src="/data/goods/21/06/26/1000001808/t50_1000001808_magnify_041.jpg" width="68" alt="탱글드 헤어 트리트먼트" title="탱글드 헤어 트리트먼트" class="middle"></a></div></div></div>
+				                                <div aria-live="polite" class="slick-list" style="height: 500px;">
+				                                	<div class="slick-track" role="listbox" style="opacity: 1; height: 100px; transform: translate3d(0px, 0px, 0px);">
+				                                		<div class="swiper-slide slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide10" style="width: 0px;">
+				                                			<a href="javascript:change_image('0','magnify');" tabindex="0">
+				                                				<img src="${spaVO.photo_detail_s}" width="68" alt="${spaVO.name}" title="${spaVO.name}" class="middle">
+                                			</a></div></div></div>
 				                            </div>
 				                        </div>
 				                        <div class="prev slider-image-magnify-prev slick-arrow slick-hidden" title="이전 상품 이미지" aria-disabled="true" tabindex="-1"></div>
 				                        <div class="next slider-image-magnify-next slick-arrow slick-hidden" title="다음 상품 이미지" aria-disabled="true" tabindex="-1"></div>
 				                    </div>
 				                </div>
-				                <button type="button" class="close" title="닫기">닫기</button>
+				                <button type="button" class="close zoom-close" title="닫기">닫기</button>
 				            </div>
 				        </div>
 				    </div>
+				    <script>
+				    	$(document).ready(function(){
+				    		$('.thumbnail').click(function(){
+				    			$('.layer-wrap').toggleClass("dn");
+				    		});
+				    		$('.zoom-close').click(function(){
+				    			$('.layer-wrap').toggleClass("dn");
+				    		})
+				    	});
+				    </script>
 				    
 				    
 					
