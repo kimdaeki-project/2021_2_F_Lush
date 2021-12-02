@@ -1354,15 +1354,14 @@
 		<div id="container">
 			<div id="content">
 
-				<meta property="recopick:title" content="탱글드 헤어 트리트먼트">
-				<meta property="recopick:image"
-					content="../../resources/img/goods/tangled_hair_treatment_detail.jpg">
+			<!-- 	<meta property="recopick:title" content="탱글드 헤어 트리트먼트">
+				<meta property="recopick:image" content="../../resources/img/goods/tangled_hair_treatment_detail.jpg">
 				<meta property="recopick:price" content="70000.00">
 				<meta property="recopick:price:currency" content="KRW">
 				<meta property="recopick:sale_price" content="70000.00">
-				<meta property="recopick:sale_price:currency" content="KRW">
+				<meta property="recopick:sale_price:currency" content="KRW"> -->
 
-				<div class="groobeeProductDetail" style="display: none;">
+				<%-- <div class="groobeeProductDetail" style="display: none;">
 					<span class="groobeeProductName">"${spaVO.name}"</span> <span
 						class="groobeeProductPrice">70000.00</span> <span
 						class="groobeeProductSalePrice">70000.00</span> <span
@@ -1375,7 +1374,7 @@
 						class="groobeeProductCategoryName">SPA</span> <span
 						class="groobeeProductCategoryName">TREATMENTS</span> <span
 						class="groobeeProductStatus">n</span>
-				</div>
+				</div> --%>
 
 				<%--------------- 상품 주문 ---------------%>
 				<div class="goods-view">
@@ -1389,27 +1388,28 @@
 							<!-- 토글1 -->
 							<div class="navi">
 								<div class="this">
-									<a href="#">LUSH SPA</a>
-									<div>
-										<a href="#">러쉬</a> <a href="#">LUSH SPA</a>
+									<a href="/spa/list">LUSH SPA</a>
+									<div class="drop">
+										<a href="#">러쉬</a>
+										<a href="/spa/list">LUSH SPA</a>
 									</div>
 								</div>
 							</div>
 							<!-- 토글2 -->
 							<div class="navi">
 								<div class="this">
-									<a href="#">SPA</a>
-									<div>
-										<a href="#">SPA</a>
+									<a href="/spa/list">SPA</a>
+									<div class="drop">
+										<a href="/spa/list">SPA</a>
 									</div>
 								</div>
 							</div>
 							<!-- 토글3 -->
 							<div class="navi">
 								<div class="this">
-									<a href="#">TREATMENTS</a>
-									<div>
-										<a href="#">TREATMENTS</a>
+									<a href="/spa/list">TREATMENTS</a>
+									<div class="drop">
+										<a href="/spa/list">TREATMENTS</a>
 									</div>
 								</div>
 							</div>
@@ -1417,14 +1417,20 @@
 						<%-- path end --%>
 					</div>
 					<%-- location end --%>
-
+					
+					<script type="text/javascript">
+						$(document).on('mouseover', '.location .navi .this', function(){
+							$('.drop').slideDown(200);
+						});
+					</script>
+					
 					<%--------------- 상품 주문 : 제품 ---------------%>
 					<div class="goods">
 						<%--------------- 상품 주문/제품  : 이미지 ---------------%>
 						<div class="image">
 							<div class="thumbnail">
 								<a href="#zoom-layer" class="zoom-layer-open btn-open-layer"
-									id="mainImage"> <img src="${spaVO.photo}" width="380"
+									id="mainImage"> <img src="${spaVO.photo_detail_b}" width="380"
 									alt="${spaVO.name}" title="${spaVO.name}" class="middle"></a>
 							</div>
 							<div class="more-thumbnail">
@@ -1441,7 +1447,7 @@
 													style="width: 80px;"> <a
 													href="javascript:change_image('0','detail');" tabindex="0">
 														<img
-														src="../../resources/img/goods/tangled_hair_treatment_detail.jpg"
+														src="${spaVO.photo_detail_s}"
 														width="68" alt="${spaVO.name}" title="${spaVO.name}"
 														class="middle">
 												</a>
@@ -1515,7 +1521,7 @@
 											class="top_zzim btn-add-wish"> <em>찜하기</em>
 										</a>
 									</div>
-
+									
 									<%--------------- 상품 주문/제품/제품정보  : 후기, good to know, 판매가 ---------------%>
 									<div class="item">
 										<div>
@@ -1529,6 +1535,19 @@
 										<div class="mt10">
 											Good to Know
 											<span class="toggle_w">
+											<script>
+												$(document).ready(function(){
+													$('.toggle_btn').click(function(){
+															$('.toggle_content').toggle();
+													});
+													$('.toggle_close').click(function(){
+															$('.toggle_content').hide();
+													});
+													$('.sns > a').click(function(){
+															$('.toggle_content').hide();
+													});
+												});
+											</script>
 												<span class="toggle_btn"></span>
 												<div class="toggle_content" style="width: 500px;">
 													<a href="#;" class="toggle_close">닫기</a>

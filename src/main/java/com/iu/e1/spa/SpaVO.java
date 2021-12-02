@@ -14,7 +14,14 @@ public class SpaVO {
 	private String voucherNumber;
 	private Date bookingDate;
 	private String photo;
+	private String photo_detail_b;
+	private String photo_detail_s;
 	private String hashtag;
+	private String soldOut;
+	private String topCategory;
+	private String firstSubCategory;
+	private String secondSubCategory;
+	private String thirdSubCategory;
 	private String details;
 	private String review;
 	private String guide;
