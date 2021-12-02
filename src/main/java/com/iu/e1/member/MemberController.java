@@ -26,7 +26,7 @@ public class MemberController {
 	public ModelAndView find_id(MemberVO memberVO, ModelAndView mv) throws Exception {
 		MemberVO vo = memberService.find_id(memberVO);
 		mv.addObject("memberVO", vo);
-		System.out.println(vo.getName());
+		/* System.out.println(vo.getName()); */
 		mv.setViewName("member/find_id2");
 		return mv;
 	}
@@ -50,9 +50,22 @@ public class MemberController {
 	}
 
 	@GetMapping("pwReset")
-	public String pwReset(String name) throws Exception {
-		System.out.println(name);
-		return "member/pwReset";
+	public ModelAndView pwReset(String name, ModelAndView mv) throws Exception {
+		System.out.println(name + "1234");
+		mv.addObject("name", name);
+		mv.setViewName("member/pwReset");
+		return mv;
+	}
+
+	@PostMapping("pwReset")
+	public String pwReset(MemberVO memberVO) throws Exception {
+		int result = memberService.pwReset(memberVO);
+		if (result == 0) {
+			System.out.println("오류");
+		} else {
+			System.out.println("수정성공");
+		}
+		return "redirect:../";
 	}
 
 	@GetMapping("joinFinish")
@@ -70,7 +83,7 @@ public class MemberController {
 	@PostMapping("memberJoin2")
 	public String setInsert(MemberVO memberVO) throws Exception {
 		int result = memberService.setInsert(memberVO);
-		return "redirect:../";
+		return "member/joinFinish";
 	}
 
 	// check page
@@ -109,38 +122,109 @@ public class MemberController {
 		return "redirect:../";
 	}
 
-	// 회원탈퇴
-	@GetMapping("memberDelete")
-	public String setDelete(MemberVO memberVO) throws Exception {
-		int result = memberService.setDelete(memberVO);
-		return "redirect:../";
-	}
-
 	// MyPage
 	@GetMapping("myPage")
 	public ModelAndView getMyPage(HttpSession session) throws Exception {
-		MemberVO memberVO = (MemberVO) session.getAttribute("member");		
-		System.out.println(memberVO.getName());
+		MemberVO memberVO = (MemberVO) session.getAttribute("member");
+		/* System.out.println(memberVO.getName()); */
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("memberVO", memberVO);
 		mv.setViewName("member/myPage");
 		return mv;
 	}
 
-	// 회원정보업데이트
-	@GetMapping("memberUpdate")
-	public String setUpdate(MemberVO memberVO, Model model) throws Exception {
-		memberVO = memberService.getSelectOne(memberVO);
-		model.addAttribute("memberVO", memberVO);
-		return "member/memberUpdate";
+	// 회원정보 업데이트 전 본인확인
+	@GetMapping("mypage_updateCheck")
+	public ModelAndView mypage_updateCheck(HttpSession session) throws Exception {
+		MemberVO memberVO = (MemberVO) session.getAttribute("member");
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("memberVO", memberVO);
+		mv.setViewName("member/mypage_updateCheck");
+		return mv;
+	}
+
+	@PostMapping("mypage_updateCheck")
+	public ModelAndView mypage_updateCheck(MemberVO memberVO, ModelAndView mv) throws Exception {
+		MemberVO vo = memberService.checkMember(memberVO);
+		String id1 = memberVO.getId();
+
+		String message = "";
+		String url = "";
+
+		if (vo == null) {
+			message = "아이디와 비밀번호가 일지하지 않습니다";
+			url = "/member/mypage_updateCheck";
+			System.out.println("실패");
+		} else {
+			String id2 = vo.getId();
+
+			if (id1.equals(id2)) {
+				message = "본인 인증에 성공하였습니다";
+				url = "/member/mypage_updatePage";
+				System.out.println("성공");
+			}
+		}
+
+		mv.addObject("message", message);
+		mv.addObject("url", url);
+		mv.setViewName("./member/extra");
+
+		return mv;
 	}
 
 	// 회원정보업데이트
-	@PostMapping("memberUpdate")
-	public String setUpdate(MemberVO memberVO, HttpSession session) throws Exception {
+	@GetMapping("mypage_updatePage")
+	public String mypage_updatePage(MemberVO memberVO, Model model, HttpSession session) throws Exception {
+		MemberVO vo = (MemberVO) session.getAttribute("member");
+		memberVO = memberService.getSelectOne(vo);
+		System.out.println(memberVO.getId());
+		model.addAttribute("memberVO", memberVO);
+
+		return "member/mypage_updatePage";
+	}
+
+	// 회원정보업데이트
+	@PostMapping("mypage_updatePage")
+	public String mypage_updatePage(MemberVO memberVO, HttpSession session) throws Exception {
+		System.out.println(memberVO.getId());
 		int result = memberService.setUpdate(memberVO);
+		System.out.println(result);
 		session.invalidate();
 		return "redirect: ../../../";
+	}
+
+	// 회원탈퇴
+	@GetMapping("mypage_memberDelete")
+	public String mypage_memberDelete(MemberVO memberVO) throws Exception {
+		
+		
+		return "member/mypage_memberDelete";
+	}
+	
+	@PostMapping("mypage_memberDelete")
+	public ModelAndView mypage_memberDelete(MemberVO memberVO, ModelAndView mv, HttpSession session) throws Exception{
+		MemberVO vo1 = (MemberVO) session.getAttribute("member");		
+		String a = vo1.getPw();
+				
+		MemberVO vo2 = memberService.getSelectOne(memberVO);
+		String b = vo2.getPw();
+		
+		String message = "";
+		String url = "";
+		
+		if(a.equals(b)) {
+			message = "탈퇴완료되었습니다";
+			url = "../../../";
+		}else {
+			message = "비밀번호가 일치하지 않습니다";
+			url = "./member/mypage_memberDelete";
+		}
+		
+		mv.addObject("message", message);
+		mv.addObject("url", url);
+		mv.setViewName("./extra");
+		
+		return mv;
 	}
 
 }

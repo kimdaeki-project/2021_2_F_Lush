@@ -4,6 +4,12 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface MemberRepository {
+	// 회원정보변경을 위한 본인 확인
+	public MemberVO checkMember(MemberVO memberVO) throws Exception;
+	
+	// 비밀번호 리셋
+	public int pwReset(MemberVO memberVO) throws Exception;
+	
 	//비밀번호 찾기
 	public MemberVO find_pw(MemberVO memberVO) throws Exception;
 	

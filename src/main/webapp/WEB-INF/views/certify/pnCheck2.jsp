@@ -89,7 +89,7 @@
 				window.location.href = './pnCheck'; 				
 			} else {
 				alert("인증이 완료되었습니다.")
-				opener.parent.location='../member/joinFinish';
+				opener.parent.location='../member/memberJoin2';
 				window.close();
 				
 			}

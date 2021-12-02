@@ -157,7 +157,7 @@
 				</div>
 				<div class="btn">
 					<!-- <a href="#" class="skinbtn default jo-home" id="btnHome"><em>홈으로</em></a> -->
-					<a href="#" class="btnicon btn_bk btn_l w280 jo-login"
+					<a href="./member/memberLogin" class="btnicon btn_bk btn_l w280 jo-login"
 						id="btnLogin"><em>로그인 하기</em></a>
 				</div>
 

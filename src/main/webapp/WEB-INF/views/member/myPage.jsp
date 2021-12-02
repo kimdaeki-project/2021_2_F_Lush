@@ -711,8 +711,8 @@ div .no-data {
 						</ul>
 						<h3>회원정보</h3>
 						<ul>
-							<li><a href="../mypage/my_page_password.php">회원정보 변경</a></li>
-							<li><a href="../mypage/hack_out.php">회원 탈퇴</a></li>
+							<li><a href="/mypage_updateCheck">회원정보 변경</a></li>
+							<li><a href="/mypage_memberDelete">회원 탈퇴</a></li>
 							<li><a href="../mypage/shipping.php">배송지 관리</a></li>
 						</ul>
 						<h3 class="my-review">

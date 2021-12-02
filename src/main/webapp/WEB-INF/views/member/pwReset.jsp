@@ -176,17 +176,26 @@ button em {
 
 					<fieldset>
 						<legend>비밀번호 찾기 폼</legend>
-						<h3>비밀번호 변경</h3>						
-						<div style="display: none;" id="a"></div>
+						<h3>비밀번호 변경</h3>
+						<div id="a">${name}</div>
 						<p class="guide">새로운 비밀번호를 등록해 주세요.</p>
 
 						<div class="new-pw">
 							<div class="input-pw">
 								<div class="txt-field" style="width: 309px;">
-									<input type="password" class="text input-pw" id="passwordMsg"
-										name="pw" autocomplete="off"
-										placeholder="영문대/소문자, 숫자, 특수문자 중 2가지 이상 조합하세요"
-										data-min-length="10" data-max-length="16">
+									<form action="./pwReset" method="post">
+										<input type="text" style="display: none;" name="name" value="${name}">
+										<input type="password" class="text input-pw" id="passwordMsg"
+											name="pw" autocomplete="off"
+											placeholder="영문대/소문자, 숫자, 특수문자 중 2가지 이상 조합하세요"
+											data-min-length="10" data-max-length="16">
+										<div class="btn">
+											<button class="skinbtn point2 fp-confirm" type="submit"
+												id="btnConfirm">
+												<em>확인</em>
+											</button>
+										</div>										
+									</form>									
 								</div>
 							</div>
 							<!--  <div class="input-pw">
@@ -196,7 +205,7 @@ button em {
                     </div> -->
 						</div>
 						<div class="btn">
-							<button class="skinbtn point2 fp-confirm" type="button"
+							<button class="skinbtn point2 fp-confirm" type="submit"
 								id="btnConfirm">
 								<em>확인</em>
 							</button>
@@ -211,8 +220,5 @@ button em {
 
 	</div>
 	<c:import url="../main/mainFooter.jsp"></c:import>
-	<script type="text/javascript">
-    	console.log($('#a').text());
-    </script>
 </body>
 </html>

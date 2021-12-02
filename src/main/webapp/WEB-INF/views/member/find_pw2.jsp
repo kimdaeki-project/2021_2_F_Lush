@@ -263,14 +263,18 @@ caption, legend {
 		
 		$(".radio").click(function(){
 			const a = $(this).val();
+			
 			$(".skinbtn").click(function(){
 				const id = $('#ppwCheck').text();
 				console.log(id);
 				if(a == "authCellphone"){
 					window.open('../certify/pwCheck', 'check', 'status=no, height=400, width=600, left=600, top=400');					
 					 
-				}	
-			})								
+				}else{
+					alert("휴대폰 본인인증만 가능합니다");
+				}				
+				
+			})							
 		});
 	
 		/* $("input[name='authType']:checked").each(function(){

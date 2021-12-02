@@ -159,18 +159,17 @@ a {
     padding: 0 5px;
 }
 
-/* #header .gnbwrap .gnb .nav li.mypage div {
-    display: none;
+#header .gnbwrap .gnb .nav li.mypage div {
     position: absolute;
     top: 38px;
     right: 0;
     width: 220px;
     padding: 0;
     background: #FFFFFF;
-    border: 1px solid #f5f5f5;
+    /* border: 1px solid #f5f5f5; */
     border-bottom: 0;
     z-index: 1;
-} */
+}  
 
 ul, li {
     margin: 0;
@@ -189,15 +188,15 @@ ul, li {
 }
 
 .menu li {
-	border: 2px solid white;
-	width: 100px;
+	
+	width: 220px;
 }
 
 ul:hover .menu {
-	padding-top: 15px;
+	
 	display: block;
 	position: absolute;
-	width: 100px;
+	width: 220px;
 	background: white;
 	text-align: center;
 }
@@ -205,6 +204,8 @@ ul:hover .menu {
 .lim:hover {
 	background: black;
 }
+
+
 </style>
 </head>
 
@@ -239,13 +240,13 @@ ul:hover .menu {
 									<ul class="menu">
 										<c:choose>
 											<c:when test="${not empty member}">
-												<li class="lim"><a href="/member/memberLogout">로그아웃</a></li>
+												<li class="lim lim1"><a href="/member/memberLogout">로그아웃</a></li>
 												<li class="lim"><a href="/member/myPage">마이페이지</a></li>
 												<li class="lim"><a href="#">스카우트</a></li>
 												<li class="lim"><a href="/member/myPage">고객센터</a></li>
 											</c:when>
 											<c:otherwise>
-												<li class="lim"><a href="/member/memberLogin">로그인</a></li>
+												<li class="lim lim1"><a href="/member/memberLogin">로그인</a></li>
 												<li class="lim"><a href="/member/joinCheck">회원가입</a></li>
 												<li class="lim"><a href="#">스카우트</a></li>
 												<li class="lim"><a href="/member/myPage">고객센터</a></li>

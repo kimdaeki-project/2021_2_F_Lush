@@ -91,16 +91,20 @@
 				alert("인증번호가 일치하지 않습니다.\n재인증 부탁드립니다.")
 				window.location.href = './pwCheck'; 				
 			} else {
-				alert("인증이 완료되었습니다.")
-				$.ajax({
-					type: "GET",
-					url: "/member/pwReset",
-					data: {name:name},
-					success: function(result){
-						console.log(result);
-					}
-				})
+				alert("인증이 완료되었습니다.");
+				opener.parent.location = '../member/pwReset?name='+name;
 				window.close();
+				/* $.ajax({
+					type : "GET",
+					url : "../member/pwReset",
+					data : {
+						name : name
+					},
+					success : function(result){
+						opener.parent.location='../member/pwReset';
+						window.close();			
+					}
+				});  */											
 				
 			}
 		});

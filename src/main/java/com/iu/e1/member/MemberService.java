@@ -7,7 +7,17 @@ import org.springframework.stereotype.Service;
 public class MemberService {
 	@Autowired
 	private MemberRepository memberRepository;
-
+	
+	// 회원정보변경을 위한 본인 확인
+	public MemberVO checkMember(MemberVO memberVO) throws Exception{
+		return memberRepository.checkMember(memberVO);
+	}
+	
+	// 비밀번호 리셋
+	public int pwReset(MemberVO memberVO) throws Exception{
+		return memberRepository.pwReset(memberVO);
+	}
+	
 	// 비밀번호 찾기
 	public MemberVO find_pw(MemberVO memberVO) throws Exception {
 		return memberRepository.find_pw(memberVO);
