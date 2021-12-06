@@ -31,5 +31,6 @@ public interface MemberRepository {
    // 회원정보 가져오기
    public MemberVO getSelectOne(MemberVO memberVO) throws Exception;
       
-   
+// 회원정보 가져오기
+   public MemberVO getSelectOne2(MemberVO memberVO) throws Exception;
 }

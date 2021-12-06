@@ -47,6 +47,11 @@ public class MemberService {
 	public MemberVO getSelectOne(MemberVO memberVO) throws Exception {
 		return memberRepository.getSelectOne(memberVO);
 	}
+	
+	// 삭제를 위한 비교를 위해 회원 정보 가져오기
+	public MemberVO getSelectOne2(MemberVO memberVO) throws Exception {
+		return memberRepository.getSelectOne2(memberVO);
+	}
 
 	// 로그인
 	public MemberVO getLoign(MemberVO memberVO) throws Exception {

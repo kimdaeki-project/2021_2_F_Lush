@@ -632,6 +632,216 @@ element.style {
 button em {
 	font-family: "notokrR";
 }
+
+.section .section {
+    margin: 0;
+}
+
+.section-header {
+    margin: 0 0 10px 0;
+    position: relative;
+}
+
+.section-header .h3-1 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.textbox {
+    border: 1px solid #ccc;
+    padding: 16px;
+    letter-spacing: -0.5px;
+    font-size: 14px;
+    font-family: "notokrR",Malgun Gothic,"맑은 고딕",AppleGothic,Dotum,"돋움",sans-serif;
+}
+
+.section .section + .section {
+    margin: 30px 0;
+}
+
+.section-header {
+    margin: 0 0 10px 0;
+    position: relative;
+}
+
+.section-header .h3-1 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.table1 > table {
+    width: 100%;
+    border-top: 1px solid #000;
+}
+table, th, td {
+    margin: 0;
+    padding: 0;
+    border-spacing: 0;
+    border: 0;
+    border-collapse: collapse;
+    vertical-align: middle;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.table1 > table > tbody > tr > th {
+    background: #f9f9f9;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 10px 16px;
+    color: #777;
+    font-weight: normal;
+}
+.ta-l {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.txt-field.hs {
+    height: 38px;
+}
+
+.txt-field {
+    position: relative;    
+    padding: 0 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+}
+
+.txt-field.hs .text {
+    width: 100%;
+    height: 36px;
+    padding: 0;
+    border: 1px solid #fff;
+    color: #333;
+    line-height: 36px;
+}
+
+input.text, input.password, input.edit {
+    padding: 0 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+input, select {
+    outline: none;
+    font-family: "notokrR",Malgun Gothic,'맑은 고딕',Helvetica,AppleGothic,dotum,'돋움',sans-serif;
+    color: #717171;
+}
+
+.check-list .row {
+    overflow: hidden;
+}
+
+.col3 .col { 
+	float:left;
+    width: 33.3%;
+}
+.check-list .check-item {    
+    width: 49% !important;
+    font-family: 'notokrR';
+}
+
+span.form-element {
+    display: inline-block;
+}
+.form-element {
+    position: relative;
+}
+
+.check-list .check-item input[type=checkbox] {
+    vertical-align: middle;
+    margin: 0 4px 0 0;
+}
+.form-element input {
+    position: absolute;
+    top: 5px;
+    left: 1px;
+    z-index: -1;
+}
+input.checkbox {
+    width: 13px;
+    height: 13px; 
+}
+
+.form-element label.check-s {
+    min-width: 13px;
+    padding: 0 0 0 22px; 
+}
+
+.form-element label.a {
+    min-width: 13px;
+    padding: 0 0 0 52px; 
+}
+
+.form-element label {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;    
+    min-height: 20px;    
+}
+
+label {
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.col3 .col {
+    float: left; 
+}
+.check-list .check-item {    
+    width: 49% !important;
+    font-family: 'notokrR';
+}
+
+.check-list .check-item + .check-item input[type=checkbox] {
+    margin: 0 0 0 30px;
+}
+
+input.checkbox {
+    width: 13px;
+    height: 13px;
+    vertical-align: top;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+.table1 > table > tbody > tr > th~td {
+    padding: 10px;
+}
+.table1 > table > tbody > tr > td {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.check-list .check-item + .check-item input[type=checkbox] {
+    margin: 0 0 0 30px;
+}
+
+.textarea textarea { 
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid #ccc;
+    color: #333;
+}
+.w100p {
+    width: 100%;
+}
 </style>
 </head>
 <body>
@@ -704,6 +914,169 @@ button em {
 			</div>
 		</div>
 
+		<div id="content">
+			<div class="contents-inner mypage">
+				<div class="section">
+					<div class="section-header type1">
+						<h2 class="h2">회원탈퇴</h2>
+					</div>
+					<form id="formHackOut" name="formHackOut"
+						action="./mypage_memberDelete" method="post"
+						novalidate="novalidate">
+						<input type="hidden" name="mode" value="hackOut"> <input
+							type="hidden" name="snsType" value="">
+						<div class="section-body">
+							<div class="section">
+								<div class="section-header">
+									<h3 class="h3-1">01.회원탈퇴 안내</h3>
+								</div>
+								<div class="section-body">
+									<div class="textbox">
+										러쉬코리아 탈퇴안내<br> <br> 불편하셨던 점이나 불만사항을 알려주시면 적극 반영해서
+										고객님의 불편함을 해결해 드리도록 노력하겠습니다.<br> <br> ■ 아울러 회원 탈퇴시의
+										아래 사항을 숙지하시기 바랍니다.<br> 1. 회원 탈퇴 시 회원님의 정보는 상품 반품 및 A/S를
+										위해 전자상거래 등에서의 소비자 보호에 관한 법률에 의거한 <br> 고객정보 보호정책에따라 관리
+										됩니다.<br> 2. 탈퇴 시 회원님께서 보유하셨던 데이터는 삭제 됩니다
+									</div>
+								</div>
+							</div>
+							<div class="section">
+								<div class="section-header">
+									<h3 class="h3-1">02.회원탈퇴 하기</h3>
+								</div>
+								<div class="section-body">
+									<div class="table1">
+										<table>
+											<colgroup>
+												<col style="width: 150px;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th class="ta-l">비밀번호</th>
+													<td>
+														<div class="txt-field hs" style="width: 200px;">
+															<input type="password" class="text" name="pw">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th class="ta-l">탈퇴사유</th>
+													<td>
+														<div class="check-list col3">
+															<div class="row">
+																<span class="check-item col"><span
+																	class="form-element"><input type="checkbox"
+																		id="reasonCd01003001" name="reasonCd[]"
+																		class="checkbox" value="01003001"><label
+																		for="reasonCd01003001" class="check-s">고객서비스(상담,포장
+																			등) 불만</label></span></span><span class="check-item col"><span
+																	class="form-element"><input type="checkbox"
+																		id="reasonCd01003002" name="reasonCd[]"
+																		class="checkbox" value="01003002"><label
+																		for="reasonCd01003002" class="check-s a">배송불만</label></span></span>
+															</div>
+															<div class="row">
+																<span class="check-item col"><span
+																	class="form-element"><input type="checkbox"
+																		id="reasonCd01003003" name="reasonCd[]"
+																		class="checkbox" value="01003003"><label
+																		for="reasonCd01003003" class="check-s">교환/환불/반품
+																			불만</label></span></span><span class="check-item col"><span
+																	class="form-element"><input type="checkbox"
+																		id="reasonCd01003004" name="reasonCd[]"
+																		class="checkbox" value="01003004"><label
+																		for="reasonCd01003004" class="check-s a">방문 빈도가
+																			낮음</label></span></span>
+															</div>
+															<div class="row">
+																<span class="check-item col"><span
+																	class="form-element"><input type="checkbox"
+																		id="reasonCd01003005" name="reasonCd[]"
+																		class="checkbox" value="01003005"><label
+																		for="reasonCd01003005" class="check-s">상품가격 불만</label></span></span><span
+																	class="check-item col"><span
+																	class="form-element"><input type="checkbox"
+																		id="reasonCd01003006" name="reasonCd[]"
+																		class="checkbox" value="01003006"><label
+																		for="reasonCd01003006" class="check-s a">개인 정보유출
+																			우려</label></span></span>
+															</div>
+															<div class="row">
+																<span class="check-item col"><span
+																	class="form-element"><input type="checkbox"
+																		id="reasonCd01003007" name="reasonCd[]"
+																		class="checkbox" value="01003007"><label
+																		for="reasonCd01003007" class="check-s">쇼핑몰의
+																			신뢰도 불만</label></span></span>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th class="ta-l">남기실 말씀</th>
+													<td>
+														<div class="textarea">
+															<textarea cols="30" rows="5" class="w100p"
+																name="reasonDesc"></textarea>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+								</div>
+							</div>
+							<div class="btm-btn">
+								<button class="btnicon btn_l btn_wt w280 ho-prev btn-prev"
+									type="button">
+									<em>이전으로</em>
+								</button>
+								<button class="btnicon btn_l btn_bk w280 ho-secession"
+									id="btnHackOut" type="submit">
+									<em>탈퇴</em>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$(document)
+						.ready(
+								function() {
+									$('#formHackOut')
+											.validate(
+													{
+														rules : {
+															memPw : "required",
+															"reasonCd[]" : "required"
+														},
+														messages : {
+															memPw : "비밀번호를 입력해주세요",
+															"reasonCd[]" : "탈퇴사유를 1개 이상 체크하여 주시기바랍니다."
+														},
+														submitHandler : function(
+																form) {
+															var params = $(form)
+																	.serializeArray();
+															var mileage = "￦0";
+															if (confirm("현재 보유중인 회원혜택 : 쿠폰 "
+																	+ "0"
+																	+ "장 / 마일리지"
+																	+ mileage
+																	+ " \n탈퇴 시 보유중인  회원혜택은 모두 삭제됩니다. 정말로 탈퇴하시곘습니까?")) {
+																form.action = '../mypage/hack_out_ps.php';
+																form.target = 'ifrmProcess';
+																form.submit();
+															}
+														}
+													});
+								});
+			</script>
 		</div>
+
+	</div>
 </body>
 </html>

@@ -206,7 +206,7 @@ public class MemberController {
 		MemberVO vo1 = (MemberVO) session.getAttribute("member");		
 		String a = vo1.getPw();
 				
-		MemberVO vo2 = memberService.getSelectOne(memberVO);
+		MemberVO vo2 = memberService.getSelectOne2(memberVO);		
 		String b = vo2.getPw();
 		
 		String message = "";
@@ -215,6 +215,7 @@ public class MemberController {
 		if(a.equals(b)) {
 			message = "탈퇴완료되었습니다";
 			url = "../../../";
+			System.out.println("성공");
 		}else {
 			message = "비밀번호가 일치하지 않습니다";
 			url = "./member/mypage_memberDelete";
@@ -222,8 +223,8 @@ public class MemberController {
 		
 		mv.addObject("message", message);
 		mv.addObject("url", url);
-		mv.setViewName("./extra");
-		
+		mv.setViewName("member/extra");
+		session.invalidate();
 		return mv;
 	}
 
