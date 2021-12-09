@@ -105,14 +105,32 @@ public class MemberController {
 
 	// 로그인
 	@PostMapping("memberLogin")
-	public String getLogin(MemberVO memberVO, HttpSession httpSession) throws Exception {
+	public ModelAndView getLogin(MemberVO memberVO, HttpSession httpSession) throws Exception {
 		memberVO = memberService.getLoign(memberVO);
-
+		ModelAndView mv = new ModelAndView();
+		String message = "";
+		String url = "";
+		
 		if (memberVO != null) {
+			
+			message = "로그인 완료 되었습니다";
+			url = "../";
 			httpSession.setAttribute("member", memberVO);
+			System.out.println("성공");
+						
+		} else {
+			
+			message = "아이디와 비밀번호가 일지하지 않습니다";
+			url = "./memberLogin";			
+			System.out.println("실패");
+			
 		}
 
-		return "redirect:../";
+		mv.addObject("message", message);
+		mv.addObject("url", url);
+		mv.setViewName("./member/extra");
+
+		return mv;
 	}
 
 	// 로그아웃

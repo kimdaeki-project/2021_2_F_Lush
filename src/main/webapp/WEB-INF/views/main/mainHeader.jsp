@@ -229,7 +229,7 @@ ul:hover .menu {
 						<ul class="nav">
 							<li><a href="#" class="openMask" viewpop=".pop_w01"><img
 									src="https://lush.co.kr/data/skin/front/howling/_msc/images/header/icon_top_search.png"></a></li>
-							<li><a href="../order/cart.php"><img
+							<li><a href="/cart/cartPage"><img
 									src="https://lush.co.kr/data/skin/front/howling/_msc/images/header/icon_top_cart.png">
 									<span>0</span></a></li>
 							<li class="mypage"><a href="#"> <img

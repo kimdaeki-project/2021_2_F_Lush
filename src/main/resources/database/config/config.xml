@@ -15,6 +15,7 @@
   		<typeAlias type="com.iu.e1.inquiry.InquiryVO" alias="InquiryVO"/>
   		<typeAlias type="com.iu.e1.qna.QnaVO" alias="QnaVO"/>
   		<typeAlias type="com.iu.e1.shopInfo.ShopInfoVO" alias="ShopInfoVO"/>
+  		<typeAlias type="com.iu.e1.cart.CartVO" alias="CartVO"/>
   		<typeAlias type="java.lang.String" alias="String"/>
   		
   	</typeAliases>
