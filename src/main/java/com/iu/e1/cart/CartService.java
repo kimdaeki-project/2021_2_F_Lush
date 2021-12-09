@@ -1,7 +1,11 @@
 package com.iu.e1.cart;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.iu.e1.member.MemberVO;
 
 @Service
 public class CartService {
@@ -16,7 +20,7 @@ public class CartService {
 		return cartRepository.setDelete(cartVO);
 	}
 	
-	public CartVO getSelect(CartVO cartVO) throws Exception{
-		return cartRepository.getSelete(cartVO);
+	public List<CartVO> getSelect(MemberVO memberVO) throws Exception{
+		return cartRepository.getSelect(memberVO);
 	}
 }

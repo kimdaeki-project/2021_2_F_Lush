@@ -1,6 +1,10 @@
 package com.iu.e1.cart;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
+
+import com.iu.e1.member.MemberVO;
 
 @Mapper
 public interface CartRepository {
@@ -11,5 +15,5 @@ public interface CartRepository {
 	public int setDelete(CartVO cartVO) throws Exception;
 	
 	// 장바구니 정보 가져오기
-	public CartVO getSelete(CartVO cartVO) throws Exception;
+	public List<CartVO> getSelect(MemberVO memberVO) throws Exception;
 }
