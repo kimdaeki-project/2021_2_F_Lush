@@ -610,6 +610,31 @@
 		    display: none !important;
 		}
 		
+		.board-paging02 .pagination {
+		    padding-top: 40px;
+		}
+		
+		.pagination {
+		    padding: 20px 0 0;
+		    text-align: center;
+		}
+		
+		.board-paging02 .pagination .active {
+		    border: 0;
+		}
+		
+		.pagination .active {
+		    border: 1px solid #fff;
+		    text-decoration: underline;
+		    color: #3e3d3c;
+		}
+		
+		.pagination li {
+		    display: inline-block;
+		    border: 1px solid #fff;
+		    margin: 0 2px;
+		}
+		
 		
 		
 		
