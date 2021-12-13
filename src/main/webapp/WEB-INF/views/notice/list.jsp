@@ -525,9 +525,9 @@ img {
 					<table class="table-set">
 						<thead>
 							<tr>
-								<th>번호</th>
-								<th>제목</th>
-								<th>날짜</th>								
+								<th style="width: 150px;">번호</th>
+								<th style="width: 670px;">제목</th>
+								<th style="width: 160px;">날짜</th>								
 							</tr>
 						</thead>
 						<tbody>

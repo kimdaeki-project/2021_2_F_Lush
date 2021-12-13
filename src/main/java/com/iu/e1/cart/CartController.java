@@ -18,6 +18,11 @@ import com.iu.e1.member.MemberVO;
 public class CartController {
 	@Autowired
 	private CartService cartService;
+	
+	@GetMapping("pay")
+	public String pay() throws Exception{
+		return "./cart/pay";
+	}
 
 	@GetMapping("cartPage")
 	public ModelAndView getSelect(CartVO cartVO, HttpSession session) throws Exception {

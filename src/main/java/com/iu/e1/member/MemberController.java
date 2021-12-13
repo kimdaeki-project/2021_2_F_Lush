@@ -16,6 +16,15 @@ import org.springframework.web.servlet.ModelAndView;
 public class MemberController {
 	@Autowired
 	private MemberService memberService;
+	
+	@GetMapping("orderPage")
+	public ModelAndView orderPage(HttpSession session) throws Exception{
+		ModelAndView mv = new ModelAndView();
+		MemberVO memberVO = (MemberVO) session.getAttribute("member"); // session의 memberVO를 가져오기		
+		mv.addObject("memberVO", memberVO);
+		mv.setViewName("member/orderPage");
+		return mv;
+	}
 
 	@GetMapping("find_id")
 	public String find_id() throws Exception {

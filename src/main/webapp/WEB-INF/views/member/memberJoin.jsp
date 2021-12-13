@@ -24,6 +24,10 @@
 	src: url('/resources/fonts/HelveticaNeue-Heavy.otf') format('opentype');
 }
 
+input[type=checkbox]{
+	zoom : 1.2;
+}
+
 #container {
 	display: block;
 	height: 100%;
@@ -901,9 +905,9 @@ thead {
 		$("#allAgree").click(function(){
 			console.log('check');
 			$("#termsAgree1").prop("checked", $("#allAgree").prop("checked"));
-			$("#termsAgree2").prop("checked", $("#allAgree").prop("checked"));
-			$("#termsAgree3").prop("checked", $("#allAgree").prop("checked"));
-			$("#privateApprovalOption_23").prop("checked", $("#allAgree").prop("checked"));
+			$("#termsAgree2").prop("checked");
+			$("#termsAgree3").prop("checked");
+			$("#privateApprovalOption_23").prop("checked");
 		});
 		
 		$("#privateApprovalOption_23").click(function(){
@@ -940,7 +944,7 @@ thead {
 				if(!$(".cellPhone").prop("checked")){
 					alert("본인인증 방법을 선택해주세요.");
 				}else{
-					location.href = "./memberJoin2";
+					window.open('../certify/pnCheck', 'check', 'status=no, height=400, width=600, left=600, top=400');
 				}
 			}else{
 				console.log("a");
@@ -954,9 +958,7 @@ thead {
 					 $('p.msg').removeClass('dn').find('span').text(r + "을 체크해주세요.");
 				}
 			}		
-		});
-		
-		
+		});		
 	</script>
 </body>
 </html>

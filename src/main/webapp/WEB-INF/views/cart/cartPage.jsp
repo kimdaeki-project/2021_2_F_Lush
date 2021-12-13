@@ -427,6 +427,7 @@ button {
 	font-family: "notokrM";
 	padding-left: 8px;
 }
+.count
 </style>
 </head>
 <body>
@@ -470,18 +471,7 @@ button {
 							<h3 class="tit-supplier">제품</h3>
 
 
-							<div class="groobeeCartList" style="display: none;">
-								<a href="../goods/goods_view.php?goodsNo=9"
-									class="groobeeProductA"></a> <span class="groobeeProductName">씨
-									베지터블</span> <span class="groobeeProductCategory">001002001</span> <span
-									class="groobeeProductCount">1</span> <span
-									class="groobeeProductAmount"> ￦10,000 </span> <span
-									class="groobeeProductPrice">10000.00</span> <span
-									class="groobeeProductSalePrice">10000</span> <span
-									class="groobeeProductImage"><img
-									src="/data/goods/11/01/19/9/9_list_083.jpg" width="40"
-									alt="씨 베지터블" title="씨 베지터블" class="middle"></span>
-							</div>
+							
 							<table>
 								<thead>
 									<c:choose>
@@ -573,7 +563,7 @@ button {
 
 													<td rowspan="2" class="ta-c"><span class="c-gray">
 															<span style="display: none;">비회원 및 직원용 배송비<br></span>
-															￦2,500															
+															￦2,500
 													</span></td>
 													<tr class="op">
 														<td>
@@ -599,28 +589,28 @@ button {
 					<div class="price-box">
 						<c:choose>
 							<c:when test="${memberVO != null}">
-								
-									<div>
-										<p>
-											<span class="detail"><em class="tit">총 <em
-													id="totalGoodsCnt">${pamount}</em> 개의 금액
-											</em> ￦<strong id="totalGoodsPrice">${pprice}</strong></span> <span
-												id="deliveryCalculateNone"><img
-												src="https://www.lush.co.kr/data/skin/front/howling/img/icon/plus_new.png"
-												alt="더하기"><em class="tit">배송비</em> ￦<strong
-												id="totalDeliveryCharge">2,500</strong></span> <span class="total"><img
-												src="https://www.lush.co.kr/data/skin/front/howling/img/icon/total_new.png"
-												alt="합계"><em class="tit">총 주문금액</em>￦<strong
-												id="totalSettlePrice">${pprice}</strong> </span>
-										</p>
-										<div class="add_currency" style="display: none;">
-											<em id="totalSettlePriceAdd"></em>
-										</div>
 
-										<p></p>
-										<span id="deliveryChargeText"></span>
+								<div>
+									<p>
+										<span class="detail"><em class="tit">총 <em
+												id="totalGoodsCnt">${pamount}</em> 개의 금액
+										</em> ￦<strong id="totalGoodsPrice">${pprice}</strong></span> <span
+											id="deliveryCalculateNone"><img
+											src="https://www.lush.co.kr/data/skin/front/howling/img/icon/plus_new.png"
+											alt="더하기"><em class="tit">배송비</em> ￦<strong
+											id="totalDeliveryCharge">2,500</strong></span> <span class="total"><img
+											src="https://www.lush.co.kr/data/skin/front/howling/img/icon/total_new.png"
+											alt="합계"><em class="tit">총 주문금액</em>￦<strong
+											id="totalSettlePrice">${pprice}</strong> </span>
+									</p>
+									<div class="add_currency" style="display: none;">
+										<em id="totalSettlePriceAdd"></em>
 									</div>
-								
+
+									<p></p>
+									<span id="deliveryChargeText"></span>
+								</div>
+
 							</c:when>
 							<c:otherwise>
 								<div>
@@ -659,7 +649,7 @@ button {
 								href="https://lush.co.kr:443/goods/goods_list.php?cateCd=001002001"
 								class="btnicon btn_l btn_wt w280">쇼핑 계속하기</a>
 							<button type="button" class="btnicon btn_l btn_bk w280"
-								onclick="cart_process('orderSelect');">
+								id="pbutton">
 								<em>주문하기</em>
 							</button>
 
@@ -732,7 +722,7 @@ button {
 																	src="/data/goods/20/08/36/1000001312/1000001312_list_06.jpg"
 																	width="40" alt="${spa.ps_name}" title="${spa.ps_name}"
 																	class="middle"></a></span>
-															
+
 														</div>
 													</td>
 													<td class="ta-c count this-product">
@@ -771,7 +761,7 @@ button {
 														<p class="add_currency"></p></td>
 													<td rowspan="2" class="ta-c"><span class="c-gray">
 															<span style="display: none;">스파 배송비<br></span> 무료배송
-															
+
 													</span></td>
 												</tr>
 												<tr class="op">
@@ -805,27 +795,27 @@ button {
 
 					<div class="price-box">
 						<c:choose>
-							<c:when test="${memberVO != null}">								
-									<div>
-										<p>
-											<span class="detail"><em class="tit">총 <em
-													id="totalGoodsCnt">${samount}</em> 개의 금액
-											</em> ￦<strong id="totalGoodsPrice">${sprice}</strong></span> <span
-												id="deliveryCalculateNone"><img
-												src="https://www.lush.co.kr/data/skin/front/howling/img/icon/plus_new.png"
-												alt="더하기"><em class="tit">배송비</em> ￦<strong
-												id="totalDeliveryCharge">0</strong></span> <span class="total"><img
-												src="https://www.lush.co.kr/data/skin/front/howling/img/icon/total_new.png"
-												alt="합계"><em class="tit">총 주문금액</em>￦<strong
-												id="totalSettlePrice">${sprice}</strong> </span>
-										</p>
-										<div class="add_currency" style="display: none;">
-											<em id="totalSettlePriceAdd"></em>
-										</div>
+							<c:when test="${memberVO != null}">
+								<div>
+									<p>
+										<span class="detail"><em class="tit">총 <em
+												id="totalGoodsCnt">${samount}</em> 개의 금액
+										</em> ￦<strong id="totalGoodsPrice">${sprice}</strong></span> <span
+											id="deliveryCalculateNone"><img
+											src="https://www.lush.co.kr/data/skin/front/howling/img/icon/plus_new.png"
+											alt="더하기"><em class="tit">배송비</em> ￦<strong
+											id="totalDeliveryCharge">0</strong></span> <span class="total"><img
+											src="https://www.lush.co.kr/data/skin/front/howling/img/icon/total_new.png"
+											alt="합계"><em class="tit">총 주문금액</em>￦<strong
+											id="totalSettlePrice">${sprice}</strong> </span>
+									</p>
+									<div class="add_currency" style="display: none;">
+										<em id="totalSettlePriceAdd"></em>
+									</div>
 
-										<p></p>
-										<span id="deliveryChargeText"></span>
-									</div>								
+									<p></p>
+									<span id="deliveryChargeText"></span>
+								</div>
 							</c:when>
 							<c:otherwise>
 								<div>
@@ -890,21 +880,47 @@ button {
 
 
 			<!-- Recopick 장바구니_하단 스크립트 -->
-			<div id="recopick_widget_XTBGdLiz" data-widget_id="XTBGdLiz">
-				<script>
-					(function(w, n) {
-						w[n] = w[n] || function() {
-							(w[n].q = w[n].q || []).push(arguments)
-						};
-					}(window, 'recoPick'));
-					recoPick('widget', 'recopick_widget_XTBGdLiz');
-				</script>
-			</div>
+			<div id="recopick_widget_XTBGdLiz" data-widget_id="XTBGdLiz"></div>
 			<!-- Recopick 장바구니_하단 스크립트 -->
 		</div>
 		<!-- 본문 끝 : end -->
 
 	</div>
 	<%-- <c:import url="../main/mainFooter.jsp"></c:import> --%>
+	<script type="text/javascript"
+		src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+	<script>
+		$('#pbutton').click(function() {
+
+			$(function(){
+		    	console.log("a");
+		    	console.log("${memberVO.name}");
+		    	console.log("${ar1.ps_name}");
+		    	const a =  ${pprice};
+		    	const b = 2500;
+		    	const c = a+b;
+		    	console.log(c);
+		        var IMP = window.IMP; // 생략가능
+		        IMP.init('imp62074745'); // 'iamport' 대신 부여받은 "가맹점 식별코드"를 사용
+		        var msg;
+		        
+		        IMP.request_pay({
+		            pg : 'kakaopay',
+		            pay_method : 'card',
+		            merchant_uid : 'merchant_' + new Date().getTime(),
+		            name : 'KH Books 도서 결제',
+		            amount : c,
+		            buyer_email : '${memberVO.email}',
+		            buyer_name : '${memberVO.name}',
+		            buyer_tel : '${memberVO.phone}',
+		            buyer_addr : '${memberVO.address}',
+		            buyer_postcode : '123-456',
+		            //m_redirect_url : 'http://www.naver.com'
+		        });
+		        
+		    });
+
+		});
+	</script>
 </body>
 </html>

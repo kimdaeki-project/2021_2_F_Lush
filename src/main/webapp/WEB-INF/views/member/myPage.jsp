@@ -674,7 +674,7 @@ div .no-data {
 						<h2>마이페이지</h2>
 						<h3>쇼핑정보</h3>
 						<ul>
-							<li><a href="../mypage/order_list.php">주문목록/배송조회</a></li>
+							<li><a href="/member/orderPage">주문목록/배송조회</a></li>
 							<li><a href="../mypage/cancel_list.php">취소/반품/교환 내역</a></li>
 							<li><a href="../mypage/refund_list.php">환불/입금 내역</a></li>
 							<li><a href="../mypage/wish_list.php">찜리스트</a></li>
@@ -705,7 +705,7 @@ div .no-data {
 						<h3>고객센터</h3>
 						<ul>
 
-							<li><a href="../service/notice.php">공지사항</a></li>
+							<li><a href="../notice/list">공지사항</a></li>
 							<li><a href="../mypage/mypage_qa.php">1:1 문의</a></li>
 							<li><a href="../service/faq.php">FAQ</a></li>
 						</ul>
@@ -1325,7 +1325,7 @@ div .no-data {
 					<div class="section">
 						<div class="section-header type1">
 							<h2 class="h2">최근 본 상품</h2>
-							<p class="sub-text">김성연님께서 본 최근 상품입니다.</p>
+							<p class="sub-text">${memberVO.name}님께서 본 최근 상품입니다.</p>
 						</div>
 						<div class="section-body">
 							<div class="item-display type-gallery">
@@ -1516,60 +1516,7 @@ div .no-data {
 											<li style="width: 25%">
 												<div class="space">
 													<div class="box ">
-														<div class="thumbnail"
-															data-image-magnify="/data/goods/11/01/25/88/88_magnify_01.jpg"
-															data-image-detail="/data/goods/11/01/25/88/88_detail_056.jpg"
-															data-image-list="/data/goods/11/01/25/88/88_list_07.jpg"
-															data-image-main="/data/goods/11/01/25/88/88_main_058.jpg"
-															data-image-add1="/data/goods/11/01/25/88/88_add1_010.jpg"
-															data-image-add2="/data/goods/11/01/25/88/88_add2_098.jpg">
-															<a
-																href="../goods/goods_view.php?goodsNo=88&amp;mtn=%5E%7C%5E%5E%7C%5E">
-																<span class="prdimg"><img
-																	data-original="/data/goods/11/01/25/88/88_main_058.jpg"
-																	width="280" alt="챠콜" title="챠콜"
-																	class="middle gd_image_lazy"
-																	src="/data/goods/11/01/25/88/88_main_058.jpg"
-																	style="display: inline;"></span>
-															</a> <span class="choice -moslow"> <a
-																href="../goods/goods_view.php?goodsNo=88&amp;mtn=%5E%7C%5E%5E%7C%5E"
-																target="_blank" class="btn-open-win -moslow"
-																type="button" data-goods-no="88"><span
-																	class="ti ti-layout-media-center-alt -moslow"></span><span
-																	class="hand icon-name">새창열기</span></a> <a
-																class="wish btn-add-wishwidget -moslow"
-																data-goods-no="88"><span class="ti ti-heart -moslow"></span><span
-																	class="icon-name">찜하기</span></a> <a href="#optionViewLayer"
-																type="button"
-																class="cart btn-open-layer btn-add-cartwidget -moslow"
-																data-mode="cartIn" data-goods-no="88"><span
-																	class="ti ti-bag -moslow"></span><span
-																	class="icon-name">장바구니</span></a>
-															</span>
-														</div>
-														<div class="prdinfo">
-															<div class="conditions">
-																<span class="hot"> <img
-																	src="/data/icon/goods_icon/icon_local.png" alt="국내제조"
-																	title="국내제조" class="middle"> <img
-																	src="/data/icon/goods_icon/icon_vegan.png" alt="vegan"
-																	title="vegan" class="middle">
-																</span>
-															</div>
-															<div class="txt">
-																<a
-																	href="../goods/goods_view.php?goodsNo=88&amp;mtn=%5E%7C%5E%5E%7C%5E">
-																	<span class="prdName">챠콜</span><span class="shotdesc">#유명한숯비누
-																		#바로그제품 #맑은피부</span>
-																</a>
-															</div>
-															<div class="price gd-default">
-																<span class="cost"> <strong>￦ 18,000</strong>
-																</span>
-															</div>
-															<div class="display-field"></div>
-
-														</div>
+													
 													</div>
 												</div>
 											</li>
