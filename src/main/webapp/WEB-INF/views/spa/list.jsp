@@ -713,6 +713,7 @@
 														<option value="reviewCnt desc,g.regDt desc">상품평순</option>
 														<option value="g.regDt desc">등록일순</option>
 													</select>
+													
 													<div class="chosen-container chosen-container-single chosen-container-single-nosearch" style="width: 110px;" title="">
 														<a class="chosen-single chosen-sch" tabindex="-1">
 															<span>추천순</span>

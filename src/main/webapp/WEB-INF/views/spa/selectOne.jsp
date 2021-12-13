@@ -1471,6 +1471,108 @@
 		    outline: none;
 		}
 		
+		.layer-wrap2 {
+		    position: fixed;
+		    left: 0;
+		    top: 0;
+		    z-index: 100;
+		    overflow-y: auto;
+		    width: 100%;
+		    height: 100%;
+		    background: rgba(0,0,0,0.3);
+		}
+		
+		.layer-wrap2 .box {
+		    background: #fff;
+		}
+		
+		.add-wish-layer, .add-cart-layer {
+		    width: 457px;
+		    height: 312px;
+		}
+		
+		
+		.layer-wrap2 .box .view {
+		    position: relative;
+		    margin: 28px 20px;
+		}
+		
+		.layer-wrap2 .scroll-box {
+		    overflow-x: hidden;
+		    overflow-y: auto;
+		}
+		
+		.add-wish-layer p.success, .add-cart-layer p.success {
+		    padding: 50px 0 40px;
+		    background: none;
+		    font-size: 18px;
+		}
+		
+		.add-wish-layer p, .add-cart-layer p {
+		    margin: 30px 0 0;
+		    padding: 80px 0 0;
+		    background: url(../img/icon/add-cart-success.png) no-repeat center top;
+		    color: #222;
+		    font-size: 14px;
+		    line-height: 22px;
+		    text-align: center;
+		}
+		
+		.add-wish-layer p.success strong, .add-cart-layer p.success strong {
+		    display: block;
+		    padding-bottom: 15px;
+		    font-size: 22px;
+		    font-family: "notokrB";
+		    font-weight: normal;
+		}
+		
+		.layer-wrap2 .box .view > .btn, .layer-wrap .box .view > form > .btn {
+		    padding: 20px 0 0;
+		    text-align: center;
+		}
+		
+		.w160 {
+		    width: 160px;
+		}
+		
+		.btn_wt {
+		    border: 1px solid #000;
+		    background: #fff;
+		    color: #000;
+		}
+		
+		.btn_m {
+		    height: 54px;
+		    line-height: 50px;
+		    font-size: 14px;
+		}
+		
+		.btnicon {
+		    display: inline-block;
+		    vertical-align: middle;
+		    text-align: center;
+		    box-sizing: border-box;
+		}
+		
+		.btn_bk {
+		    border: 1px solid #000;
+		    background: #000;
+		    color: #fff;
+		}
+		
+		.layer-wrap2 .box .view .cartClose {
+		    display: block;
+		    position: absolute;
+		    top: 6px;
+		    right: 0;
+		    width: 18px;
+		    height: 18px;
+		    text-indent: -9999px;
+		    background: url(../../resources/img/etc/layer_close.png) no-repeat left top;
+		}
+		
+		
+		
 		
 		
 		
@@ -1480,7 +1582,7 @@
 	
 </head>
 
-<body>
+<body onload="init();">
 
 	<div id="wrap">
 		<%--------------- 헤더영역 ---------------%>
@@ -1631,6 +1733,69 @@
 								type="hidden" id="set_dc_price" value="0"> <input
 								type="hidden" name="spaPreNo" value="130"> <input
 								type="hidden" id="goodsOptionCnt" value="1">
+								
+							<script>
+								function goods_order(modeStr)
+							    {
+							        $('#frmView input[name=\'cartMode\']').val(modeStr);
+	
+							        if (modeStr == 'w') {
+							            alert("로그인하셔야 본 서비스를 이용하실 수 있습니다.");
+							            document.location.href = "../member/memberLogin";
+							            return false;
+							        } else {
+							            $('#frmView input[name=\'mode\']').val('cartIn');
+	
+							            $('#frmView').attr('action','../order/cart_ps.php');
+	
+							            var goodsInfo		= $('#frmView input[name="optionSnoInput"]').val();
+	
+							            if (goodsInfo == '') {
+							                alert("가격 정보가 없거나 옵션이 선택되지 않았습니다!");
+							                return false;
+							            }
+							        }
+	
+							        if(modeStr == 'pa') return true;
+	
+							        $('#frmView').attr('target','');
+	
+							        if (modeStr == 'w' || typeof modeStr == 'undefined') {
+							            var params = $("#frmView").serialize();
+	
+							            if (modeStr == 'w') {
+							                var ajaxUrl = '../mypage/wish_list_ps.php';
+							                var target = $("#addWishLayer");
+							            } else {
+							                var ajaxUrl = '../order/cart_ps.php';
+							                var target = $("#addCartLayer");
+							            }
+	
+										$.ajax({
+							                method: "POST",
+							                cache: false,
+							                url: ajaxUrl,
+							                data: params,
+							                success: function (data) {
+							                    // error 메시지 예외 처리용
+							                    if (!_.isUndefined(data.error) && data.error == 1) {
+							                        alert(data.message);
+							                        return false;
+							                    }
+	
+							                    target.removeClass('dn');
+							                    $('#layerDim').removeClass('dn');
+							                    target.find('> div').center();
+							                },
+							                error: function (data) {
+												alert(data.message);
+							                }
+							            });
+							        } else {
+							            $('#frmView').submit();
+							        }
+							    }
+							</script>
 
 							<div class="info">
 								<div class="info_wrap">
@@ -1709,6 +1874,13 @@
 										<a href="#option_display_area" id="wishBtn"
 											class="top_zzim btn-add-wish"> <em>찜하기</em>
 										</a>
+										<script>
+											$('.btn-add-wish').on('click', function(e){
+									            goods_order('w');
+									            return false;
+									        });
+										</script>
+										
 									</div>
 									
 									<%--------------- 상품 주문/제품/제품정보  : 후기, good to know, 판매가 ---------------%>
@@ -1803,17 +1975,58 @@
 										<div id="option_display_item_0">
 											<input type="hidden" name="goodsNo[]" value="1000001312">
 											<input type="hidden" name="optionSno[]" value="2410">
-											<input type="hidden" name="goodsPriceSum[]" value="120000">
+											<input type="hidden" name="goodsPriceSum[]" value="${spaVO.price}">
 											<input type="hidden" name="addGoodsPriceSum[]" value="0">
 											<input type="hidden" name="couponApplyNo[]" value="">
 											<input type="hidden" name="couponSalePriceSum[]" value="">
 											<input type="hidden" name="couponAddPriceSum[]" value="">
 											
 											<div class="check optionKey_0">
+											
+												<script language="JavaScript">
+													var sell_price;
+													var amount;
+													
+													function init () {
+														sell_price = document.form.sell_price.value;
+														amount = document.form.amount.value;
+														document.form.sum.value = sell_price;
+														change();
+													}
+													
+													function add () {
+														hm = document.form.amount;
+														sum = document.form.sum;
+														hm.value ++ ;
+													
+														sum.value = parseInt(hm.value) * sell_price;
+													}
+													
+													function del () {
+														hm = document.form.amount;
+														sum = document.form.sum;
+															if (hm.value > 1) {
+																hm.value -- ;
+																sum.value = parseInt(hm.value) * sell_price;
+															}
+													}
+													
+													function change () {
+														hm = document.form.amount;
+														sum = document.form.sum;
+													
+															if (hm.value < 0) {
+																hm.value = 0;
+															}
+														sum.value = parseInt(hm.value) * sell_price;
+													}  
+												</script>
+												
 												<span class="name">
 													구매수량
 													<button type="button" class="btn-alert-login" style="display:none;">
-														<img src="/data/skin/front/howling/img/btn/coupon-apply.png" alt="쿠폰적용"></button>
+														<img src="/data/skin/front/howling/img/btn/coupon-apply.png" alt="쿠폰적용">
+													</button>
 													<span id="option_text_display_0"></span>
 												</span>
 												
@@ -1824,8 +2037,13 @@
 														<button type="button" class="up goods-cnt" title="증가" value="up^|^0" style="cursor: pointer">+</button>
 													</span>
 				
-													<em><input type="hidden" value="0" name="optionPriceSum[]"> <input type="hidden" value="0.00" name="option_price_0">￦<strong class="option_price_display_0"><fmt:formatNumber value="${spaVO.price}" pattern="#,###"/></strong></em>
+													<em>
+														<input type="hidden" value="0" name="optionPriceSum[]">
+														<input type="hidden" value="0.00" name="option_price_0">
+														￦<strong class="option_price_display_0"><fmt:formatNumber value="${spaVO.price}" pattern="#,###"/></strong>
+													</em>
 												</div>
+												
 											</div>
 										</div>
 									</div> <%-- 구매수량 end --%>
@@ -1873,6 +2091,8 @@
 
 						</form>
 					</div> <%-- goods end --%>
+					
+					
 					
 					<%--------------- 상품 주문 : 리뷰 ---------------%>
 					<div class="adpic_detail"></div>
@@ -2042,56 +2262,78 @@
 					
 					<%--------------- 상품 주문 : 상품 정보 ---------------%>
 					<c:import url="./selectOneDetail.jsp"></c:import>
+				</div> <%-- goods-view end --%>
 					
-					<%--------------- 확대보기 ---------------%>
-					<div id="zoom-layer" class="layer-wrap dn">
-				        <div class="wrap" style="position: absolute; margin: 0px; top: 124px; left: 61px;">
-				            <div class="ctt">
-				                <div class="txt">
-				                    <h4>이미지 확대보기</h4>
-				                    <p>${spaVO.name}</p>
-				                </div>
-				                <div class="view">
-				                    <div class="detail" id="magnifyImage">
-				                        <img src="${spaVO.photo_detail_b}" width="500" alt="${spaVO.name}" title="${spaVO.name}" class="middle">
-				                    </div>
-				                    <div class="list">
-				                        <div class="slide">
-				                            <div class="slider-image-magnify slick-initialized slick-slider slick-vertical">
-				                                <div aria-live="polite" class="slick-list" style="height: 500px;">
-				                                	<div class="slick-track" role="listbox" style="opacity: 1; height: 100px; transform: translate3d(0px, 0px, 0px);">
-				                                		<div class="swiper-slide slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide10" style="width: 0px;">
-				                                			<a href="javascript:change_image('0','magnify');" tabindex="0">
-				                                				<img src="${spaVO.photo_detail_s}" width="68" alt="${spaVO.name}" title="${spaVO.name}" class="middle">
-                                			</a></div></div></div>
-				                            </div>
-				                        </div>
-				                        <div class="prev slider-image-magnify-prev slick-arrow slick-hidden" title="이전 상품 이미지" aria-disabled="true" tabindex="-1"></div>
-				                        <div class="next slider-image-magnify-next slick-arrow slick-hidden" title="다음 상품 이미지" aria-disabled="true" tabindex="-1"></div>
-				                    </div>
-				                </div>
-				                <button type="button" class="close zoom-close" title="닫기">닫기</button>
+				<%--------------- 확대보기 ---------------%>
+				<div id="zoom-layer" class="layer-wrap dn">
+			        <div class="wrap" style="position: absolute; margin: 0px; top: 124px; left: 61px;">
+			            <div class="ctt">
+			                <div class="txt">
+			                    <h4>이미지 확대보기</h4>
+			                    <p>${spaVO.name}</p>
+			                </div>
+			                <div class="view">
+			                    <div class="detail" id="magnifyImage">
+			                        <img src="${spaVO.photo_detail_b}" width="500" alt="${spaVO.name}" title="${spaVO.name}" class="middle">
+			                    </div>
+			                    <div class="list">
+			                        <div class="slide">
+			                            <div class="slider-image-magnify slick-initialized slick-slider slick-vertical">
+			                                <div aria-live="polite" class="slick-list" style="height: 500px;">
+			                                	<div class="slick-track" role="listbox" style="opacity: 1; height: 100px; transform: translate3d(0px, 0px, 0px);">
+			                                		<div class="swiper-slide slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide10" style="width: 0px;">
+			                                			<a href="javascript:change_image('0','magnify');" tabindex="0">
+			                                				<img src="${spaVO.photo_detail_s}" width="68" alt="${spaVO.name}" title="${spaVO.name}" class="middle">
+                               			</a></div></div></div>
+			                            </div>
+			                        </div>
+			                        <div class="prev slider-image-magnify-prev slick-arrow slick-hidden" title="이전 상품 이미지" aria-disabled="true" tabindex="-1"></div>
+			                        <div class="next slider-image-magnify-next slick-arrow slick-hidden" title="다음 상품 이미지" aria-disabled="true" tabindex="-1"></div>
+			                    </div>
+			                </div>
+			                <button type="button" class="close zoom-close" title="닫기">닫기</button>
+			            </div>
+			        </div>
+			    </div>
+			    <script>
+			    	$(document).ready(function(){
+			    		$('.thumbnail').click(function(){
+			    			$('.layer-wrap').toggleClass("dn");
+			    		});
+			    		$('.zoom-close').click(function(){
+			    			$('.layer-wrap').toggleClass("dn");
+			    		})
+			    	});
+			    </script>
+			    
+			    <%--------------- 장바구니 ---------------%>
+			    <div id="addCartLayer" class="layer-wrap2 dn">
+				    <div class="box add-cart-layer" style="position: absolute; margin: 0px; top: 324px; left: 207.5px;">
+				        <div class="view">
+				            <!-- <h2>장바구니 담기</h2> -->
+				            <div class="scroll-box">
+				                <p class="success"><strong>상품이 장바구니에 담겼습니다.</strong> 바로 확인하시겠습니까?</p>
 				            </div>
+				            <div class="btn">
+				                <button class="btnicon btn_wt btn_m w160 layer-cartaddcancel btn-close" style="margin-right:20px;"><em>계속 쇼핑하기</em></button>
+				                <button class="btnicon btn_bk btn_m w160 layer-cartaddconfirm layer-cart-btn"><em>확인하기</em></button>
+				            </div>
+				            <button title="닫기" class="cartClose" type="button">닫기</button>
 				        </div>
 				    </div>
-				    <script>
-				    	$(document).ready(function(){
-				    		$('.thumbnail').click(function(){
-				    			$('.layer-wrap').toggleClass("dn");
-				    		});
-				    		$('.zoom-close').click(function(){
-				    			$('.layer-wrap').toggleClass("dn");
-				    		})
-				    	});
-				    </script>
-				    
-				    
+				</div>
+				<script>
+				
+					$(document).ready(function(){
+			    		$('.btn-add-cart').click(function(){
+			    			$('.layer-wrap2').toggleClass("dn");
+			    		});
+			    		$('.cartClose').click(function(){
+			    			$('.layer-wrap2').toggleClass("dn");
+			    		})
+			    	});
 					
-				</div> <%-- goods-view end --%>
-
-
-
-
+				</script>
 			</div>
 
 		</div>
