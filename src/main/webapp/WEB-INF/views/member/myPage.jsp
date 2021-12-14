@@ -674,7 +674,7 @@ div .no-data {
 						<h2>마이페이지</h2>
 						<h3>쇼핑정보</h3>
 						<ul>
-							<li><a href="/member/orderPage">주문목록/배송조회</a></li>
+							<li><a href="../payment/orderPage">주문목록/배송조회</a></li>
 							<li><a href="../mypage/cancel_list.php">취소/반품/교환 내역</a></li>
 							<li><a href="../mypage/refund_list.php">환불/입금 내역</a></li>
 							<li><a href="../mypage/wish_list.php">찜리스트</a></li>

@@ -16,6 +16,7 @@
   		<typeAlias type="com.iu.e1.qna.QnaVO" alias="QnaVO"/>
   		<typeAlias type="com.iu.e1.shopInfo.ShopInfoVO" alias="ShopInfoVO"/>
   		<typeAlias type="com.iu.e1.cart.CartVO" alias="CartVO"/>
+  		<typeAlias type="com.iu.e1.payment.PaymentVO" alias="PaymentVO"/>
   		<typeAlias type="java.lang.String" alias="String"/>
   		<typeAlias type="java.util.List" alias="List"/>
   		

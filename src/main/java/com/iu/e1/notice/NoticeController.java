@@ -23,6 +23,12 @@ public class NoticeController {
 		
 		List<NoticeVO> ar = noticeService.noticeList();
 		
+		if(ar == null) {
+			System.out.println("false");
+		}else {
+			System.out.println("success");
+		}
+		
 		mv.setViewName("notice/list");
 		mv.addObject("noticeVO", ar);
 		return mv;

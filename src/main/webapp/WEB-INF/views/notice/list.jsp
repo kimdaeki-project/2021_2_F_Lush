@@ -313,9 +313,10 @@ tr {
 	color: #8f8f8f;
 }
 
-.body-board .table1.type2 td {
+.body-board .table1.type2 #a, #c {
 	padding: 15px 0;
 	font-size: 14px;
+	text-align:center;
 	color: #333;
 }
 
@@ -525,17 +526,17 @@ img {
 					<table class="table-set">
 						<thead>
 							<tr>
-								<th style="width: 150px;">번호</th>
-								<th style="width: 670px;">제목</th>
-								<th style="width: 160px;">날짜</th>								
+								<th style="width: 160px;">번호</th>
+								<th style="width: 650px;">제목</th>
+								<th style="width: 160px;">날짜</th>
 							</tr>
 						</thead>
 						<tbody>
-							<c:forEach items="${list}" var="dto">
+							<c:forEach items="${noticeVO}" var="dto">
 								<tr>
-									<td>${dto.num}</td>
-									<td>${dto.cord}</td>									
-									<td>${dto.hits}</td>
+									<td id="a">${dto.num}</td>
+									<td id="b">${dto.title}</td>
+									<td id="c">${dto.regDate}</td>
 								</tr>
 
 							</c:forEach>
