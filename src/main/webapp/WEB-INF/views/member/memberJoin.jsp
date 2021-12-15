@@ -905,9 +905,9 @@ thead {
 		$("#allAgree").click(function(){
 			console.log('check');
 			$("#termsAgree1").prop("checked", $("#allAgree").prop("checked"));
-			$("#termsAgree2").prop("checked");
-			$("#termsAgree3").prop("checked");
-			$("#privateApprovalOption_23").prop("checked");
+			$("#termsAgree2").prop("checked", $("#allAgree").prop("checked"));
+			$("#termsAgree3").prop("checked", $("#allAgree").prop("checked"));
+			$("#privateApprovalOption_23").prop("checked", $("#allAgree").prop("checked"));
 		});
 		
 		$("#privateApprovalOption_23").click(function(){

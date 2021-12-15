@@ -500,7 +500,7 @@ td{
 								<tbody>
 									<tr>
 										<c:choose>
-											<c:when test="${ar1 != null}">
+											<c:when test="${memberVO != null}">
 												<c:forEach items="${product}" var="product">
 													<td style="display: none;" id="cart_num">${product.cart_num}</td>
 													<td rowspan="2" class="ta-c cb-array"><span
@@ -902,8 +902,7 @@ td{
 			
 		});
 		
-		$('#pbutton').click(function() {
-
+		$('#pbutton').click(function() {			
 			$(function(){
 		    	console.log("a");
 		    	console.log("${memberVO.name}");
