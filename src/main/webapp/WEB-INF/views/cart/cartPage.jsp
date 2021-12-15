@@ -427,6 +427,10 @@ button {
 	font-family: "notokrM";
 	padding-left: 8px;
 }
+
+td{
+	text-align: center;
+}
 .count
 </style>
 </head>
@@ -471,7 +475,7 @@ button {
 							<h3 class="tit-supplier">제품</h3>
 
 
-							
+
 							<table>
 								<thead>
 									<c:choose>
@@ -486,7 +490,7 @@ button {
 												<th style="width: 440px;">제품 정보</th>
 												<th style="width: 185.32px;">수량</th>
 												<th style="width: 158.51px;">금액</th>
-												<th style="width: 60.37px;">복지혜택</th>
+												<th style="width: 80px;">복지혜택</th>
 												<th style="width: 158.53px;">합계금액</th>
 												<th style="width: 120px;">배송비</th>
 											</tr>
@@ -496,8 +500,9 @@ button {
 								<tbody>
 									<tr>
 										<c:choose>
-											<c:when test="${memberVO != null}">
+											<c:when test="${ar1 != null}">
 												<c:forEach items="${product}" var="product">
+													<td style="display: none;" id="cart_num">${product.cart_num}</td>
 													<td rowspan="2" class="ta-c cb-array"><span
 														class="form-element"> <input type="checkbox"
 															name="cartSno[]" id="cartSno1_2182038" value="2182038"
@@ -588,7 +593,7 @@ button {
 
 					<div class="price-box">
 						<c:choose>
-							<c:when test="${memberVO != null}">
+							<c:when test="${ar1 != null}">
 
 								<div>
 									<p>
@@ -638,9 +643,8 @@ button {
 					</div>
 					<div class=" ">
 						<div class="mt20">
-							<button type="button"
-								class="btnicon btn_underline cart-cartdelete"
-								onclick="cart_process('cartDelete');">
+							<button type="submit"
+								class="btnicon btn_underline cart-cartdelete dbutton">
 								<em>삭제 하기</em>
 							</button>
 						</div>
@@ -696,12 +700,12 @@ button {
 															type="checkbox" id="allCheck-frmSpaCart"
 															class="checkbox gd_checkbox_all"
 															data-target-id="cartSno1_" data-target-form="#frmSpaCart"
-															checked="checked">
+															>
 													</span></th>
 													<th style="width: 440px;">제품 정보</th>
 													<th style="width: 185.32px;">수량</th>
 													<th style="width: 158.51px;">금액</th>
-													<th style="width: 60.37px;">복지혜택</th>
+													<th style="width: 80px;">복지혜택</th>
 													<th style="width: 158.53px;">합계금액</th>
 													<th style="width: 120px;">배송비</th>
 												</tr>
@@ -890,6 +894,14 @@ button {
 	<script type="text/javascript"
 		src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
 	<script>
+		
+		$('.dbutton').click(function(){
+			const a = $('#cart_num').text();
+			console.log(a);
+			window.location.href = "./cartDelete?cart_num="+a;
+			
+		});
+		
 		$('#pbutton').click(function() {
 
 			$(function(){
@@ -922,5 +934,6 @@ button {
 
 		});
 	</script>
+		
 </body>
 </html>

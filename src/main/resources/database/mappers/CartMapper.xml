@@ -17,6 +17,6 @@
   	
   	<delete id="setDelete" parameterType="CartVO">
   		delete from cart
-  		where cart_num={cart_num}
+  		where cart_num=#{cart_num}
   	</delete>
   </mapper>

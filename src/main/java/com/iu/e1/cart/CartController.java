@@ -8,6 +8,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -24,6 +25,20 @@ public class CartController {
 		return "./cart/pay";
 	}
 
+	@GetMapping("cartInsert")
+	public String getInsert(CartVO cartVO) throws Exception{
+		return "";
+	}
+	
+	@PostMapping("cartInsert")
+	public ModelAndView getInsert(CartVO cartVO, HttpSession session) throws Exception{
+		ModelAndView mv= new ModelAndView();
+		int result = cartService.getInsert(cartVO);
+		
+		mv.setViewName("redirect:../cart/cartPage");
+		return mv;
+	}
+	
 	@GetMapping("cartPage")
 	public ModelAndView getSelect(CartVO cartVO, HttpSession session) throws Exception {
 		MemberVO memberVO = (MemberVO) session.getAttribute("member"); // session의 memberVO를 가져오기		
@@ -74,4 +89,11 @@ public class CartController {
 		mv.setViewName("./cart/cartPage");
 		return mv;
 	}
+	
+	@GetMapping("cartDelete")
+	public String setDelete(CartVO cartVO) throws Exception{
+		int result = cartService.setDelete(cartVO);
+		return "redirect:./cartPage";
+	}
+		
 }
