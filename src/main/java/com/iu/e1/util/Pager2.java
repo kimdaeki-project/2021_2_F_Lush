@@ -14,6 +14,8 @@ public class Pager2 {
 	private Long startNum;
 	private Long lastNum;
 	
+	private Long totalPage;
+	
 	private boolean lastCheck;    //true면 마지막 블럭, false면 마지막 블럭X
 	
 	   public void makeRow() {
@@ -78,9 +80,13 @@ public class Pager2 {
 	   }
 	   
 	   public String getKind() {
+		   if(this.kind==null) {
+				this.kind="";
+			}
+		   
 			return kind;
 		}
-		public void setKind(String keyword) {
+		public void setKind(String kind) {
 			this.kind = kind;
 		}
 		public String getSearch() {

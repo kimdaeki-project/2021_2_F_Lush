@@ -6,6 +6,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <style type="text/css">
 
 body {
@@ -92,7 +94,7 @@ body {
     font-size: 16px;
 }
 
-.eventboard-sorting li a {
+.eventboard-sorting li button{
     display: inline-block;
     padding: 0 40px;
     color: #8f8f8f;
@@ -217,6 +219,15 @@ tbody {
     color: #8f8f8f;
 }
 
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: "notokrR";
+    padding: 0px 0px;
+}
+
 
 </style>
 </head>
@@ -231,15 +242,12 @@ tbody {
 					</div>
 					<div class=" eventboard-sorting">
 						<ul>
-							<li class="all"><a
-								href="list.php?bdId=event&amp;period=current" class="active">진행중
-									이벤트(5)</a></li>
-							<li><a href="/board/eventresult.php">선정자 발표</a></li>
-							<li><a href="list.php?bdId=event&amp;period=end">종료된
-									이벤트(182)</a></li>
+							<li><button class="ing active">진행중 이벤트(5)</button></li>
+							<li><button class="winner">선정자 발표</button></li>
+							<li><button class="finished">종료된 이벤트(182)</button></li>
 						</ul>
 					</div>
-					<div>
+					<div id="changeArea">
 						<div id="contents-inner cs-page">
 							<div class="section">
 								<div class="table1 type2" align="center">
@@ -303,9 +311,43 @@ tbody {
 		</div>
 	</div>
 	
+	<c:import url="../main/mainFooter.jsp"></c:import>
 	
+	<script type="text/javascript">
 	
-	<a href="./Winnerinsert">Insert</a>
-	<a href="./delete">Delete</a>
+	function start() {
+		let kind = $("#kind").attr('data-board-keyword');
+		let search = $("#search").val();
+
+		$.ajax({
+			type : "GET",
+			url : "./eventList",
+			data : {
+				search : search,
+				kind : kind
+			},
+			success : function(result) {
+				result = result.trim();
+				$('#changeArea').html(result);
+			}
+
+		});
+
+	}
+	
+	$(".ing").on('click', function(){
+		$('#eventList').removeClass("ffff");
+		$('#finishList').addClass("ffff");
+		$('#winnerList').addClass("ffff");
+		$('.finished').removeClass("active");
+		$('.winner').removeClass("active");
+		$('.ing').addClass("active");
+		$('#searchBX').css("display", "")
+		
+		start();
+
+	});
+	
+	</script>
 </body>
 </html>

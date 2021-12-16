@@ -35,10 +35,6 @@
     min-height: 100%;
 }
 
-#container {
-    /* z-index: 9; */
-    padding-top: 100px;
-}
 
 #container {
     display: block;

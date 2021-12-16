@@ -8,6 +8,10 @@
   		select * from product
   	</select>
   	
+  	<select id="productCordList" parameterType="ProductVO" resultType="ProductVO">
+  		select * from product where cord=#{cord}
+  	</select>
+  	
   	<select id="productSelect" parameterType="ProductVO" resultType="ProductVO">
   		select * from product where num=#{num}
   	</select>
@@ -23,4 +27,8 @@
   	<update id="productUpdate" parameterType="ProductVO">
   		update product set category=#{category}, name=#{name}, hashTag=#{hashTag}, price=#{price}, weight=#{weight}, photo=#{photo}, heart=#{heart} where num=#{num}
   	</update>
+  	
+  	<insert id="cartInsert" >
+  		
+  	</insert>
   </mapper>

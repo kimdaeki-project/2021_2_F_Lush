@@ -19,11 +19,25 @@ public class EventController {
    @Autowired
    private EventService eventService;
    
-   @GetMapping("finishList")
-   public ModelAndView getSelectFinishList(ModelAndView mv)throws Exception{
-	   List<EventVO> ar = eventService.getSelectFinishList();
-	   mv.setViewName("event/finishList");
+   @GetMapping("FinishList")
+   public ModelAndView getSelectFinishList(ModelAndView mv, Pager2 pager2)throws Exception{
+	   List<EventVO> ar = eventService.getSelectFinishList(pager2);
+	   
+	   mv.addObject("pager2", pager2);
 	   mv.addObject("finishList", ar);
+	   
+	   mv.setViewName("event/FinishList");
+	   return mv;
+   }
+   
+   @GetMapping("finishList")
+   public ModelAndView setSelectFinishList(ModelAndView mv, Pager2 pager2)throws Exception{
+	   List<EventVO> ar = eventService.setSelectFinishList(pager2);
+	   
+	   mv.addObject("pager2", pager2);
+	   mv.addObject("finishList", ar);
+	   
+	   mv.setViewName("common/finishList");
 	   return mv;
    }
 
@@ -50,12 +64,35 @@ public class EventController {
    }
 
    @GetMapping("EventList")
-   public ModelAndView getSelectEventList(ModelAndView mv) throws Exception {
-
-      List<EventVO> ar = eventService.getSelectEventList();
+   public ModelAndView getSelectEventList(ModelAndView mv, Pager2 pager2) throws Exception {
+	  mv = new ModelAndView();
+      mv.addObject("pager2", pager2);
       mv.setViewName("event/EventList");
+      
+      return mv;
+   }
+   
+   @GetMapping("eventList")
+   public ModelAndView setSelectEventList(ModelAndView mv, Pager2 pager2) throws Exception {
+	  mv = new ModelAndView();
+      List<EventVO> ar = eventService.setSelectEventList(pager2);
+      mv.addObject("pager2", pager2);
       mv.addObject("eventList", ar);
+      mv.setViewName("common/eventList");
+      return mv;
+   }
+   
+   @GetMapping("winnerList")
+   public ModelAndView setSelectWinnerList(ModelAndView mv, Pager2 pager2) throws Exception {
 
+      List<EventVO> ar = eventService.getSelectWinnerList(pager2);
+      int result = eventService.getCountWinnerList();
+      mv.addObject("count", result);
+      
+      mv.addObject("winnerList", ar);
+      mv.addObject("pager2", pager2);
+      
+      mv.setViewName("common/winnerList");
 
       return mv;
    }
@@ -74,10 +111,10 @@ public class EventController {
    }
 
    @GetMapping("selectOne")
-   public ModelAndView getSelectOne(EventVO eventVO) throws Exception {
+   public ModelAndView getSelectOne(EventVO eventVO,Pager2 pager2) throws Exception {
       ModelAndView mv = new ModelAndView();
       eventVO = eventService.getSelectOne(eventVO);
-      List<EventVO> ar = eventService.getSelectEventList();
+      List<EventVO> ar = eventService.getSelectEventList(pager2);
       mv.addObject("eventList", ar);
       mv.setViewName("event/select");
       mv.addObject("eventVO", eventVO);

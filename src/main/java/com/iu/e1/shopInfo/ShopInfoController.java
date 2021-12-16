@@ -25,7 +25,7 @@ public class ShopInfoController {
 		mv.addObject("shopInfo", ar);
 		mv.setViewName("common/infoList");
 		return mv;
-		
+	
 	}
 	
 	

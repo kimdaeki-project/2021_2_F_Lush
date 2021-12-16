@@ -6,7 +6,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <style type="text/css">
+
+@font-face {
+   font-family: 'notokrM';
+   src: url('/resources/fonts/NotoSansKR-Medium.otf') format('opentype');
+}
+
+@font-face {
+   font-family: 'notokrR';
+   src: url('/resources/fonts/NotoSansKR-Regular.otf') format('opentype');
+}
+
 @font-face {
 	font-family: 'notokrB';
 	src: url('/resources/fonts/NotoSansKR-Black.otf') format('opentype');
@@ -130,7 +143,7 @@
 
 .txt-field.hs .text {
 	width: 100%;
-	height: 36px;
+	height: 34px;
 	padding: 0;
 	border: 1px solid #fff;
 	color: #333;
@@ -207,13 +220,18 @@ button {
 }
 
 .cs-page .item-display.type-gallery .list ul li {
-	margin: 0 0 0px;
+	margin: 0 0 20px;
 }
 
-.shop_boad_list .list ul li {
+.item-display .list-li {
 	float: left;
 	width: 275px;
-	margin-right: 0px !important;
+	margin-right: 26px !important;
+}
+
+.shop_boad_list .list ul li:nth-child(4n) {
+    float: right;
+    margin-right: 0 !important;
 }
 
 .item-display .list ul li {
@@ -272,10 +290,115 @@ button {
 }
 
 .list-ul {
-	display: flex;
+	
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
+
+.pagination {
+    padding: 20px 0 0;
+    text-align: center;
+}
+
+
+.st-hs {
+    text-align: left;
+}
+
+.search-box .item .chosen-container {
+    font-size: 16px;
+}
+
+.chosen-container-single .chosen-sch {
+    height: 40px;
+    line-height: 38px;
+    margin: 0 !important;
+    background: none;
+}
+
+.chosen-container-single .chosen-sch {
+    height: 28px;
+    border: 1px solid #ccc;
+    line-height: 27px;
+    margin: 0 !important;
+    background: none;
+}
+
+.chosen-container-single .chosen-single span {
+    display: block;
+    overflow: hidden;
+    margin-right: 26px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.chosen-container-single .chosen-single div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 18px;
+    height: 100%;
+}
+
+.chosen-container-single .chosen-single div b {
+    background: url('https://lush.co.kr/data/skin/front/howling/img/etc/select-arrow-down-11x7.png') no-repeat left 50%;
+}
+
+.chosen-container-single .chosen-single div b {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('https://lush.co.kr/data/skin/front/howling/js/jquery/chosen/chosen-sprite.png') no-repeat 0px 4px;
+}
+
+.chosen-container .chosen-drop {
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.chosen-container-single .chosen-drop {
+    margin-top: -1px;
+    border-radius: 0;
+    padding: 5px 0px;
+}
+
+.chosen-container {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    zoom: 1;
+    *display: inline;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    height: 36px;
+    border : 1px solid #ccc;
+}
+
+
+
+#kind {
+     width:99px;
+     height:40px;
+     padding:5px;
+     border:1px solid #ccc;
+     background:url('https://lush.co.kr/data/skin/front/howling/img/etc/select-arrow-down-11x7.png') no-repeat 95% 50%;
+     border-radius:3px;
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance : none;
+     vertical-align: middle;
+     color: #333;
+     font-size: 16px;
+     margin-right: 10px;
+}
+
+.list > ul > li {
+	margin: 0 0 20px;		
+}
+
 </style>
 
 </head>
@@ -297,26 +420,30 @@ button {
 					<div class="item">
 						<div class="st-hs">
 							<form action="./list" id="frm">
-								<c:if test="${empty pager2.kind eq 'name'}">
-									<select data-board-keyword="${pager2.kind}" id="kind"
+							
+							<c:if test="${empty pager2.kind or pager2.kind eq 'name'}">
+			                  <select data-board-keyword="${pager2.kind}" id="kind"
 										name="kind" class="tune" aria-label="Default select example"
-										style="width: 99px; display: none;">
+										style="width: 99px;">
 										<option value="name" selected="selected">매장명</option>
 										<option value="address">주소</option>
-									</select>
-								</c:if>
-								<c:if test="${empty pager2.kind eq 'address'}">
-									<select data-board-keyword="${pager2.kind}" id="kind"
+								</select>
+			               </c:if>
+			               <c:if test="${pager2.kind eq 'address'}">
+			                  <select data-board-keyword="${pager2.kind}" id="kind"
 										name="kind" class="tune" aria-label="Default select example"
-										style="width: 99px; display: none;">
+										style="width: 99px;">
 										<option value="name">매장명</option>
 										<option value="address" selected="selected">주소</option>
-									</select>
-								</c:if>
-
+								</select>
+			               </c:if>
+								
+						
+								
+								
 								<div class="item">
 									<div class="txt-field hs" style="width: 320px;">
-										<input value="${pager2.search}" type="text" class="text" name="searchWord">
+										<input value="${pager2.search}" type="text" class="text" name="search" id="search">
 									</div>
 								</div>
 								<div class="item">
@@ -353,9 +480,7 @@ button {
 
 		function start() {
 			let kind = $("#kind").attr('data-board-keyword');
-			console.log(keyword);
 			let search = $("#search").val();
-			console.log(search);
 
 			$.ajax({
 				type : "GET",
@@ -376,18 +501,16 @@ button {
 		let kind = '';
 		$(".chosen-results").on('click', '.active-result', function() {
 			kind = $(this).attr('data-board-cord');
-			console.log(kind);
 			let kind = $("#kind").attr('data-board-keyword');
-			//console.log(keyword);
+			
 			let search = $("#search").val();
-			//console.log(search);
+			
 
 			/* location.href="./list?cord="+cord; */
 			$.ajax({
 				type : "GET",
 				url : "./infoList",
 				data : {
-
 					search : search,
 					kind : kind
 				},

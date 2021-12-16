@@ -69,7 +69,7 @@ div {
 
 #container #content {
    margin: 0;
-   padding-bottom: 300px;
+   padding-bottom: 100px;
    background: #fdda40
       url(https://www.lush.co.kr/data/skin/front/howling/img/scout/scout_page_bg.jpg)
       no-repeat 50% top;
@@ -346,7 +346,7 @@ ul, li {
     font-size: 18px;
 }
 
-.tab_menu li.ative a, .tab_menu li.ui-state-active a {
+.tab_menu li.active a, .tab_menu li.ui-state-active a {
     color: #fff;
     background: #146802;
 }
@@ -632,6 +632,29 @@ dl:after, dt:after, dd:after {
     width: 340px;
 }
 
+.sct_area02 .partbx.info01 {
+    margin-top: 55px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.sct_area02 .btn_blackbx {
+    display: block;
+    margin-top: 26px;
+    background: #000;
+}
+
+.btn_blackbx {
+    width: 230px;
+    height: 47px;
+    line-height: 44px;
+    color: #fff;
+    background: #231a15;
+    font-size: 16px;
+}
+
 </style>
 </head>
 <body>
@@ -692,74 +715,11 @@ dl:after, dt:after, dd:after {
                               </div>
                            </div>
                         </div>
-                        <div class="duczzi_pg_area02">
-                           <div class="tit">방금 만들어진 따끈한 덕찌</div>
-                           <link rel="stylesheet"
-                              href="/data/skin/mobile/howling_M/css/swiper.min.css">
-                           <link rel="stylesheet"
-                              href="/data/skin/front/howling/css/jquery.bxslider.css">
-                           <script
-                              src="/data/skin/front/howling/js/jquery.bxslider.min.js"></script>
-                           <div
-                              class="swiper-container new_duczzi_swiper swiper-container-horizontal">
-                              <div class="duczzi_bxslider swiper-wrapper "
-                                 style="transform: translate3d(0px, 0px, 0px);">
-                                 <div class="swiper-slide swiper-slide-active"
-                                    style="width: 275px;">
-                                    <div class="dz_item">
-                                       <div class="dz_thumb">
-                                          <img src="https://www.lush.co.kr/data/ducczi/d_imageOn/493_d_imageOn.png" alt="">
-                                       </div>
-                                       <div class="dz_zone">디지털 액션 존</div>
-                                       <div class="dz_name">셀프프리저빙덕찌</div>
-                                       <div class="dz_desc">[셀프 프리저빙의 모든 것] 아티클을 읽고 댓글 작성 시
-                                          증정</div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <!-- Add Arrows -->
-                              <div class="swiper-button-next swiper-button-disabled"
-                                 tabindex="0" role="button" aria-label="Next slide"
-                                 aria-disabled="true"></div>
-                              <div class="swiper-button-prev swiper-button-disabled"
-                                 tabindex="0" role="button" aria-label="Previous slide"
-                                 aria-disabled="true"></div>
-                              <span class="swiper-notification" aria-live="assertive"
-                                 aria-atomic="true"></span>
-                           </div>
-                           <!-- <script>
-                            $(function(){
-                              $('.duczzi_bxslider').bxSlider({
-                                //auto: true,
-                                pager: true,
-                                captions: false,
-                                minSlides:'1',
-                                maxSlides:'4',
-                                //moveSlides:'1',
-                                slideWidth: 280,
-                                //slideMargin: 95
-                              });
-                            });
-                        </script> -->
-                           <script src="/data/skin/mobile/howling_M/js/swiper.min.js"></script>
-                           <script>
-                              var swiper = new Swiper(
-                                    '.new_duczzi_swiper',
-                                    {
-                                       slidesPerView : 4,
-                                       //spaceBetween: 30,
-                                       navigation : {
-                                          nextEl : '.swiper-button-next',
-                                          prevEl : '.swiper-button-prev',
-                                       },
-                                    });
-                           </script>
-
-                        </div>
+                        
 
                         <div class="duczzi_pg_area03" id="tabs_zone">
                            <ul class="tab_menu">
-                              <li class="DuccziZone_list dz_idx_31 ative"><a
+                              <li class="DuccziZone_list dz_idx_31 active"><a
                                  class="DuccziZone_bt" dz_idx="31" style="cursor: pointer;">디지털
                                     액션 존 <i><img
                                        src="https://www.lush.co.kr/data/skin/front/howling/img/scout/icon_new.png"
@@ -802,7 +762,7 @@ dl:after, dt:after, dd:after {
                               <div class="zone_duczzi_wrap">
 
                                  <div class="list_area duczzi_list_area">
-                                    <ul class="duczzi_ul">
+                                    <ul class="duczzi_ul ul1" style="">
                                        <li><a class="viewDucczi_bt" d_idx="493"
                                           style="cursor: pointer">
                                              <p class="thumb">
@@ -965,12 +925,244 @@ dl:after, dt:after, dd:after {
                                           type="hidden" id="more_dz_idx" value="31">
                                        </span>
                                     </ul>
+                                    
+                                    <ul class="duczzi_ul ul2" style="display:none;"><link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_reset.css?ts=1613343302">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/js/jquery/chosen/chosen.css?ts=1586309716">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_layout.css?ts=1628121406">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_common.css?ts=1558498525">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_item-display.css?ts=1596107608">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_goods-view.css?ts=1543474384">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_contents.css?ts=1626655689">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_share.css?ts=1596181667">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_custom.css?ts=1621295217">
+
+	<li>
+		<a class="viewDucczi_bt" d_idx="490" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOn/ztu_thum1_490_d_imageOn.png" width="106"></span></p>
+			<p class="nm">피부에선물해찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="463" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOn/ztu_thum1_463_d_imageOn.png" width="106"></span></p>
+			<p class="nm">카먀샤워해찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="454" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOn/ztu_thum1_454_d_imageOn.png" width="106"></span></p>
+			<p class="nm">몸과마음풀어찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="453" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOn/ztu_thum1_453_d_imageOn.png" width="106"></span></p>
+			<p class="nm">지구위해바꿔찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="451" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOn/ztu_thum1_451_d_imageOn.png" width="106"></span></p>
+			<p class="nm">한올한올또렷해졌찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="443" style="cursor: pointer">
+			<p class="thumb"><span><img src=https://lush.co.kr/data/ducczi/d_imageOn/ztu_thum1_443_d_imageOn.png width="106"></span></p>
+			<p class="nm">라임퐁당덕찌</p>
+		</a>
+	</li>
+
+	<li id="makeDucczi">
+		<a class="viewDucczi_bt" d_idx="makeDucczi" style="cursor: pointer;">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/skin/front/howling/img/scout/myduczzi.png" alt=""></span></p>
+			<p class="nm">내가 만들어보는<br>덕찌</p>
+		</a>
+	</li>
+
+	<span id="more_page_data">
+		<input type="hidden" id="more_total_page" value="1">
+		<input type="hidden" id="more_now_page" value="1">
+		<input type="hidden" id="more_dz_idx" value="32">
+	</span>
+</ul>
+
+<ul class="duczzi_ul ul3" style="display:none;"><link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_reset.css?ts=1613343302">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/js/jquery/chosen/chosen.css?ts=1586309716">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_layout.css?ts=1628121406">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_common.css?ts=1558498525">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_item-display.css?ts=1596107608">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_goods-view.css?ts=1543474384">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_contents.css?ts=1626655689">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_share.css?ts=1596181667">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_custom.css?ts=1621295217">
+
+	<li>
+		<a class="viewDucczi_bt" d_idx="489" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOn/ztu_thum1_489_d_imageOn.png" width="106"></span></p>
+			<p class="nm">11월채러티덕찌</p>
+		</a>
+	</li>
+
+	<li id="makeDucczi">
+		<a class="viewDucczi_bt" d_idx="makeDucczi" style="cursor: pointer;">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/skin/front/howling/img/scout/myduczzi.png" alt=""></span></p>
+			<p class="nm">내가 만들어보는<br>덕찌</p>
+		</a>
+	</li>
+
+	<span id="more_page_data">
+		<input type="hidden" id="more_total_page" value="1">
+		<input type="hidden" id="more_now_page" value="1">
+		<input type="hidden" id="more_dz_idx" value="33">
+	</span>
+</ul>
+
+<ul class="duczzi_ul ul4" style="display:none;"><link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_reset.css?ts=1613343302">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/js/jquery/chosen/chosen.css?ts=1586309716">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_layout.css?ts=1628121406">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_common.css?ts=1558498525">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_item-display.css?ts=1596107608">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_goods-view.css?ts=1543474384">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_contents.css?ts=1626655689">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_share.css?ts=1596181667">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_custom.css?ts=1621295217">
+
+	<li>
+		<a class="viewDucczi_bt" d_idx="480" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOn/ztu_thum1_480_d_imageOn.png" width="106"></span></p>
+			<p class="nm">크리스마스덕찌</p>
+		</a>
+	</li>
+
+	<li id="makeDucczi">
+		<a class="viewDucczi_bt" d_idx="makeDucczi" style="cursor: pointer;">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/skin/front/howling/img/scout/myduczzi.png" alt=""></span></p>
+			<p class="nm">내가 만들어보는<br>덕찌</p>
+		</a>
+	</li>
+
+	<span id="more_page_data">
+		<input type="hidden" id="more_total_page" value="1">
+		<input type="hidden" id="more_now_page" value="1">
+		<input type="hidden" id="more_dz_idx" value="34">
+	</span>
+</ul>
+
+<ul class="duczzi_ul ul5" style="display:none;"><link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_reset.css?ts=1613343302">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/js/jquery/chosen/chosen.css?ts=1586309716">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_layout.css?ts=1628121406">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_common.css?ts=1558498525">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_item-display.css?ts=1596107608">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_goods-view.css?ts=1543474384">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_contents.css?ts=1626655689">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_share.css?ts=1596181667">
+<link type="text/css" rel="stylesheet" href="/data/skin/front/howling/css/gd_custom.css?ts=1621295217">
+
+	<li>
+		<a class="viewDucczi_bt" d_idx="486" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOff/ztu_thum1_486_d_imageOff.png" width="106"></span></p>
+			<p class="nm">맨션열쇠받아찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="484" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOff/ztu_thum1_484_d_imageOff.png" width="106"></span></p>
+			<p class="nm">10월 리뷰해찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="483" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOff/ztu_thum1_483_d_imageOff.png" width="106"></span></p>
+			<p class="nm">10월채러티덕찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="482" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOff/ztu_thum1_482_d_imageOff.png" width="106"></span></p>
+			<p class="nm">10월러쉬와만났찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="481" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOff/ztu_thum1_481_d_imageOff.png" width="106"></span></p>
+			<p class="nm">10월또담아찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="479" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOff/ztu_thum1_479_d_imageOff.png" width="106"></span></p>
+			<p class="nm">할로윈덕찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="477" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOff/ztu_thum1_477_d_imageOff.png" width="106"></span></p>
+			<p class="nm">취향대로뿌려찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="476" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOff/ztu_thum1_476_d_imageOff.png" width="106"></span></p>
+			<p class="nm">9월 리뷰해찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="475" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOff/ztu_thum1_475_d_imageOff.png" width="106"></span></p>
+			<p class="nm">장바구니열어찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="474" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOff/ztu_thum1_474_d_imageOff.png" width="106"></span></p>
+			<p class="nm">마음을나눠찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="473" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOff/ztu_thum1_473_d_imageOff.png" width="106"></span></p>
+			<p class="nm">나만의낫랩찾아찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="472" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOff/ztu_thum1_472_d_imageOff.png" width="106"></span></p>
+			<p class="nm">9월채러티덕찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="471" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOff/ztu_thum1_471_d_imageOff.png" width="106"></span></p>
+			<p class="nm">9월또담아찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="470" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOff/ztu_thum1_470_d_imageOff.png" width="106"></span></p>
+			<p class="nm">9월러쉬와만났찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="469" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOff/ztu_thum1_469_d_imageOff.png" width="106"></span></p>
+			<p class="nm">낫랩만랩덕찌</p>
+		</a>
+	</li>
+	<li>
+		<a class="viewDucczi_bt" d_idx="465" style="cursor: pointer">
+			<p class="thumb"><span><img src="https://lush.co.kr/data/ducczi/d_imageOff/ztu_thum1_465_d_imageOff.png" width="106"></span></p>
+			<p class="nm">8월 리뷰해찌</p>
+		</a>
+	</li>
 
 
-
-                                    <div class="page_more_bt ">
-                                       <span class="btn_scout_more">더보기</span>
-                                    </div>
+	<span id="more_page_data">
+		<input type="hidden" id="more_total_page" value="5">
+		<input type="hidden" id="more_now_page" value="1">
+		<input type="hidden" id="more_dz_idx" value="endZone">
+	</span>
+</ul>
 
 
                                  </div>
@@ -1110,6 +1302,77 @@ dl:after, dt:after, dd:after {
 	   $('.1btn').removeClass("selected");
 	   $('.2btn').addClass("selected");
    });
+   
+   $(".dz_idx_31").click(function(){
+	   $('.ul1').css("display", "");
+	   $('.ul2').css("display", "none");
+	   $('.ul3').css("display", "none");
+	   $('.ul4').css("display", "none");
+	   $('.ul5').css("display", "none");
+	   $('.dz_idx_31').addClass("active");
+	   $('.dz_idx_32').removeClass("active");
+	   $('.dz_idx_33').removeClass("active");
+	   $('.dz_idx_34').removeClass("active");
+	   $('.dz_idx_endZone').removeClass("active");
+	   
+   });
+   
+   $(".dz_idx_32").click(function(){
+	   $('.ul2').css("display", "");
+	   $('.ul1').css("display", "none");
+	   $('.ul3').css("display", "none");
+	   $('.ul4').css("display", "none");
+	   $('.ul5').css("display", "none");
+	   $('.dz_idx_32').addClass("active");
+	   $('.dz_idx_31').removeClass("active");
+	   $('.dz_idx_33').removeClass("active");
+	   $('.dz_idx_34').removeClass("active");
+	   $('.dz_idx_endZone').removeClass("active");
+	   
+   });
+   
+   $(".dz_idx_33").click(function(){
+	   $('.ul3').css("display", "");
+	   $('.ul2').css("display", "none");
+	   $('.ul1').css("display", "none");
+	   $('.ul4').css("display", "none");
+	   $('.ul5').css("display", "none");
+	   $('.dz_idx_33').addClass("active");
+	   $('.dz_idx_32').removeClass("active");
+	   $('.dz_idx_31').removeClass("active");
+	   $('.dz_idx_34').removeClass("active");
+	   $('.dz_idx_endZone').removeClass("active");
+	   
+   });
+   
+   $(".dz_idx_34").click(function(){
+	   $('.ul4').css("display", "");
+	   $('.ul2').css("display", "none");
+	   $('.ul3').css("display", "none");
+	   $('.ul1').css("display", "none");
+	   $('.ul5').css("display", "none");
+	   $('.dz_idx_34').addClass("active");
+	   $('.dz_idx_32').removeClass("active");
+	   $('.dz_idx_33').removeClass("active");
+	   $('.dz_idx_31').removeClass("active");
+	   $('.dz_idx_endZone').removeClass("active");
+	   
+   });
+   
+   $(".dz_idx_endZone").click(function(){
+	   $('.ul5').css("display", "");
+	   $('.ul2').css("display", "none");
+	   $('.ul3').css("display", "none");
+	   $('.ul4').css("display", "none");
+	   $('.ul1').css("display", "none");
+	   $('.dz_idx_endZone').addClass("active");
+	   $('.dz_idx_32').removeClass("active");
+	   $('.dz_idx_33').removeClass("active");
+	   $('.dz_idx_34').removeClass("active");
+	   $('.dz_idx_31').removeClass("active");
+	   
+   });
+   
    </script>
    
    <c:import url="../main/mainFooter.jsp"></c:import>

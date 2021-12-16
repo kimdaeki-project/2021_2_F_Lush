@@ -11,6 +11,10 @@ public class ProductService {
 	@Autowired
 	private ProductRepository productRepository;
 	
+	public List<ProductVO> productCordList(ProductVO productVO)throws Exception{
+		return productRepository.productCordList(productVO);
+	}
+	
 	public List<ProductVO> productList()throws Exception{
 		return productRepository.productList();
 	}

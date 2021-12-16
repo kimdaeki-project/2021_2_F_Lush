@@ -16,4 +16,6 @@ public interface ProductRepository {
 	public int productDelete(ProductVO productVO)throws Exception;
 	
 	public int productUpdate(ProductVO productVO)throws Exception;
+	
+	public List<ProductVO> productCordList(ProductVO productVO) throws Exception;
 }

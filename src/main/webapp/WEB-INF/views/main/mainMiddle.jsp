@@ -17,7 +17,7 @@
 
 #content {
 	display: block;
-	margin-bottom : 100px;
+	margin-bottom: 100px;
 }
 
 .main_wrap01 .slider-wrap .slick-list .slick-track .slick-slide {
@@ -178,7 +178,11 @@
 	width: 100%;
 	height: 580px;
 	background-image:
-		url("https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/a9b0408440b41d63085e798bc6842c2d_66784.jpg");
+		url('https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/a4718ce4ff4a9a1a7d0dfda13cac6252_44894.jpg');
+}
+
+.sliderBtn>active {
+	background: #fff;
 }
 
 .adpic_wideslide2 {
@@ -228,15 +232,6 @@
 .item-display .space .box .thumbnail .prdimg img, .item-display .space .box .thumbnail img
 	{
 	width: 100%;
-}
-
-.bx-wrapper {
-	position: relative;
-	/* margin-bottom: 60px; */
-	padding: 0; *:;
-	zoom: 1;
-	-ms-touch-action: pan-y;
-	touch-action: pan-y;
 }
 
 .adpic_wideslide2 .display_list .bx-viewport {
@@ -327,7 +322,7 @@
 	z-index: 9;
 }
 
-.adpic_wideslide2 .review .bx-wrapper .bx-prev {
+.bx-wrapper .slideList .left {
 	top: auto;
 	bottom: 20px;
 	left: 194px;
@@ -335,6 +330,7 @@
 	background:
 		url("https://lush.co.kr/data/skin/front/howling/img/etc/review_prev.png")
 		no-repeat;
+	position: absolute;
 }
 
 .adpic_wideslide2 .review .slider_count {
@@ -348,52 +344,15 @@
 	line-height: 18px;
 }
 
-.adpic_wideslide2 .review .bx-wrapper .bx-next {
+.bx-wrapper .slideList .right {
 	top: auto;
 	bottom: 20px;
-	right: 20;
+	right: 7px;
 	margin-top: 0;
 	background:
 		url("https://lush.co.kr/data/skin/front/howling/img/etc/review_next.png")
 		no-repeat;
-}
-
-.bx-wrapper .bx-controls-direction a {
 	position: absolute;
-	top: 50%;
-	margin-top: -16px;
-	outline: 0;
-	width: 32px;
-	height: 32px;
-	text-indent: -9999px;
-	z-index: 99;
-}
-
-.bx-wrapper .bx-next {
-	right: 10px;
-	background: url(images/controls.png) no-repeat -43px -32px;
-}
-
-.bx-wrapper .bx-pager {
-	text-align: center;
-	font-size: .85em;
-	font-family: Arial;
-	font-weight: bold;
-	color: #666;
-	padding-top: 20px;
-}
-
-.bx-wrapper .bx-pager-item {
-	font-size: 0;
-	line-height: 0;
-}
-
-.bx-wrapper .bx-pager-item, .bx-wrapper .bx-controls-auto .bx-controls-auto-item
-	{
-	display: inline-block;
-	vertical-align: bottom; *:;
-	zoom: 1;
-	*:;
 }
 
 .adpic_wideslide2 .bx-wrapper .bx-pager.bx-default-pager a.active {
@@ -458,57 +417,240 @@
 }
 
 .main_wrap04 {
-    padding: 90px 0 200px 0;
+	padding: 90px 0 200px 0;
 }
 
 .main_wrap04 .inner_wrap {
-    position: relative;
+	position: relative;
 }
 
 .main_wrap04 dl {
-    width: 350px;
-    padding-left: 300px;
+	width: 350px;
+	padding-left: 300px;
 }
 
 .main_wrap04 dt {
-    padding-bottom: 20px;
-    font-size: 42px;
-    font-family: "notokrB";
-    color: #000;
+	padding-bottom: 20px;
+	font-size: 42px;
+	font-family: "notokrB";
+	color: #000;
 }
 
 .main_wrap04 dd {
-    line-height: 26px;
-    font-size: 16px;
+	line-height: 26px;
+	font-size: 16px;
 }
 
 .main_wrap04 .inner_wrap .img {
-    position: absolute;
-    top: -40px;
-    right: 100px;
-    width: 380px;
-    z-index: 1;
+	position: absolute;
+	top: -40px;
+	right: 100px;
+	width: 380px;
+	z-index: 1;
 }
 
 .slick-slide {
-    display: block;
+	display: block;
 }
 
-
-
 .slick-list {
-    display: block;
-    overflow: hidden;
-    position: relative;
-    margin: 0;
-    padding: 0;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	margin: 0;
+	padding: 0;
 }
 
 .slick-track {
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
+	display: block;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.main_wrap01 .slick-dots {
+	width: 12px;
+	bottom: auto;
+	position: relative;
+	top: 40%;
+	left: 50%;
+	margin-left: 580px;
+}
+
+.main_wrap01 .slick-dots li {
+	display: block;
+	margin: 0 0 10px 0;
+}
+
+.slick-dots li {
+	cursor: pointer;
+}
+
+.slider-banner-3305991155 .slick-dots li button {
+	border: 2px solid #fff;
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	background: none;
+}
+
+.slick-li>button.active {
+	/* background: #ffffff; */
+	background: #fff;
+}
+
+.slider-banner-3305991155 {
+	margin: 0 auto;
+	width: 100%;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+.main_wrap01, .main_wrap01 .slider-wrap, .main_wrap01 .slider-wrap .slick-list,
+	.main_wrap01 .slider-wrap .slick-list .slick-track, .main_wrap01 .slider-wrap .slick-list .slick-track .slick-slide
+	{
+	height: 580px !important;
+}
+
+.sliderBtn {
+	border: 2px solid #fff;
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	display: block;
+	padding: 5px;
+	font-size: 0;
+	line-height: 0;
+	cursor: pointer;
+	outline: none;
+	opacity: 0.75;
+}
+
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@
+-webkit-keyframes fade {
+	from {opacity: .4
+}
+
+to {
+	opacity: 1
+}
+
+}
+@
+keyframes fade {
+	from {opacity: .4}
+}
+
+to {
+	opacity: 1
+}
+
+.bx-wrapper{
+	height: 100%;
+	overflow: hidden;
+}
+
+.bx-wrapper input[id*="slideInput"] {
+	display: none;
+}
+
+.bx-wrapper .mySlides {
+	max-width: 280px; 
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.bx-wrapper .slideList {
+	white-space: nowrap;
+	font-size: 0;
+}
+
+.bx-wrapper .slideList li {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	transition: all .5s;
+}
+
+.bx-wrapper .slideList li>a {
+	display: block;
+	position: relative;
+}
+
+.bx-wrapper .slideList li>a img {
+	width: 100%;
+}
+
+.bx-wrapper .slideList label {
+	position: absolute;
+	z-index: 0;
+	top: auto;
+	bottom: 20px;
+	cursor: pointer;
+	width: 11px;
+	height: 15px;
+}
+
+.bx-wrapper [id="slideInput01"]:checked ~ .mySlides .slideList > li {
+	transform: translateX(0%)
+}
+
+;
+.bx-wrapper [id="slideInput02"]:checked ~ .mySlides .slideList > li {
+	transform: translateX(-100%)
+}
+
+;
+.bx-wrapper [id="slideInput03"]:checked ~ .mySlides .slideList >li {
+	transform: translateX(-200%)
+}
+
+;
+.bx-wrapper [id="slideInput04"]:checked ~ .mySlides .slideList > li {
+	transform: translateX(-300%)
+}
+
+;
+.bx-wrapper [id="slideInput05"]:checked ~ .mySlides .slideList > li {
+	transform: translateX(-400%)
+}
+
+;
+.bx-wrapper [id="slideInput06"]:checked ~ .mySlides .slideList > li {
+	transform: translateX(-500%)
+}
+
+;
+.bx-wrapper .bx-controls bx-has-controls-direction [class*="bx-controls-direction"]
+	{
+	display: none;
+}
+
+.bx-wrapper [id="slideInput01"]:checked ~ .bxslider .bx-controls-direction01
+	{
+	display: block;
+}
+
+.bx-wrapper .bx-pager {
+    text-align: center;
+    font-size: .85em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #666;
+    padding-top: 20px;
+}
+
+.bx-controls-direction01 > a > label {
+	width: 11px;
+    height: 15px;
+    z-index: 9;
 }
 
 </style>
@@ -518,7 +660,28 @@
 	<div id="container_main">
 		<div id="content">
 			<div class="contents main_wrap01 ee">
-				<div class="slider-area"></div>
+				<div class="slider-area" style="">
+
+
+					<ul class="slick-dots" style="display: block;" role="tablist">
+						<li class="slick-li" aria-hidden="false" role="presentation"
+							aria-selected="true" aria-controls="navigation20"
+							id="slick-slide20"><button class="sliderBtn sb1 active"
+								type="button" data-role="none" role="button" tabindex="0">1</button></li>
+						<li class="slick-li" aria-hidden="true" role="presentation"
+							aria-selected="false" aria-controls="navigation21"
+							id="slick-slide21"><button class="sliderBtn sb2"
+								type="button" data-role="none" role="button" tabindex="0">2</button></li>
+						<li class="slick-li" aria-hidden="true" role="presentation"
+							aria-selected="false" aria-controls="navigation22"
+							id="slick-slide22"><button class="sliderBtn sb3"
+								type="button" data-role="none" role="button" tabindex="0">3</button></li>
+						<li class="slick-li" aria-hidden="true" role="presentation"
+							aria-selected="false" aria-controls="navigation23"
+							id="slick-slide23"><button class="sliderBtn sb4"
+								type="button" data-role="none" role="button" tabindex="0">4</button></li>
+					</ul>
+				</div>
 			</div>
 			<div class="adpic_wideslide2">
 				<div class="inner_wrap">
@@ -861,6 +1024,662 @@
 										</div>
 									</div>
 
+									<div
+										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
+										aria-hidden="false">
+										<div class="space">
+											<div class="box">
+
+												<div class="thumbnail"
+													data-image-magnify="/data/goods/16/03/18/174/174_magnify_072.jpg"
+													data-image-detail="/data/goods/16/03/18/174/174_detail_082.jpg"
+													data-image-list="/data/goods/16/03/18/174/174_list_06.jpg"
+													data-image-main="/data/goods/16/03/18/174/174_main_086.jpg"
+													data-image-add1="/data/goods/16/03/18/174/174_add1_098.jpg"
+													data-image-add2="/data/goods/16/03/18/174/174_add2_078.jpg">
+													<a
+														href="../goods/goods_view.php?goodsNo=174&amp;mtn=%5E%7C%5E%5E%7C%5E">
+														<span class="prdimg"><img
+															src="/data/goods/16/03/18/174/174_main_086.jpg"></span>
+													</a> <span class="choice -moslow"> <a
+														href="../goods/goods_view.php?goodsNo=174&amp;mtn=%5E%7C%5E%5E%7C%5E"
+														target="_blank" class="btn-open-win -moslow" type="button"
+														data-goods-no="174"><span
+															class="ti ti-layout-media-center-alt -moslow"></span><span
+															class="hand icon-name">새창열기</span></a> <!--
+									<a class="wish btn-add-wish1 -moslow" data-goods-no="174" href="#jjimA"><span class="ti ti-heart -moslow"></span><span class="icon-name">찜하기</span></a>
+									<a href="#optionViewLayer" type="button" class="cart btn-open-layer btn-add-cart1 -moslow" data-mode="cartIn" data-goods-no="174"><span class="ti ti-bag -moslow"></span><span class="icon-name">장바구니</span></a>
+									-->
+													</span>
+												</div>
+												<div class="prdinfo">
+													<div class="conditions">
+														<span class="hot"> <img
+															src="/data/icon/goods_icon/icon_vegan.png" alt="vegan"
+															title="vegan" class="middle">
+														</span>
+													</div>
+													<div class="txt">
+														<span class="brand"> <strong>[러쉬]</strong>
+														</span> <a
+															href="../goods/goods_view.php?goodsNo=174&amp;mtn=%5E%7C%5E%5E%7C%5E">
+															<span class="prdName">인터갈락틱</span><span class="shotdesc">#배쓰밤
+																#환상적인우주느낌</span>
+														</a>
+													</div>
+													<div class="price gd-default">
+														<span class="cost"> <strong>￦ 17,000</strong>
+														</span>
+													</div>
+													<div class="display-field"></div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div
+										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
+										aria-hidden="false">
+										<div class="space">
+											<div class="box">
+
+												<div class="thumbnail"
+													data-image-magnify="/data/goods/11/01/20/76/76_magnify_016.jpg"
+													data-image-detail="/data/goods/11/01/20/76/76_detail_043.jpg"
+													data-image-list="/data/goods/11/01/20/76/76_list_037.jpg"
+													data-image-main="/data/goods/11/01/20/76/76_main_063.jpg"
+													data-image-add1="/data/goods/11/01/20/76/76_add1_041.jpg"
+													data-image-add2="/data/goods/11/01/20/76/76_add2_021.jpg">
+													<a
+														href="../goods/goods_view.php?goodsNo=76&amp;mtn=%5E%7C%5E%5E%7C%5E">
+														<span class="prdimg"><img
+															src="/data/goods/11/01/20/76/76_main_063.jpg"></span>
+													</a> <span class="choice -moslow"> <a
+														href="../goods/goods_view.php?goodsNo=76&amp;mtn=%5E%7C%5E%5E%7C%5E"
+														target="_blank" class="btn-open-win -moslow" type="button"
+														data-goods-no="76"><span
+															class="ti ti-layout-media-center-alt -moslow"></span><span
+															class="hand icon-name">새창열기</span></a> <!--
+									<a class="wish btn-add-wish1 -moslow" data-goods-no="76" href="#jjimA"><span class="ti ti-heart -moslow"></span><span class="icon-name">찜하기</span></a>
+									<a href="#optionViewLayer" type="button" class="cart btn-open-layer btn-add-cart1 -moslow" data-mode="cartIn" data-goods-no="76"><span class="ti ti-bag -moslow"></span><span class="icon-name">장바구니</span></a>
+									-->
+													</span>
+												</div>
+												<div class="prdinfo">
+													<div class="conditions">
+														<span class="hot"> <img
+															src="/data/icon/goods_icon/icon_local.png" alt="국내제조"
+															title="국내제조" class="middle"> <img
+															src="/data/icon/goods_icon/icon_vegan.png" alt="vegan"
+															title="vegan" class="middle">
+														</span>
+													</div>
+													<div class="txt">
+														<span class="brand"> <strong>[러쉬]</strong>
+														</span> <a
+															href="../goods/goods_view.php?goodsNo=76&amp;mtn=%5E%7C%5E%5E%7C%5E">
+															<span class="prdName">카타스트로피 코스메틱</span><span
+															class="shotdesc">#블루베리의촉촉함 #슈퍼푸드블루베리</span>
+														</a>
+													</div>
+													<div class="price gd-default">
+														<span class="cost"> <strong>￦ 25,000</strong>
+														</span>
+													</div>
+													<div class="display-field"></div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div
+										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
+										aria-hidden="false">
+										<div class="space">
+											<div class="box">
+
+												<div class="thumbnail"
+													data-image-magnify="/data/goods/11/01/20/53/53_magnify_02.jpg"
+													data-image-detail="/data/goods/11/01/20/53/53_detail_091.jpg"
+													data-image-list="/data/goods/11/01/20/53/53_list_063.jpg"
+													data-image-main="/data/goods/11/01/20/53/53_main_044.jpg"
+													data-image-add1="/data/goods/11/01/20/53/53_add1_014.jpg"
+													data-image-add2="/data/goods/11/01/20/53/53_add2_011.jpg">
+													<a
+														href="../goods/goods_view.php?goodsNo=53&amp;mtn=%5E%7C%5E%5E%7C%5E">
+														<span class="prdimg"><img
+															src="/data/goods/11/01/20/53/53_main_044.jpg"></span>
+													</a> <span class="choice -moslow"> <a
+														href="../goods/goods_view.php?goodsNo=53&amp;mtn=%5E%7C%5E%5E%7C%5E"
+														target="_blank" class="btn-open-win -moslow" type="button"
+														data-goods-no="53"><span
+															class="ti ti-layout-media-center-alt -moslow"></span><span
+															class="hand icon-name">새창열기</span></a> <!--
+									<a class="wish btn-add-wish1 -moslow" data-goods-no="53" href="#jjimA"><span class="ti ti-heart -moslow"></span><span class="icon-name">찜하기</span></a>
+									<a href="#optionViewLayer" type="button" class="cart btn-open-layer btn-add-cart1 -moslow" data-mode="cartIn" data-goods-no="53"><span class="ti ti-bag -moslow"></span><span class="icon-name">장바구니</span></a>
+									-->
+													</span>
+												</div>
+												<div class="prdinfo">
+													<div class="conditions">
+														<span class="hot"> <img
+															src="/data/icon/goods_icon/icon_vegan.png" alt="vegan"
+															title="vegan" class="middle">
+														</span>
+													</div>
+													<div class="txt">
+														<span class="brand"> <strong>[러쉬]</strong>
+														</span> <a
+															href="../goods/goods_view.php?goodsNo=53&amp;mtn=%5E%7C%5E%5E%7C%5E">
+															<span class="prdName">씨닉</span><span class="shotdesc">#샴푸바
+																#바닷소금듬뿍</span>
+														</a>
+													</div>
+													<div class="price gd-default">
+														<span class="cost"> <strong>￦ 18,000</strong>
+														</span>
+													</div>
+													<div class="display-field"></div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div
+										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
+										aria-hidden="false">
+										<div class="space">
+											<div class="box">
+
+												<div class="thumbnail"
+													data-image-add1="/data/goods/18/11/48/1000000026/1000000026_add1_04.jpg"
+													data-image-add2="/data/goods/18/11/48/1000000026/1000000026_add2_050.jpg"
+													data-image-list="/data/goods/18/11/48/1000000026/1000000026_list_056.jpg"
+													data-image-main="/data/goods/18/11/48/1000000026/1000000026_main_03.jpg"
+													data-image-detail="/data/goods/18/11/48/1000000026/1000000026_detail_084.jpg"
+													data-image-magnify="/data/goods/18/11/48/1000000026/1000000026_magnify_072.jpg">
+													<a
+														href="../goods/goods_view.php?goodsNo=1000000026&amp;mtn=%5E%7C%5E%5E%7C%5E">
+														<span class="prdimg"><img
+															src="/data/goods/18/11/48/1000000026/1000000026_main_03.jpg"></span>
+													</a> <span class="choice -moslow"> <a
+														href="../goods/goods_view.php?goodsNo=1000000026&amp;mtn=%5E%7C%5E%5E%7C%5E"
+														target="_blank" class="btn-open-win -moslow" type="button"
+														data-goods-no="1000000026"><span
+															class="ti ti-layout-media-center-alt -moslow"></span><span
+															class="hand icon-name">새창열기</span></a> <!--
+									<a class="wish btn-add-wish1 -moslow" data-goods-no="1000000026" href="#jjimA"><span class="ti ti-heart -moslow"></span><span class="icon-name">찜하기</span></a>
+									<a href="#optionViewLayer" type="button" class="cart btn-open-layer btn-add-cart1 -moslow" data-mode="cartIn" data-goods-no="1000000026"><span class="ti ti-bag -moslow"></span><span class="icon-name">장바구니</span></a>
+									-->
+													</span>
+												</div>
+												<div class="prdinfo">
+													<div class="conditions">
+														<span class="hot"> <img
+															src="/data/icon/goods_icon/icon_vegan.png" alt="vegan"
+															title="vegan" class="middle">
+														</span>
+													</div>
+													<div class="txt">
+														<span class="brand"> <strong>[러쉬]</strong>
+														</span> <a
+															href="../goods/goods_view.php?goodsNo=1000000026&amp;mtn=%5E%7C%5E%5E%7C%5E">
+															<span class="prdName">매직 크리스탈스 300g/600g</span><span
+															class="shotdesc">#스크럽 #민트의마법 #시원해져라</span>
+														</a>
+													</div>
+													<div class="price gd-default">
+														<span class="cost"> <strong>￦ 32,000</strong>
+														</span>
+													</div>
+													<div class="display-field"></div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div
+										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
+										aria-hidden="false">
+										<div class="space">
+											<div class="box">
+
+												<div class="thumbnail"
+													data-image-magnify="/data/goods/12/03/07/97/97_magnify_035.jpg"
+													data-image-detail="/data/goods/12/03/07/97/97_detail_057.jpg"
+													data-image-list="/data/goods/12/03/07/97/97_list_071.jpg"
+													data-image-main="/data/goods/12/03/07/97/97_main_074.jpg"
+													data-image-add1="/data/goods/12/03/07/97/97_add1_073.jpg"
+													data-image-add2="/data/goods/12/03/07/97/97_add2_064.jpg">
+													<a
+														href="../goods/goods_view.php?goodsNo=97&amp;mtn=%5E%7C%5E%5E%7C%5E">
+														<span class="prdimg"><img
+															src="/data/goods/12/03/07/97/97_main_074.jpg"></span>
+													</a> <span class="choice -moslow"> <a
+														href="../goods/goods_view.php?goodsNo=97&amp;mtn=%5E%7C%5E%5E%7C%5E"
+														target="_blank" class="btn-open-win -moslow" type="button"
+														data-goods-no="97"><span
+															class="ti ti-layout-media-center-alt -moslow"></span><span
+															class="hand icon-name">새창열기</span></a> <!--
+									<a class="wish btn-add-wish1 -moslow" data-goods-no="97" href="#jjimA"><span class="ti ti-heart -moslow"></span><span class="icon-name">찜하기</span></a>
+									<a href="#optionViewLayer" type="button" class="cart btn-open-layer btn-add-cart1 -moslow" data-mode="cartIn" data-goods-no="97"><span class="ti ti-bag -moslow"></span><span class="icon-name">장바구니</span></a>
+									-->
+													</span>
+												</div>
+												<div class="prdinfo">
+													<div class="conditions">
+														<span class="hot"> <img
+															src="/data/icon/goods_icon/icon_local.png" alt="국내제조"
+															title="국내제조" class="middle">
+														</span>
+													</div>
+													<div class="txt">
+														<span class="brand"> <strong>[러쉬]</strong>
+														</span> <a
+															href="../goods/goods_view.php?goodsNo=97&amp;mtn=%5E%7C%5E%5E%7C%5E">
+															<span class="prdName">마스크 오브 매그너민티 125g/315g</span><span
+															class="shotdesc">#꿀의촉촉함 #데일리팩 #민트팩</span>
+														</a>
+													</div>
+													<div class="price gd-default">
+														<span class="cost"> <strong>￦ 20,000</strong>
+														</span>
+													</div>
+													<div class="display-field"></div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div
+										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
+										aria-hidden="false">
+										<div class="space">
+											<div class="box">
+
+												<div class="thumbnail"
+													data-image-magnify="/data/goods/17/11/01/342/342_magnify_050.jpg"
+													data-image-detail="/data/goods/17/11/01/342/342_detail_068.jpg"
+													data-image-add1="/data/goods/17/11/01/342/342_add1_042.jpg"
+													data-image-add2="/data/goods/17/11/01/342/342_add2_011.jpg"
+													data-image-list="/data/goods/17/11/01/342/342_list_061.jpg"
+													data-image-main="/data/goods/17/11/01/342/342_main_041.jpg">
+													<a
+														href="../goods/goods_view.php?goodsNo=342&amp;mtn=%5E%7C%5E%5E%7C%5E">
+														<span class="prdimg"><img
+															src="/data/goods/17/11/01/342/342_main_041.jpg"></span>
+													</a> <span class="choice -moslow"> <a
+														href="../goods/goods_view.php?goodsNo=342&amp;mtn=%5E%7C%5E%5E%7C%5E"
+														target="_blank" class="btn-open-win -moslow" type="button"
+														data-goods-no="342"><span
+															class="ti ti-layout-media-center-alt -moslow"></span><span
+															class="hand icon-name">새창열기</span></a> <!--
+									<a class="wish btn-add-wish1 -moslow" data-goods-no="342" href="#jjimA"><span class="ti ti-heart -moslow"></span><span class="icon-name">찜하기</span></a>
+									<a href="#optionViewLayer" type="button" class="cart btn-open-layer btn-add-cart1 -moslow" data-mode="cartIn" data-goods-no="342"><span class="ti ti-bag -moslow"></span><span class="icon-name">장바구니</span></a>
+									-->
+													</span>
+												</div>
+												<div class="prdinfo">
+													<div class="conditions">
+														<span class="hot"> <img
+															src="/data/icon/goods_icon/icon_vegan.png" alt="vegan"
+															title="vegan" class="middle">
+														</span>
+													</div>
+													<div class="txt">
+														<span class="brand"> <strong>[러쉬]</strong>
+														</span> <a
+															href="../goods/goods_view.php?goodsNo=342&amp;mtn=%5E%7C%5E%5E%7C%5E">
+															<span class="prdName">더 올리브 브랜치 100g/250g/500g</span><span
+															class="shotdesc">#오일듬뿍샤워젤 #보습샤워시작</span>
+														</a>
+													</div>
+													<div class="price gd-default">
+														<span class="cost"> <strong>￦ 17,000</strong>
+														</span>
+													</div>
+													<div class="display-field"></div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div
+										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
+										aria-hidden="false">
+										<div class="space">
+											<div class="box">
+
+												<div class="thumbnail"
+													data-image-magnify="/data/goods/11/01/20/37/37_magnify_029.jpg"
+													data-image-detail="/data/goods/11/01/20/37/37_detail_078.jpg"
+													data-image-list="/data/goods/11/01/20/37/37_list_055.jpg"
+													data-image-main="/data/goods/11/01/20/37/37_main_019.jpg"
+													data-image-add1="/data/goods/11/01/20/37/37_add1_017.jpg"
+													data-image-add2="/data/goods/11/01/20/37/37_add2_055.jpg">
+													<a
+														href="../goods/goods_view.php?goodsNo=37&amp;mtn=%5E%7C%5E%5E%7C%5E">
+														<span class="prdimg"><img
+															src="/data/goods/11/01/20/37/37_main_019.jpg"></span>
+													</a> <span class="choice -moslow"> <a
+														href="../goods/goods_view.php?goodsNo=37&amp;mtn=%5E%7C%5E%5E%7C%5E"
+														target="_blank" class="btn-open-win -moslow" type="button"
+														data-goods-no="37"><span
+															class="ti ti-layout-media-center-alt -moslow"></span><span
+															class="hand icon-name">새창열기</span></a> <!--
+									<a class="wish btn-add-wish1 -moslow" data-goods-no="37" href="#jjimA"><span class="ti ti-heart -moslow"></span><span class="icon-name">찜하기</span></a>
+									<a href="#optionViewLayer" type="button" class="cart btn-open-layer btn-add-cart1 -moslow" data-mode="cartIn" data-goods-no="37"><span class="ti ti-bag -moslow"></span><span class="icon-name">장바구니</span></a>
+									-->
+													</span>
+												</div>
+												<div class="prdinfo">
+													<div class="conditions">
+														<span class="hot"> <img
+															src="/data/icon/goods_icon/icon_local.png" alt="국내제조"
+															title="국내제조" class="middle">
+														</span>
+													</div>
+													<div class="txt">
+														<span class="brand"> <strong>[러쉬]</strong>
+														</span> <a
+															href="../goods/goods_view.php?goodsNo=37&amp;mtn=%5E%7C%5E%5E%7C%5E">
+															<span class="prdName">비비 씨위드</span><span class="shotdesc">#장미의촉촉함
+																#해초팩# 건강한피부</span>
+														</a>
+													</div>
+													<div class="price gd-default">
+														<span class="cost"> <strong>￦ 25,000</strong>
+														</span>
+													</div>
+													<div class="display-field"></div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div
+										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
+										aria-hidden="false">
+										<div class="space">
+											<div class="box">
+
+												<div class="thumbnail"
+													data-image-magnify="/data/goods/11/01/20/15/15_magnify_017.jpg"
+													data-image-detail="/data/goods/11/01/20/15/15_detail_056.jpg"
+													data-image-list="/data/goods/11/01/20/15/15_list_013.jpg"
+													data-image-main="/data/goods/11/01/20/15/15_main_074.jpg"
+													data-image-add1="/data/goods/11/01/20/15/15_add1_054.jpg"
+													data-image-add2="/data/goods/11/01/20/15/15_add2_016.jpg">
+													<a
+														href="../goods/goods_view.php?goodsNo=15&amp;mtn=%5E%7C%5E%5E%7C%5E">
+														<span class="prdimg"><img
+															src="/data/goods/11/01/20/15/15_main_074.jpg"></span>
+													</a> <span class="choice -moslow"> <a
+														href="../goods/goods_view.php?goodsNo=15&amp;mtn=%5E%7C%5E%5E%7C%5E"
+														target="_blank" class="btn-open-win -moslow" type="button"
+														data-goods-no="15"><span
+															class="ti ti-layout-media-center-alt -moslow"></span><span
+															class="hand icon-name">새창열기</span></a> <!--
+									<a class="wish btn-add-wish1 -moslow" data-goods-no="15" href="#jjimA"><span class="ti ti-heart -moslow"></span><span class="icon-name">찜하기</span></a>
+									<a href="#optionViewLayer" type="button" class="cart btn-open-layer btn-add-cart1 -moslow" data-mode="cartIn" data-goods-no="15"><span class="ti ti-bag -moslow"></span><span class="icon-name">장바구니</span></a>
+									-->
+													</span>
+												</div>
+												<div class="prdinfo">
+													<div class="conditions">
+														<span class="hot"> <img
+															src="/data/icon/goods_icon/icon_vegan.png" alt="vegan"
+															title="vegan" class="middle">
+														</span>
+													</div>
+													<div class="txt">
+														<span class="brand"> <strong>[러쉬]</strong>
+														</span> <a
+															href="../goods/goods_view.php?goodsNo=15&amp;mtn=%5E%7C%5E%5E%7C%5E">
+															<span class="prdName">대디-오 100g/250g/500g</span><span
+															class="shotdesc">#오래머무는잔향 #베스트샴푸</span>
+														</a>
+													</div>
+													<div class="price gd-default">
+														<span class="cost"> <strong>￦ 19,000</strong>
+														</span>
+													</div>
+													<div class="display-field"></div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div
+										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
+										aria-hidden="false">
+										<div class="space">
+											<div class="box">
+
+												<div class="thumbnail"
+													data-image-magnify="/data/goods/17/05/30/241/241_magnify_077.jpg"
+													data-image-detail="/data/goods/17/05/30/241/241_detail_073.jpg"
+													data-image-list="/data/goods/17/05/30/241/241_list_098.jpg"
+													data-image-main="/data/goods/17/05/30/241/241_main_049.jpg"
+													data-image-add1="/data/goods/17/05/30/241/241_add1_072.jpg"
+													data-image-add2="/data/goods/17/05/30/241/241_add2_07.jpg">
+													<a
+														href="../goods/goods_view.php?goodsNo=241&amp;mtn=%5E%7C%5E%5E%7C%5E">
+														<span class="prdimg"><img
+															src="/data/goods/17/05/30/241/241_main_049.jpg"></span>
+													</a> <span class="choice -moslow"> <a
+														href="../goods/goods_view.php?goodsNo=241&amp;mtn=%5E%7C%5E%5E%7C%5E"
+														target="_blank" class="btn-open-win -moslow" type="button"
+														data-goods-no="241"><span
+															class="ti ti-layout-media-center-alt -moslow"></span><span
+															class="hand icon-name">새창열기</span></a> <!--
+									<a class="wish btn-add-wish1 -moslow" data-goods-no="241" href="#jjimA"><span class="ti ti-heart -moslow"></span><span class="icon-name">찜하기</span></a>
+									<a href="#optionViewLayer" type="button" class="cart btn-open-layer btn-add-cart1 -moslow" data-mode="cartIn" data-goods-no="241"><span class="ti ti-bag -moslow"></span><span class="icon-name">장바구니</span></a>
+									-->
+													</span>
+												</div>
+												<div class="prdinfo">
+													<div class="conditions">
+														<span class="hot"> <img
+															src="/data/icon/goods_icon/icon_vegan.png" alt="vegan"
+															title="vegan" class="middle">
+														</span>
+													</div>
+													<div class="txt">
+														<span class="brand"> <strong>[러쉬]</strong>
+														</span> <a
+															href="../goods/goods_view.php?goodsNo=241&amp;mtn=%5E%7C%5E%5E%7C%5E">
+															<span class="prdName">뉴</span><span class="shotdesc">#착한고체샴푸
+																#뿌리튼튼</span>
+														</a>
+													</div>
+													<div class="price gd-default">
+														<span class="cost"> <strong>￦ 18,000</strong>
+														</span>
+													</div>
+													<div class="display-field"></div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div
+										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
+										class="bx-clone" aria-hidden="true">
+										<div class="space">
+											<div class="box">
+
+												<div class="thumbnail"
+													data-image-magnify="/data/goods/21/11/45/1000001958/1000001958_magnify_06.jpg"
+													data-image-detail="/data/goods/21/11/45/1000001958/1000001958_detail_02.jpg"
+													data-image-list="/data/goods/21/11/45/1000001958/1000001958_list_094.jpg"
+													data-image-main="/data/goods/21/11/45/1000001958/1000001958_main_057.jpg"
+													data-image-add1="/data/goods/21/11/45/1000001958/1000001958_add1_051.jpg"
+													data-image-add2="/data/goods/21/11/45/1000001958/1000001958_add2_053.jpg">
+													<a
+														href="../goods/goods_view.php?goodsNo=1000001958&amp;mtn=%5E%7C%5E%5E%7C%5E">
+														<span class="prdimg"><img
+															src="/data/goods/21/11/45/1000001958/1000001958_main_057.jpg"></span>
+													</a> <span class="choice -moslow"> <a
+														href="../goods/goods_view.php?goodsNo=1000001958&amp;mtn=%5E%7C%5E%5E%7C%5E"
+														target="_blank" class="btn-open-win -moslow" type="button"
+														data-goods-no="1000001958"><span
+															class="ti ti-layout-media-center-alt -moslow"></span><span
+															class="hand icon-name">새창열기</span></a> <!--
+									<a class="wish btn-add-wish1 -moslow" data-goods-no="1000001958" href="#jjimA"><span class="ti ti-heart -moslow"></span><span class="icon-name">찜하기</span></a>
+									<a href="#optionViewLayer" type="button" class="cart btn-open-layer btn-add-cart1 -moslow" data-mode="cartIn" data-goods-no="1000001958"><span class="ti ti-bag -moslow"></span><span class="icon-name">장바구니</span></a>
+									-->
+													</span>
+												</div>
+												<div class="prdinfo">
+													<div class="conditions">
+														<span class="hot"> <img
+															src="/data/icon/goods_icon/icon_new.png" alt="new"
+															title="new" class="middle"> <img
+															src="/data/icon/goods_icon/icon_local.png" alt="국내제조"
+															title="국내제조" class="middle">
+														</span>
+													</div>
+													<div class="txt">
+														<span class="brand"> <strong>[러쉬]</strong>
+														</span> <a
+															href="../goods/goods_view.php?goodsNo=1000001958&amp;mtn=%5E%7C%5E%5E%7C%5E">
+															<span class="prdName">마스크 오브 매그너민티 셀프-프리저빙
+																125g/315g</span><span class="shotdesc">#천연원재료 #더부드럽게</span>
+														</a>
+													</div>
+													<div class="price gd-default">
+														<span class="cost"> <strong>￦ 20,000</strong>
+														</span>
+													</div>
+													<div class="display-field"></div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div
+										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
+										class="bx-clone" aria-hidden="true">
+										<div class="space">
+											<div class="box">
+
+												<div class="thumbnail"
+													data-image-magnify="/data/goods/17/08/16/246/246_magnify_074.jpg"
+													data-image-detail="/data/goods/17/08/16/246/246_detail_070.jpg"
+													data-image-list="/data/goods/17/08/16/246/246_list_060.jpg"
+													data-image-main="/data/goods/17/08/16/246/246_main_022.jpg"
+													data-image-add1="/data/goods/17/08/16/246/246_add1_070.jpg"
+													data-image-add2="/data/goods/17/08/16/246/246_add2_025.jpg">
+													<a
+														href="../goods/goods_view.php?goodsNo=246&amp;mtn=%5E%7C%5E%5E%7C%5E">
+														<span class="prdimg"><img
+															src="/data/goods/17/08/16/246/246_main_022.jpg"></span>
+													</a> <span class="choice -moslow"> <a
+														href="../goods/goods_view.php?goodsNo=246&amp;mtn=%5E%7C%5E%5E%7C%5E"
+														target="_blank" class="btn-open-win -moslow" type="button"
+														data-goods-no="246"><span
+															class="ti ti-layout-media-center-alt -moslow"></span><span
+															class="hand icon-name">새창열기</span></a> <!--
+									<a class="wish btn-add-wish1 -moslow" data-goods-no="246" href="#jjimA"><span class="ti ti-heart -moslow"></span><span class="icon-name">찜하기</span></a>
+									<a href="#optionViewLayer" type="button" class="cart btn-open-layer btn-add-cart1 -moslow" data-mode="cartIn" data-goods-no="246"><span class="ti ti-bag -moslow"></span><span class="icon-name">장바구니</span></a>
+									-->
+													</span>
+												</div>
+												<div class="prdinfo">
+													<div class="conditions">
+														<span class="hot"> <img
+															src="/data/icon/goods_icon/icon_fresh.png" alt="프레쉬"
+															title="프레쉬" class="middle"> <img
+															src="/data/icon/goods_icon/icon_vegan.png" alt="vegan"
+															title="vegan" class="middle">
+														</span>
+													</div>
+													<div class="txt">
+														<span class="brand"> <strong>[러쉬]</strong>
+														</span> <a
+															href="../goods/goods_view.php?goodsNo=246&amp;mtn=%5E%7C%5E%5E%7C%5E">
+															<span class="prdName">더티 보디 스프레이</span><span
+															class="shotdesc">#스테디셀러 #뒤돌아보는향 #재구매각</span>
+														</a>
+													</div>
+													<div class="price gd-default">
+														<span class="cost"> <strong>￦ 50,000</strong>
+														</span>
+													</div>
+													<div class="display-field"></div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div
+										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
+										class="bx-clone" aria-hidden="true">
+										<div class="space">
+											<div class="box">
+
+												<div class="thumbnail"
+													data-image-magnify="/data/goods/11/01/25/88/88_magnify_01.jpg"
+													data-image-detail="/data/goods/11/01/25/88/88_detail_056.jpg"
+													data-image-list="/data/goods/11/01/25/88/88_list_07.jpg"
+													data-image-main="/data/goods/11/01/25/88/88_main_058.jpg"
+													data-image-add1="/data/goods/11/01/25/88/88_add1_010.jpg"
+													data-image-add2="/data/goods/11/01/25/88/88_add2_098.jpg">
+													<a
+														href="../goods/goods_view.php?goodsNo=88&amp;mtn=%5E%7C%5E%5E%7C%5E">
+														<span class="prdimg"><img
+															src="/data/goods/11/01/25/88/88_main_058.jpg"></span>
+													</a> <span class="choice -moslow"> <a
+														href="../goods/goods_view.php?goodsNo=88&amp;mtn=%5E%7C%5E%5E%7C%5E"
+														target="_blank" class="btn-open-win -moslow" type="button"
+														data-goods-no="88"><span
+															class="ti ti-layout-media-center-alt -moslow"></span><span
+															class="hand icon-name">새창열기</span></a> <!--
+									<a class="wish btn-add-wish1 -moslow" data-goods-no="88" href="#jjimA"><span class="ti ti-heart -moslow"></span><span class="icon-name">찜하기</span></a>
+									<a href="#optionViewLayer" type="button" class="cart btn-open-layer btn-add-cart1 -moslow" data-mode="cartIn" data-goods-no="88"><span class="ti ti-bag -moslow"></span><span class="icon-name">장바구니</span></a>
+									-->
+													</span>
+												</div>
+												<div class="prdinfo">
+													<div class="conditions">
+														<span class="hot"> <img
+															src="/data/icon/goods_icon/icon_local.png" alt="국내제조"
+															title="국내제조" class="middle"> <img
+															src="/data/icon/goods_icon/icon_vegan.png" alt="vegan"
+															title="vegan" class="middle">
+														</span>
+													</div>
+													<div class="txt">
+														<span class="brand"> <strong>[러쉬]</strong>
+														</span> <a
+															href="../goods/goods_view.php?goodsNo=88&amp;mtn=%5E%7C%5E%5E%7C%5E">
+															<span class="prdName">챠콜</span><span class="shotdesc">#유명한숯비누
+																#바로그제품 #맑은피부</span>
+														</a>
+													</div>
+													<div class="price gd-default">
+														<span class="cost"> <strong>￦ 18,000</strong>
+														</span>
+													</div>
+													<div class="display-field"></div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+
 								</div>
 							</div>
 
@@ -889,136 +1708,106 @@
 					<div class="review" data-500="top: -160px;" data-700="top: -111px;"
 						style="margin-top: 22.5px;">
 
-						<link rel="stylesheet"
-							href="/data/skin/front/howling/css/jquery.bxslider.css">
-						<script
-							src="/data/skin/front/howling/js/jquery.bxslider.min.4.2.15.js"></script>
-						<script type="text/javascript">
-							$(document)
-									.ready(
-											function() {
 
-												/* 롤링 아이템 1개일 때 disabled */
-												if ($(".review .bxslider .slide").length == 1) {
-													$('.review .bxslider')
-															.addClass(
-																	"disabled");
-												}
-												;
-												/* //롤링 아이템 1개일 때 disabled */
 
-												var slider2 = $(".bxslider")
-														.bxSlider(
-																{
-																	mode : 'horizontal',
-																	auto : true,
-																	slideWidth : 280,
-																	slideMargin : 0,
-																	autoHover : false,
-																	easing : 'easeInOutCubic',
-																	pagerCustom : '#bx-pager',
-																	onSliderLoad : function(
-																			currentIndex) {
-																		$(
-																				'.slider2_count .slider2_inx')
-																				.text(
-																						currentIndex + 1);
-																	},
-																	onSlideBefore : function(
-																			$slideElement,
-																			oldIndex,
-																			newIndex) {
-																		$(
-																				'.slider2_count .slider2_inx')
-																				.text(
-																						newIndex + 1);
-																	}
-																});
-												$('.slider2_count .slider2_cou')
-														.append(
-																slider2
-																		.getSlideCount() / 1);
-												//asdf
-											});
-						</script>
-						<div class="bx-wrapper" style="max-width: 280px;">
-							<div class="bx-viewport" aria-live="polite"
-								style="width: 100%; overflow: hidden; position: relative; height: 652px;">
-								<div class="bxslider"
-									style="width: 6215%; position: relative; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
-									<div class="slide bx-clone"
-										style="float: left; list-style: none; position: relative; width: 280px;"
-										aria-hidden="true">
-										<a
-											href="https://lush.co.kr/goods/goods_view.php?goodsNo=1000000893&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_2bn_review_pansy_211111"><img
-											src="https://lush.co.kr/data/skin/front/howling/img/banner/6b48a921b85b73941297a439f2ddadaf_81975.jpg"
-											alt="팬지 솔리드 퍼퓸 _ 리뷰" title="팬지 솔리드 퍼퓸 _ 리뷰"></a>
-									</div>
-									<div class="slide"
-										style="float: left; list-style: none; position: relative; width: 280px;"
-										aria-hidden="false">
-										<a
-											href="https://lush.co.kr/goods/goods_view.php?goodsNo=85&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_review_herbalism_210128"><img
+						<div class="bx-wrapper">
+
+
+							<input type="radio" name="slideInput" id="slideInput01"
+								checked="checked"> <input type="radio" name="slideInput"
+								id="slideInput02"> <input type="radio" name="slideInput"
+								id="slideInput03"> <input type="radio" name="slideInput"
+								id="slideInput04"> <input type="radio" name="slideInput"
+								id="slideInput05"> <input type="radio" name="slideInput"
+								id="slideInput06">
+
+
+							<div class="mySlides">
+								<ul class="slideList">
+									<li><a
+										href="https://lush.co.kr/goods/goods_view.php?goodsNo=85&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_review_herbalism_210128"><img
 											src="https://lush.co.kr/data/skin/front/howling/img/banner/989b90f38282fa8054dd6dfcd851b5b0_17526.jpg"
-											alt="허벌리즘 리뷰" title="허벌리즘 리뷰"></a>
-									</div>
-									<div class="slide" aria-hidden="true"
-										style="float: left; list-style: none; position: relative; width: 280px;">
-										<a
-											href="https://lush.co.kr/goods/goods_view.php?goodsNo=246&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_Review_dirtyspray_200623"><img
+											alt="허벌리즘 리뷰" title="허벌리즘 리뷰"> <label
+											for="slideInput06" class="left"></label><label
+											for="slideInput02" class="right"></label>
+											
+											</a></li>
+								</ul>
+
+							</div>
+
+							<div class="mySlides">
+								<ul class="slideList">
+									<li><a
+										href="https://lush.co.kr/goods/goods_view.php?goodsNo=1000000893&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_2bn_review_pansy_211111"><img
+											src="https://lush.co.kr/data/skin/front/howling/img/banner/6b48a921b85b73941297a439f2ddadaf_81975.jpg"
+											alt="팬지 솔리드 퍼퓸 _ 리뷰" title="팬지 솔리드 퍼퓸 _ 리뷰"> <label
+											for="slideInput01" class="left"></label><label
+											for="slideInput03" class="right"></label> </a></li>
+								</ul>
+
+							</div>
+
+							<div class="mySlides">
+								<ul class="slideList">
+									<li><a
+										href="https://lush.co.kr/goods/goods_view.php?goodsNo=246&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_Review_dirtyspray_200623"><img
 											src="https://lush.co.kr/data/skin/front/howling/img/banner/e75c8b20d4a0bbbfeef78f35b7e134e3_61468.jpg"
-											alt="더티 보디 스프레이_리뷰" title="더티 보디 스프레이_리뷰"></a>
-									</div>
-									<div class="slide" aria-hidden="true"
-										style="float: left; list-style: none; position: relative; width: 280px;">
-										<a
-											href="https://lush.co.kr/goods/goods_view.php?goodsNo=97&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_review_maskofmagnaminty_200824"><img
+											alt="더티 보디 스프레이_리뷰" title="더티 보디 스프레이_리뷰"> <label
+											for="slideInput02" class="left"></label><label
+											for="slideInput04" class="right"></label> </a></li>
+								</ul>
+
+							</div>
+
+							<div class="mySlides">
+								<ul class="slideList">
+									<li><a
+										href="https://lush.co.kr/goods/goods_view.php?goodsNo=97&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_review_maskofmagnaminty_200824"><img
 											src="https://lush.co.kr/data/skin/front/howling/img/banner/030f2710b1fd96a3713d8349a9a78252_40109.jpg"
-											alt="마스크오브 매그너민티_리뷰" title="마스크오브 매그너민티_리뷰"></a>
-									</div>
-									<div class="slide" aria-hidden="true"
-										style="float: left; list-style: none; position: relative; width: 280px;">
-										<a
-											href="https://lush.co.kr/goods/goods_view.php?goodsNo=1000001781&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_review_limebounty_211111"><img
+											alt="마스크오브 매그너민티_리뷰" title="마스크오브 매그너민티_리뷰"> <label
+											for="slideInput03" class="left"></label><label
+											for="slideInput05" class="right"></label> </a></li>
+								</ul>
+
+							</div>
+
+							<div class="mySlides">
+								<ul class="slideList">
+									<li><a
+										href="https://lush.co.kr/goods/goods_view.php?goodsNo=1000001781&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_review_limebounty_211111"><img
 											src="https://lush.co.kr/data/skin/front/howling/img/banner/d914d3b7fa14c180605388a7b7addb4f_62624.jpg"
-											alt="라임 바운티_리뷰" title="라임 바운티_리뷰"></a>
-									</div>
-									<div class="slide" aria-hidden="true"
-										style="float: left; list-style: none; position: relative; width: 280px;">
-										<a
-											href="https://lush.co.kr/goods/goods_view.php?goodsNo=220&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_2bn_review_sleepy_211111"><img
+											alt="라임 바운티_리뷰" title="라임 바운티_리뷰"> <label
+											for="slideInput04" class="left"></label><label
+											for="slideInput06" class="right"></label> </a></li>
+								</ul>
+
+							</div>
+
+							<div class="mySlides">
+								<ul class="slideList">
+									<li><a
+										href="https://lush.co.kr/goods/goods_view.php?goodsNo=220&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_2bn_review_sleepy_211111"><img
 											src="https://lush.co.kr/data/skin/front/howling/img/banner/2af29a9f30fb145691145caaf403bd13_97181.jpg"
-											alt="슬리피 보디 로션 _리뷰" title="슬리피 보디 로션 _리뷰"></a>
-									</div>
-									<div class="slide"
-										style="float: left; list-style: none; position: relative; width: 280px;"
-										aria-hidden="true">
-										<a
-											href="https://lush.co.kr/goods/goods_view.php?goodsNo=1000000893&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_2bn_review_pansy_211111"><img
-											src="https://lush.co.kr/data/skin/front/howling/img/banner/6b48a921b85b73941297a439f2ddadaf_81975.jpg"
-											alt="팬지 솔리드 퍼퓸 _ 리뷰" title="팬지 솔리드 퍼퓸 _ 리뷰"></a>
-									</div>
-									<div class="slide bx-clone"
-										style="float: left; list-style: none; position: relative; width: 280px;"
-										aria-hidden="true">
-										<a
-											href="https://lush.co.kr/goods/goods_view.php?goodsNo=85&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_review_herbalism_210128"><img
-											src="https://lush.co.kr/data/skin/front/howling/img/banner/989b90f38282fa8054dd6dfcd851b5b0_17526.jpg"
-											alt="허벌리즘 리뷰" title="허벌리즘 리뷰"></a>
-									</div>
-								</div>
+											alt="슬리피 보디 로션 _리뷰" title="슬리피 보디 로션 _리뷰"> <label
+											for="slideInput05" class="left"></label><label
+											for="slideInput01" class="right"></label> </a></li>
+								</ul>
+
 							</div>
-							<div class="bx-controls bx-has-controls-direction">
-								<div class="bx-controls-direction">
-									<a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a>
-								</div>
-							</div>
-						</div>
-						<div class="slider_count slider2_count">
-							<em class="slider2_inx">1</em> / <span class="slider2_cou">6</span>
+							
+							
+							
+
+
 						</div>
 					</div>
+					
 				</div>
+				<div class="slider_count slider2_count">
+					<em class="slider2_inx">1</em> / <span class="slider2_cou">6</span>
+				</div>
+
 			</div>
 
 			<div class="  main_wrap03">
@@ -1064,7 +1853,6 @@
 					<div class="img spa-bn-slide slick-initialized slick-slider"
 						data-1600="top: -90px;" data-2000="top: -160px;"
 						style="margin-top: -50px;">
-						
 						<div aria-live="polite" class="slick-list draggable">
 							<div class="slick-track" role="listbox"
 								style="opacity: 1; width: 380px;">
@@ -1078,23 +1866,179 @@
 									alt="NEW 탱글드 헤어        트리트먼트" title="NEW 탱글드 헤어        트리트먼트"></a>
 							</div>
 						</div>
-						
-						
-								</div>
-						
-					
-						
-						
-					
-					
-					
+
+
+					</div>
+
+
+
+
+
+
+
+
 				</div>
 			</div>
 
 		</div>
 	</div>
 	<script type="text/javascript">
-		
+		var pos = 0;
+		//number of slides
+		var totalSlides = $('#slider-wrap ul li').length;
+		//get the slide width
+		var sliderWidth = $('#slider-wrap').width();
+
+		$(document).ready(function() {
+
+			/*****************
+			 BUILD THE SLIDER
+			 *****************/
+			//set width to be 'x' times the number of slides
+			$('#slider-wrap ul#slider').width(sliderWidth * totalSlides);
+
+			//next slide  
+			$('.bx-next').click(function() {
+				slideRight();
+			});
+
+			//previous slide
+			$('.bx-prev').click(function() {
+				slideLeft();
+			});
+
+			/*************************
+			 //*> OPTIONAL SETTINGS
+			 ************************/
+			//automatic slider
+			var autoSlider = setInterval(slideRight, 3000);
+
+			//for each slide 
+			$.each($('#slider-wrap ul li'), function() {
+
+				//create a pagination
+				var li = document.createElement('li');
+				$('#pagination-wrap ul').append(li);
+			});
+
+			//counter
+			countSlides();
+
+			//pagination
+			pagination();
+
+			//hide/show controls/btns when hover
+			//pause automatic slide when hover
+			$('#slider-wrap').hover(function() {
+				$(this).addClass('active');
+				clearInterval(autoSlider);
+			}, function() {
+				$(this).removeClass('active');
+				autoSlider = setInterval(slideRight, 3000);
+			});
+
+		});//DOCUMENT READY
+
+		/***********
+		 SLIDE LEFT
+		 ************/
+		function slideLeft() {
+			pos--;
+			if (pos == -1) {
+				pos = totalSlides - 1;
+			}
+			$('#slider-wrap ul#slider').css('left', -(sliderWidth * pos));
+
+			//*> optional
+			countSlides();
+			pagination();
+		}
+
+		/************
+		 SLIDE RIGHT
+		 *************/
+		function slideRight() {
+			pos++;
+			if (pos == totalSlides) {
+				pos = 0;
+			}
+			$('#slider-wrap ul#slider').css('left', -(sliderWidth * pos));
+
+			//*> optional 
+			countSlides();
+			pagination();
+		}
+
+		/************************
+		 //*> OPTIONAL SETTINGS
+		 ************************/
+		function countSlides() {
+			$('#counter').html(pos + 1 + ' / ' + totalSlides);
+		}
+
+		function pagination() {
+			$('#pagination-wrap ul li').removeClass('active');
+			$('#pagination-wrap ul li:eq(' + pos + ')').addClass('active');
+		}
+
+		$('.sb1')
+				.click(
+						function() {
+							$('.sb1').addClass('active');
+							$('.sb2').removeClass('active');
+							$('.sb3').removeClass('active');
+							$('.sb4').removeClass('active');
+							$('.slider-area')
+									.css(
+											{
+												"background" : "url(https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/a4718ce4ff4a9a1a7d0dfda13cac6252_44894.jpg)"
+											});
+
+						});
+
+		$(".sb2")
+				.click(
+						function() {
+							$('.sb2').addClass('active');
+							$('.sb1').removeClass('active');
+							$('.sb3').removeClass('active');
+							$('.sb4').removeClass('active');
+							$('.slider-area')
+									.css(
+											{
+												"background" : "url(https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/aa15e24852bf617ba4409f3a4ef01bf8_52388.jpg)"
+											});
+
+						});
+
+		$(".sb3")
+				.click(
+						function() {
+							$('.sb3').addClass('active');
+							$('.sb2').removeClass('active');
+							$('.sb1').removeClass('active');
+							$('.sb4').removeClass('active');
+							$('.slider-area')
+									.css(
+											{
+												"background" : "url(https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/d00fdc84e1ac64b1d113e0de7167addf_59738.jpg)"
+											});
+
+						});
+
+		$(".sb4")
+				.click(
+						function() {
+							$('.sb4').addClass('active');
+							$('.sb2').removeClass('active');
+							$('.sb3').removeClass('active');
+							$('.sb1').removeClass('active');
+							$('.slider-area')
+									.css(
+											{
+												"background" : "url(https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/070251f41882f6b3ca199c2de70a49fb_61190.jpg)"
+											});
+						});
 	</script>
 
 </body>

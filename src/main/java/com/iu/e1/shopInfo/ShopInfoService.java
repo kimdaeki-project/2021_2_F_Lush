@@ -15,7 +15,6 @@ public class ShopInfoService {
 	
 	public List<ShopInfoVO> getInfoList(Pager2 pager2)throws Exception{
 		pager2.makeRow();
-		
 		List<ShopInfoVO> ar = shopInfoRepository.getInfoList(pager2);
 		
 		pager2.makeNum(Long.valueOf(shopInfoRepository.getCount()));
@@ -25,7 +24,10 @@ public class ShopInfoService {
 
 	public List<ShopInfoVO> shopInfoList(Pager2 pager2)throws Exception{
 		pager2.makeRow();
-		
+		System.out.println("START LOW"+pager2.getStartRow());
+		System.out.println("PER PAGE"+pager2.getPerPage());
+		System.out.println("kind :"+pager2.getKind());
+		System.out.println("search : "+pager2.getSearch());
 		List<ShopInfoVO> ar = shopInfoRepository.shopInfoList(pager2);
 		
 		pager2.makeNum(Long.valueOf(shopInfoRepository.getCount()));

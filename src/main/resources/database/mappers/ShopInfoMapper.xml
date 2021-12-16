@@ -5,26 +5,19 @@
   
   <mapper namespace="com.iu.e1.shopInfo.ShopInfoRepository">
   	<select id="shopInfoList" parameterType="Pager2" resultType="ShopInfoVO">
-		select * from 
-			(select num n, si.* from
-					(select * from shopinfo
-					where
-					
+		select * from shopinfo
+			where
 					<choose>
-						<when test="kind == 'name'">
-							UPPER(name)
-						</when>
-						<otherwise>
-							UPPER(address)
-						</otherwise>
-					</choose>
-					
-					like upper('%' || #{search} || '%')
-					order by num desc
-					)
-				si
-				)a
-			where n limit #{startRow}, #{perPage}	
+					<when test="kind == 'name'">
+						UPPER(name)
+					</when>
+					<otherwise>
+						UPPER(address)
+					</otherwise>
+				</choose>
+				like upper(concat('%', #{search}, '%'))
+			order by num desc
+		limit #{startRow}, #{perPage}	
 	</select>
 	
 	<select id="getCount" resultType="Integer">

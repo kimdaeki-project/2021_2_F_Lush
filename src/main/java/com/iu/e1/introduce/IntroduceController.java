@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/introduce/**")
 public class IntroduceController {
+	
+	@GetMapping("LushCampaign")
+	public String lushCampaign() {
+		return "introduce/LushCampaign";
+	}
 
 	@GetMapping("LushScout")
 	public String lushScout() throws Exception {

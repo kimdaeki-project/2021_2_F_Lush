@@ -201,7 +201,7 @@ table, th, td {
 
 .txt-field .text {
    width: 100%;
-   height: 36px;
+   height: 34px;
    padding: 0;
    border: 1px solid #fff;
    color: #333;

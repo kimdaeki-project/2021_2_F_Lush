@@ -23,22 +23,106 @@
    </update>
    <!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ관리자 페이지 끝ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
    
-   <select id="getSelectFinishList" resultType="EventVO">
-   		select * from event where state=2
+   <select id="getSelectFinishList" parameterType="Pager2" resultType="EventVO">
+   		select * from event
+			where state=2 and
+					<choose>
+					<when test="kind == 'title'">
+						UPPER(title)
+					</when>
+					<otherwise>
+						UPPER(contents)
+					</otherwise>
+				</choose>
+				like upper(concat('%', #{search}, '%'))
+			order by num desc
+		limit #{startRow}, #{perPage}
+   </select>
+   
+   <select id="setSelectFinishList" parameterType="Pager2" resultType="EventVO">
+   		select * from event
+			where state=2 and
+					<choose>
+					<when test="kind == 'title'">
+						UPPER(title)
+					</when>
+					<otherwise>
+						UPPER(contents)
+					</otherwise>
+				</choose>
+				like upper(concat('%', #{search}, '%'))
+			order by num desc
+		limit #{startRow}, #{perPage}
    </select>
    
    
    
-   <select id="getSelectEventList" resultType="EventVO">
-      	select * from event where state=0
+   <select id="getSelectEventList" parameterType="Pager2" resultType="EventVO">
+   		select * from event
+			where state=0 and
+					<choose>
+					<when test="kind == 'title'">
+						UPPER(title)
+					</when>
+					<otherwise>
+						UPPER(contents)
+					</otherwise>
+				</choose>
+				like upper(concat('%', #{search}, '%'))
+			order by num desc
+		limit #{startRow}, #{perPage}	
+   </select>
+   
+   <select id="setSelectEventList" parameterType="Pager2" resultType="EventVO">
+   		select * from event
+			where state=0 and
+					<choose>
+					<when test="kind == 'title'">
+						UPPER(title)
+					</when>
+					<otherwise>
+						UPPER(contents)
+					</otherwise>
+				</choose>
+				like upper(concat('%', #{search}, '%'))
+			order by num desc
+		limit #{startRow}, #{perPage}	
    </select>
    
    <select id="getSelectWinnerList" resultType="EventVO" parameterType="Pager2">
-      select * from event 
-      where state=1 
-      order by num desc
-      limit #{startRow}, #{perPage}
+      select * from event
+			where state=1 and
+					<choose>
+					<when test="kind == 'title'">
+						UPPER(title)
+					</when>
+					<otherwise>
+						UPPER(contents)
+					</otherwise>
+				</choose>
+				like upper(concat('%', #{search}, '%'))
+			order by num desc
+		limit #{startRow}, #{perPage}
    </select>
+   
+   
+   <select id="setSelectWinnerList" resultType="EventVO" parameterType="Pager2">
+      select * from event
+			where state=1 and
+					<choose>
+					<when test="kind == 'title'">
+						UPPER(title)
+					</when>
+					<otherwise>
+						UPPER(contents)
+					</otherwise>
+				</choose>
+				like upper(concat('%', #{search}, '%'))
+			order by num desc
+		limit #{startRow}, #{perPage}
+   </select>
+   
+   
    
    <select id="getCountWinnerList" resultType="Integer">
    		select count(*) from event where state=1
@@ -51,4 +135,12 @@
    <update id="setHitsUpdate" parameterType="EventVO">
       update event set hits=hits+1 where num=#{num}
    </update>
+   
+   <select id="geteventListCount" resultType="Integer">
+			select count(*) from event where state=0
+   	</select>
+	
+	<select id="getfinishListCount" resultType="Integer">
+			select count(*) from event where state=2
+	</select>
 </mapper>

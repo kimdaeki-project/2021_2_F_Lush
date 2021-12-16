@@ -252,7 +252,7 @@ a {
                            선물이 찾아갈 확률</strong>도 높아집니다.<br> 가치있는 이야기가 담긴 ‘덕찌’를 공유해보세요.<br>
                         우리가 옳다고 믿는 가치를 널리 알릴 수 있답니다.
                      </p>
-                     <a href="/board/view.php?page=8&amp;bdId=article&amp;sno=61"
+                     <a href="/introduce/LushScout"
                         class="link">덕찌 더 알아보기</a>
                   </div>
                </li>

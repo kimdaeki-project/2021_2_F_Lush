@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.iu.e1.cart.CartRepository">
+     <insert id="getInsert" parameterType="CartVO">
+        insert into cart
+        values(0, #{member_id}, (select name from product where num=#{cart_num}), (select price from product where num=#{cart_num}), 1, (select category from product where num=#{cart_num}), (select photo from product where num=#{cart_num}))
+     </insert>
+     
+     <select id="getSelect" parameterType="MemberVO" resultType="CartVO">
+        select * from cart
+        where member_id=#{id}
+     </select>
+     
+     <delete id="setDelete" parameterType="CartVO">
+        delete from cart
+        where cart_num=#{cart_num}
+     </delete>
+  </mapper>
