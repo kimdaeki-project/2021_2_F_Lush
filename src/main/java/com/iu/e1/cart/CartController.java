@@ -27,15 +27,15 @@ public class CartController {
 
    @GetMapping("cartInsert")
    public ModelAndView getInsert(CartVO cartVO, HttpSession session) throws Exception{
-	   ModelAndView mv= new ModelAndView();
-	      
-	   MemberVO memberVO = (MemberVO)session.getAttribute("member");
-	   cartVO.setMember_id(memberVO.getId());
-	   System.out.println(cartVO);
-	   int result = cartService.getInsert(cartVO);
-	      
-	   mv.setViewName("redirect:../cart/cartPage");
-	   return mv;
+      ModelAndView mv= new ModelAndView();
+         
+      MemberVO memberVO = (MemberVO)session.getAttribute("member");
+      cartVO.setMember_id(memberVO.getId());
+      System.out.println(cartVO);
+      int result = cartService.getInsert(cartVO);
+         
+      mv.setViewName("redirect:../cart/cartPage");
+      return mv;
    }
    
    

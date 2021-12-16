@@ -4,31 +4,33 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
   <mapper namespace="com.iu.e1.product.ProductRepository">
-  	<select id="productList" resultType="ProductVO">
-  		select * from product
-  	</select>
-  	
-  	<select id="productCordList" parameterType="ProductVO" resultType="ProductVO">
-  		select * from product where cord=#{cord}
-  	</select>
-  	
-  	<select id="productSelect" parameterType="ProductVO" resultType="ProductVO">
-  		select * from product where num=#{num}
-  	</select>
-  	
-  	<insert id="productInsert" parameterType="ProductVO">
-  		insert into product values(#{num}, #{category}, #{name}, #{hashTag}, #{price}, #{weight}, #{photo}, #{heart})
-  	</insert>
-  	
-  	<delete id="productDelete" parameterType="ProductVO">
-  		delete from product where num=#{num}
-  	</delete>
-  	
-  	<update id="productUpdate" parameterType="ProductVO">
-  		update product set category=#{category}, name=#{name}, hashTag=#{hashTag}, price=#{price}, weight=#{weight}, photo=#{photo}, heart=#{heart} where num=#{num}
-  	</update>
-  	
-  	<insert id="cartInsert" >
-  		
-  	</insert>
+
+     <select id="productList" resultType="ProductVO">
+        select * from product
+     </select>
+     
+     <select id="productCordList" parameterType="ProductVO" resultType="ProductVO">
+        select * from product where cord=#{cord}
+     </select>
+     
+     <select id="productSelect" parameterType="ProductVO" resultType="ProductVO">
+        select * from product where num=#{num}
+     </select>
+     
+     <insert id="productInsert" parameterType="ProductVO">
+        insert into product values(#{num}, #{category}, #{name}, #{hashTag}, #{price}, #{weight}, #{photo}, #{heart})
+     </insert>
+     
+     <delete id="productDelete" parameterType="ProductVO">
+        delete from product where num=#{num}
+     </delete>
+     
+     <update id="productUpdate" parameterType="ProductVO">
+        update product set category=#{category}, name=#{name}, hashTag=#{hashTag}, price=#{price}, weight=#{weight}, photo=#{photo}, heart=#{heart} where num=#{num}
+     </update>
+     
+     <insert id="cartInsert" >
+        
+     </insert>
+
   </mapper>
