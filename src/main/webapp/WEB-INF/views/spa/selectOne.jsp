@@ -662,7 +662,7 @@
 		    vertical-align: middle;
 		}
 		
-		button {
+		input {
 		    cursor: pointer;
 		    background: none;
 		    border: none;
@@ -682,12 +682,12 @@
 		    border: 1px solid #e7e7e7;
 		}
 		
-		.goods-view .goods .info .order-goods .check .price .count button.down {
+		.goods-view .goods .info .order-goods .check .price .count input.down {
 		    width: 50px;
 		    height: 40px;
 		}
 		
-		.order-goods .check .price .count button.down {
+		.order-goods .check .price .count input.down {
 		    float: left;
 		    border: 0;
 		    background: url(../../resources/img/etc/icon_count_down.png) no-repeat 50% 50%;
@@ -715,12 +715,12 @@
 		    text-align: center;
 		}	
 		
-		.goods-view .goods .info .order-goods .check .price .count button.up {
+		.goods-view .goods .info .order-goods .check .price .count input.up {
 		    width: 50px;
 		    height: 40px;
 		}
 		
-		.order-goods .check .price .count button.up {
+		.order-goods .check .price .count input.up {
 		    float: left;
 		    border: 0;
 		    background: url(../../resources/img/etc/icon_count_up.png) no-repeat 50% 50%;
@@ -772,7 +772,7 @@
     		padding: 0 0 0 3px;
 		}
 		
-		.goods-view .goods .info .end-price ul li strong {
+		.goods-view .goods .info .end-price ul li strong input {
 		    float: right;
 		    color: #000;
 		    line-height: 38px;
@@ -788,7 +788,7 @@
 		    font-weight: normal;
 		}
 		
-		.goods-view .goods .info .end-price ul .discount strong {
+		.goods-view .goods .info .end-price ul .discount strong input {
 		    color: #3e3d3c;
 		}
 		
@@ -1699,40 +1699,62 @@
 									title="다음 상품 이미지" aria-disabled="true" tabindex="-1"></div>
 							</div>
 						</div>
-
+						
+						<%-- <form name="form" method="get">
+							수량 : <input type="hidden" name="sell_price" value="${spaVO.price}">
+							<input type="text" name="amount" value="1" size="3" onchange="change();">
+							<input type="button" value=" + " onclick="add();"><input type="button" value=" - " onclick="del();"><br>
+							
+							금액 : <input type="text" name="sum" size="11" readonly>원
+						</form> --%>
 						<%--------------- 상품 주문/제품  : 제품정보 ---------------%>
-						<form name="frmView" id="frmView" method="post">
-							<input type="hidden" name="mode" value="get_benefit"> <input
-								type="hidden" name="scmNo" value="1"> <input
-								type="hidden" name="cartMode" value=""> <input
-								type="hidden" name="set_goods_price" value="70000"> <input
-								type="hidden" name="set_goods_fixedPrice"
-								id="set_goods_fixedPrice" value="0.00"> <input
-								type="hidden" name="set_goods_mileage" value="0"> <input
-								type="hidden" name="set_goods_stock" value="∞"> <input
-								type="hidden" name="set_coupon_dc_price" value="70000.00">
-							<input type="hidden" name="set_goods_total_price"
-								id="set_goods_total_price" value="0"> <input
-								type="hidden" name="set_option_price" id="set_option_price"
-								value="0"> <input type="hidden"
-								name="set_option_text_price" id="set_option_text_price"
-								value="0"> <input type="hidden"
-								name="set_add_goods_price" id="set_add_goods_price" value="0">
-							<input type="hidden" name="set_total_price" value="70000">
-							<input type="hidden" name="mileageFl" value="c"> <input
-								type="hidden" name="mileageGoods" value="0.00"> <input
-								type="hidden" name="mileageGoodsUnit" value="percent"> <input
-								type="hidden" name="goodsDiscountFl" value="n"> <input
-								type="hidden" name="goodsDiscount" value="0.00"> <input
-								type="hidden" name="goodsDiscountUnit" value="percent">
-							<input type="hidden" name="taxFreeFl" value="t"> <input
-								type="hidden" name="taxPercent" value="10.0"> <input
-								type="hidden" name="scmNo" value="1"> <input
-								type="hidden" name="brandCd" value="001"> <input
-								type="hidden" name="cateCd" value="002001001"> <input
-								type="hidden" id="set_dc_price" value="0"> <input
-								type="hidden" name="spaPreNo" value="130"> <input
-								type="hidden" id="goodsOptionCnt" value="1">
+						<form name="frmView" method="post">
+							
+							<!-- <script>
+							var sell_price;
+							var amount;
+
+							function init () {
+								sell_price = document.form.sell_price.value;
+								amount = document.form.amount.value;
+								document.form.sum.value = sell_price;
+								change();
+							}
+
+							function add () {
+								hm = document.form.amount;
+								sum = document.form.sum;
+								hm.value ++ ;
+
+								sum.value = parseInt(hm.value) * sell_price;
+							}
+
+							function del () {
+								hm = document.form.amount;
+								sum = document.form.sum;
+									if (hm.value > 1) {
+										hm.value -- ;
+										sum.value = parseInt(hm.value) * sell_price;
+									}
+							}
+
+							function change () {
+								hm = document.form.amount;
+								sum = document.form.sum;
+
+									if (hm.value < 0) {
+										hm.value = 0;
+									}
+								sum.value = parseInt(hm.value) * sell_price;
+							}  
+							</script> -->
+							
+							<%-- 수량 : <input type="hidden" name="sell_price" value="${spaVO.price}">
+							<input type="text" name="amount" value="1" size="3" onchange="change();">
+							<input type="button" value=" + " onclick="add();"><input type="button" value=" - " onclick="del();"><br>
+							
+							금액 : <input type="text" name="sum" size="11" readonly>원 --%>
+						
 								
 							<script>
 								function goods_order(modeStr)
@@ -1973,76 +1995,26 @@
 									<%--------------- 상품 주문/제품/제품정보  : 구매수량 ---------------%>
 									<div class="order-goods option_display_area">
 										<div id="option_display_item_0">
-											<input type="hidden" name="goodsNo[]" value="1000001312">
-											<input type="hidden" name="optionSno[]" value="2410">
-											<input type="hidden" name="goodsPriceSum[]" value="${spaVO.price}">
-											<input type="hidden" name="addGoodsPriceSum[]" value="0">
-											<input type="hidden" name="couponApplyNo[]" value="">
-											<input type="hidden" name="couponSalePriceSum[]" value="">
-											<input type="hidden" name="couponAddPriceSum[]" value="">
+											<input type="hidden" name="sell_price" value="${spaVO.price}">
 											
 											<div class="check optionKey_0">
-											
-												<script language="JavaScript">
-													var sell_price;
-													var amount;
-													
-													function init () {
-														sell_price = document.form.sell_price.value;
-														amount = document.form.amount.value;
-														document.form.sum.value = sell_price;
-														change();
-													}
-													
-													function add () {
-														hm = document.form.amount;
-														sum = document.form.sum;
-														hm.value ++ ;
-													
-														sum.value = parseInt(hm.value) * sell_price;
-													}
-													
-													function del () {
-														hm = document.form.amount;
-														sum = document.form.sum;
-															if (hm.value > 1) {
-																hm.value -- ;
-																sum.value = parseInt(hm.value) * sell_price;
-															}
-													}
-													
-													function change () {
-														hm = document.form.amount;
-														sum = document.form.sum;
-													
-															if (hm.value < 0) {
-																hm.value = 0;
-															}
-														sum.value = parseInt(hm.value) * sell_price;
-													}  
-												</script>
 												
 												<span class="name">
 													구매수량
-													<button type="button" class="btn-alert-login" style="display:none;">
-														<img src="/data/skin/front/howling/img/btn/coupon-apply.png" alt="쿠폰적용">
-													</button>
-													<span id="option_text_display_0"></span>
 												</span>
 												
 												<div class="price">
 													<span class="count">
-														<button type="button" class="down goods-cnt" title="감소" value="dn^|^0" style="cursor: pointer">-</button>
-														<input type="text" class="text goodsCnt_0 js-number" title="수량" data-key="0" name="goodsCnt[]" value="1" data-value="1" data-stock="0" onchange="goodsViewController.input_count_change(this,'1');  return false;">
-														<button type="button" class="up goods-cnt" title="증가" value="up^|^0" style="cursor: pointer">+</button>
+														<input type="button" class="down goods-cnt" title="감소" value=" - " style="cursor: pointer" onclick="del();">-</button>
+														<input type="text" class="text goodsCnt_0 js-number" title="수량" data-key="0" name="amount" value="1" data-value="1" data-stock="0" onchange="change();">
+														<input type="button" class="up goods-cnt" title="증가" value=" + " style="cursor: pointer" onclick="add();">+</button>
 													</span>
 				
 													<em>
-														<input type="hidden" value="0" name="optionPriceSum[]">
-														<input type="hidden" value="0.00" name="option_price_0">
 														￦<strong class="option_price_display_0"><fmt:formatNumber value="${spaVO.price}" pattern="#,###"/></strong>
 													</em>
 												</div>
+												
 												
 											</div>
 										</div>
@@ -2053,18 +2025,53 @@
 										<ul>
 											<li class="price">
 												<span>총 제품 금액</span>
-												<strong class="goods_total_price"> <fmt:formatNumber value="${spaVO.price}" pattern="￦ #,###"/><b></b></strong>
-											</li>
-											<li class="discount dn">
-												<span>총 할인 금액</span>
-												<strong class="total_benefit_price"></strong>
+												<%-- <strong class="goods_total_price"> <fmt:formatNumber value="${spaVO.price}" pattern="￦ #,###"/><b></b></strong> --%>
+												<!-- <strong class="total_price"><input type="text" name="sum" size="11" readonly> <b></b></strong> -->
 											</li>
 											<li class="total">
 												<span>총 합계 금액</span>
-												<strong class="total_price"> <fmt:formatNumber value="${spaVO.price}" pattern="￦ #,###"/><b></b></strong>
+												<strong class="total_price">￦<input type="text" name="sum" size="11" readonly> <b></b></strong>
 											</li>
 										</ul>
 									</div>
+									<script>
+										var sell_price;
+										var amount;
+				
+										function init () {
+											sell_price = document.frmView.sell_price.value;
+											amount = document.frmView.amount.value;
+											document.frmView.sum.value = sell_price;
+											change();
+										}
+				
+										function add () {
+											hm = document.frmView.amount;
+											sum = document.frmView.sum;
+											hm.value ++ ;
+				
+											sum.value = parseInt(hm.value) * sell_price;
+										}
+				
+										function del () {
+											hm = document.frmView.amount;
+											sum = document.frmView.sum;
+												if (hm.value > 1) {
+													hm.value -- ;
+													sum.value = parseInt(hm.value) * sell_price;
+												}
+										}
+				
+										function change () {
+											hm = document.frmView.amount;
+											sum = document.frmView.sum;
+				
+												if (hm.value < 0) {
+													hm.value = 0;
+												}
+											sum.value = parseInt(hm.value) * sell_price;
+										}  
+									</script>
 									
 									<%--------------- 상품 주문/제품/제품정보  : 장바구니, 구매하기 버튼 ---------------%>
 									<div class="btn">
