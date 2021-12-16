@@ -355,13 +355,13 @@
 	position: absolute;
 }
 
-.adpic_wideslide2 .bx-wrapper .bx-pager.bx-default-pager a.active {
+.adpic_wideslide2 .bx-wrapper .bx-pager.bx-default-pager button.active {
 	background:
 		url("https://lush.co.kr/data/skin/front/howling/img/etc/main_dot_off.png")
 		no-repeat;
 }
 
-.adpic_wideslide2 .bx-wrapper .bx-pager.bx-default-pager a {
+.adpic_wideslide2 .bx-wrapper .bx-pager.bx-default-pager button {
 	width: 12px;
 	height: 12px;
 	background:
@@ -369,13 +369,14 @@
 		no-repeat;
 }
 
-.bx-wrapper .bx-pager.bx-default-pager a {
+.bx-wrapper .bx-pager.bx-default-pager button {
 	background: #666;
 	text-indent: -9999px;
 	display: block;
 	width: 10px;
 	height: 10px;
 	margin: 0 5px;
+	border:0;
 	outline: 0;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -653,6 +654,36 @@ to {
     z-index: 9;
 }
 
+.bx-wrapper .bx-pager-item, .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+    display: inline-block;
+    vertical-align: bottom;
+    *zoom: 1;
+    *display: inline;
+}
+
+.bx-controls-direction a {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    outline: 0;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    z-index: 99;
+}
+
+
+.slider_count {
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    width: 46px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    line-height: 19px;
+}
+
 </style>
 
 </head>
@@ -697,7 +728,7 @@ to {
 									style="width: 12215%; position: relative; transition-duration: 0s; transform: translate3d(-900px, 0px, 0px);">
 									<div
 										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
-										aria-hidden="false">
+										class="bx-clone" aria-hidden="true">
 										<div class="space">
 											<div class="box">
 
@@ -856,7 +887,11 @@ to {
 											</div>
 										</div>
 									</div>
-									<div
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+								
+									<div class="mid1"									
 										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
 										aria-hidden="false">
 										<div class="space">
@@ -912,7 +947,7 @@ to {
 										</div>
 									</div>
 
-									<div
+									<div class="mid1"
 										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
 										aria-hidden="false">
 										<div class="space">
@@ -968,7 +1003,7 @@ to {
 										</div>
 									</div>
 
-									<div
+									<div class="mid1"
 										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
 										aria-hidden="false">
 										<div class="space">
@@ -1024,7 +1059,7 @@ to {
 										</div>
 									</div>
 
-									<div
+									<div class="mid2"
 										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
 										aria-hidden="false">
 										<div class="space">
@@ -1040,7 +1075,7 @@ to {
 													<a
 														href="../goods/goods_view.php?goodsNo=174&amp;mtn=%5E%7C%5E%5E%7C%5E">
 														<span class="prdimg"><img
-															src="/data/goods/16/03/18/174/174_main_086.jpg"></span>
+															src="https://www.lush.co.kr/data/goods/16/03/18/174/174_main_086.jpg"></span>
 													</a> <span class="choice -moslow"> <a
 														href="../goods/goods_view.php?goodsNo=174&amp;mtn=%5E%7C%5E%5E%7C%5E"
 														target="_blank" class="btn-open-win -moslow" type="button"
@@ -1078,7 +1113,7 @@ to {
 										</div>
 									</div>
 
-									<div
+									<div class="mid2"
 										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
 										aria-hidden="false">
 										<div class="space">
@@ -1094,7 +1129,7 @@ to {
 													<a
 														href="../goods/goods_view.php?goodsNo=76&amp;mtn=%5E%7C%5E%5E%7C%5E">
 														<span class="prdimg"><img
-															src="/data/goods/11/01/20/76/76_main_063.jpg"></span>
+															src="https://www.lush.co.kr/data/goods/11/01/20/76/76_main_063.jpg"></span>
 													</a> <span class="choice -moslow"> <a
 														href="../goods/goods_view.php?goodsNo=76&amp;mtn=%5E%7C%5E%5E%7C%5E"
 														target="_blank" class="btn-open-win -moslow" type="button"
@@ -1134,7 +1169,7 @@ to {
 										</div>
 									</div>
 
-									<div
+									<div class="mid2"
 										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
 										aria-hidden="false">
 										<div class="space">
@@ -1150,7 +1185,7 @@ to {
 													<a
 														href="../goods/goods_view.php?goodsNo=53&amp;mtn=%5E%7C%5E%5E%7C%5E">
 														<span class="prdimg"><img
-															src="/data/goods/11/01/20/53/53_main_044.jpg"></span>
+															src="https://www.lush.co.kr/data/goods/11/01/20/53/53_main_044.jpg"></span>
 													</a> <span class="choice -moslow"> <a
 														href="../goods/goods_view.php?goodsNo=53&amp;mtn=%5E%7C%5E%5E%7C%5E"
 														target="_blank" class="btn-open-win -moslow" type="button"
@@ -1188,7 +1223,7 @@ to {
 										</div>
 									</div>
 
-									<div
+									<div class="mid3"
 										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
 										aria-hidden="false">
 										<div class="space">
@@ -1204,7 +1239,7 @@ to {
 													<a
 														href="../goods/goods_view.php?goodsNo=1000000026&amp;mtn=%5E%7C%5E%5E%7C%5E">
 														<span class="prdimg"><img
-															src="/data/goods/18/11/48/1000000026/1000000026_main_03.jpg"></span>
+															src="https://www.lush.co.kr/data/goods/18/11/48/1000000026/1000000026_main_03.jpg"></span>
 													</a> <span class="choice -moslow"> <a
 														href="../goods/goods_view.php?goodsNo=1000000026&amp;mtn=%5E%7C%5E%5E%7C%5E"
 														target="_blank" class="btn-open-win -moslow" type="button"
@@ -1242,7 +1277,7 @@ to {
 										</div>
 									</div>
 
-									<div
+									<div class="mid3"
 										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
 										aria-hidden="false">
 										<div class="space">
@@ -1258,7 +1293,7 @@ to {
 													<a
 														href="../goods/goods_view.php?goodsNo=97&amp;mtn=%5E%7C%5E%5E%7C%5E">
 														<span class="prdimg"><img
-															src="/data/goods/12/03/07/97/97_main_074.jpg"></span>
+															src="https://www.lush.co.kr/data/goods/12/03/07/97/97_main_074.jpg"></span>
 													</a> <span class="choice -moslow"> <a
 														href="../goods/goods_view.php?goodsNo=97&amp;mtn=%5E%7C%5E%5E%7C%5E"
 														target="_blank" class="btn-open-win -moslow" type="button"
@@ -1296,7 +1331,7 @@ to {
 										</div>
 									</div>
 
-									<div
+									<div class="mid3"
 										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
 										aria-hidden="false">
 										<div class="space">
@@ -1312,7 +1347,7 @@ to {
 													<a
 														href="../goods/goods_view.php?goodsNo=342&amp;mtn=%5E%7C%5E%5E%7C%5E">
 														<span class="prdimg"><img
-															src="/data/goods/17/11/01/342/342_main_041.jpg"></span>
+															src="https://www.lush.co.kr/data/goods/17/11/01/342/342_main_041.jpg"></span>
 													</a> <span class="choice -moslow"> <a
 														href="../goods/goods_view.php?goodsNo=342&amp;mtn=%5E%7C%5E%5E%7C%5E"
 														target="_blank" class="btn-open-win -moslow" type="button"
@@ -1350,7 +1385,7 @@ to {
 										</div>
 									</div>
 
-									<div
+									<div class="mid4"
 										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
 										aria-hidden="false">
 										<div class="space">
@@ -1366,7 +1401,7 @@ to {
 													<a
 														href="../goods/goods_view.php?goodsNo=37&amp;mtn=%5E%7C%5E%5E%7C%5E">
 														<span class="prdimg"><img
-															src="/data/goods/11/01/20/37/37_main_019.jpg"></span>
+															src="https://www.lush.co.kr/data/goods/11/01/20/37/37_main_019.jpg"></span>
 													</a> <span class="choice -moslow"> <a
 														href="../goods/goods_view.php?goodsNo=37&amp;mtn=%5E%7C%5E%5E%7C%5E"
 														target="_blank" class="btn-open-win -moslow" type="button"
@@ -1404,7 +1439,7 @@ to {
 										</div>
 									</div>
 
-									<div
+									<div class="mid4"
 										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
 										aria-hidden="false">
 										<div class="space">
@@ -1420,7 +1455,7 @@ to {
 													<a
 														href="../goods/goods_view.php?goodsNo=15&amp;mtn=%5E%7C%5E%5E%7C%5E">
 														<span class="prdimg"><img
-															src="/data/goods/11/01/20/15/15_main_074.jpg"></span>
+															src="https://www.lush.co.kr/data/goods/11/01/20/15/15_main_074.jpg"></span>
 													</a> <span class="choice -moslow"> <a
 														href="../goods/goods_view.php?goodsNo=15&amp;mtn=%5E%7C%5E%5E%7C%5E"
 														target="_blank" class="btn-open-win -moslow" type="button"
@@ -1458,7 +1493,7 @@ to {
 										</div>
 									</div>
 
-									<div
+									<div class="mid4"
 										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
 										aria-hidden="false">
 										<div class="space">
@@ -1474,7 +1509,7 @@ to {
 													<a
 														href="../goods/goods_view.php?goodsNo=241&amp;mtn=%5E%7C%5E%5E%7C%5E">
 														<span class="prdimg"><img
-															src="/data/goods/17/05/30/241/241_main_049.jpg"></span>
+															src="https://www.lush.co.kr/data/goods/17/05/30/241/241_main_049.jpg"></span>
 													</a> <span class="choice -moslow"> <a
 														href="../goods/goods_view.php?goodsNo=241&amp;mtn=%5E%7C%5E%5E%7C%5E"
 														target="_blank" class="btn-open-win -moslow" type="button"
@@ -1689,16 +1724,16 @@ to {
 								</div>
 								<div class="bx-pager bx-default-pager">
 									<div class="bx-pager-item">
-										<a href="" data-slide-index="0" class="bx-pager-link active">1</a>
+										<button data-slide-index="0" class="bx-pager-link active midbtn1"></button>
 									</div>
 									<div class="bx-pager-item">
-										<a href="" data-slide-index="1" class="bx-pager-link">2</a>
+										<button data-slide-index="1" class="bx-pager-link midbtn2"></button>
 									</div>
 									<div class="bx-pager-item">
-										<a href="" data-slide-index="2" class="bx-pager-link">3</a>
+										<button data-slide-index="2" class="bx-pager-link midbtn3"></button>
 									</div>
 									<div class="bx-pager-item">
-										<a href="" data-slide-index="3" class="bx-pager-link">4</a>
+										<button data-slide-index="3" class="bx-pager-link midbtn4"></button>
 									</div>
 								</div>
 							</div>
@@ -1722,7 +1757,7 @@ to {
 								id="slideInput06">
 
 
-							<div class="mySlides">
+							<div class="mySlides last1">
 								<ul class="slideList">
 									<li><a
 										href="https://lush.co.kr/goods/goods_view.php?goodsNo=85&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_review_herbalism_210128"><img
@@ -1736,7 +1771,7 @@ to {
 
 							</div>
 
-							<div class="mySlides">
+							<div class="mySlides last2" style="display:none;">
 								<ul class="slideList">
 									<li><a
 										href="https://lush.co.kr/goods/goods_view.php?goodsNo=1000000893&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_2bn_review_pansy_211111"><img
@@ -1748,19 +1783,19 @@ to {
 
 							</div>
 
-							<div class="mySlides">
+							<div class="mySlides last3" style="display:none;">
 								<ul class="slideList">
 									<li><a
 										href="https://lush.co.kr/goods/goods_view.php?goodsNo=246&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_Review_dirtyspray_200623"><img
 											src="https://lush.co.kr/data/skin/front/howling/img/banner/e75c8b20d4a0bbbfeef78f35b7e134e3_61468.jpg"
 											alt="더티 보디 스프레이_리뷰" title="더티 보디 스프레이_리뷰"> <label
-											for="slideInput02" class="left"></label><label
+											for="slideInput02" class="lef3"></label><label
 											for="slideInput04" class="right"></label> </a></li>
 								</ul>
 
 							</div>
 
-							<div class="mySlides">
+							<div class="mySlides last4" style="display:none;">
 								<ul class="slideList">
 									<li><a
 										href="https://lush.co.kr/goods/goods_view.php?goodsNo=97&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_review_maskofmagnaminty_200824"><img
@@ -1772,7 +1807,7 @@ to {
 
 							</div>
 
-							<div class="mySlides">
+							<div class="mySlides last5" style="display:none;">
 								<ul class="slideList">
 									<li><a
 										href="https://lush.co.kr/goods/goods_view.php?goodsNo=1000001781&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_review_limebounty_211111"><img
@@ -1784,7 +1819,7 @@ to {
 
 							</div>
 
-							<div class="mySlides">
+							<div class="mySlides last6" style="display:none;">
 								<ul class="slideList">
 									<li><a
 										href="https://lush.co.kr/goods/goods_view.php?goodsNo=220&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_2bn_review_sleepy_211111"><img
@@ -1797,16 +1832,16 @@ to {
 							</div>
 							
 							
-							
+							<div class="slider_count slider2_count">
+								<em class="slider2_inx">1</em> / <span class="slider2_cou">6</span>
+							</div>
 
 
 						</div>
 					</div>
 					
 				</div>
-				<div class="slider_count slider2_count">
-					<em class="slider2_inx">1</em> / <span class="slider2_cou">6</span>
-				</div>
+				
 
 			</div>
 
@@ -1883,107 +1918,9 @@ to {
 		</div>
 	</div>
 	<script type="text/javascript">
-		var pos = 0;
-		//number of slides
-		var totalSlides = $('#slider-wrap ul li').length;
-		//get the slide width
-		var sliderWidth = $('#slider-wrap').width();
-
-		$(document).ready(function() {
-
-			/*****************
-			 BUILD THE SLIDER
-			 *****************/
-			//set width to be 'x' times the number of slides
-			$('#slider-wrap ul#slider').width(sliderWidth * totalSlides);
-
-			//next slide  
-			$('.bx-next').click(function() {
-				slideRight();
-			});
-
-			//previous slide
-			$('.bx-prev').click(function() {
-				slideLeft();
-			});
-
-			/*************************
-			 //*> OPTIONAL SETTINGS
-			 ************************/
-			//automatic slider
-			var autoSlider = setInterval(slideRight, 3000);
-
-			//for each slide 
-			$.each($('#slider-wrap ul li'), function() {
-
-				//create a pagination
-				var li = document.createElement('li');
-				$('#pagination-wrap ul').append(li);
-			});
-
-			//counter
-			countSlides();
-
-			//pagination
-			pagination();
-
-			//hide/show controls/btns when hover
-			//pause automatic slide when hover
-			$('#slider-wrap').hover(function() {
-				$(this).addClass('active');
-				clearInterval(autoSlider);
-			}, function() {
-				$(this).removeClass('active');
-				autoSlider = setInterval(slideRight, 3000);
-			});
-
-		});//DOCUMENT READY
-
-		/***********
-		 SLIDE LEFT
-		 ************/
-		function slideLeft() {
-			pos--;
-			if (pos == -1) {
-				pos = totalSlides - 1;
-			}
-			$('#slider-wrap ul#slider').css('left', -(sliderWidth * pos));
-
-			//*> optional
-			countSlides();
-			pagination();
-		}
-
-		/************
-		 SLIDE RIGHT
-		 *************/
-		function slideRight() {
-			pos++;
-			if (pos == totalSlides) {
-				pos = 0;
-			}
-			$('#slider-wrap ul#slider').css('left', -(sliderWidth * pos));
-
-			//*> optional 
-			countSlides();
-			pagination();
-		}
-
-		/************************
-		 //*> OPTIONAL SETTINGS
-		 ************************/
-		function countSlides() {
-			$('#counter').html(pos + 1 + ' / ' + totalSlides);
-		}
-
-		function pagination() {
-			$('#pagination-wrap ul li').removeClass('active');
-			$('#pagination-wrap ul li:eq(' + pos + ')').addClass('active');
-		}
-
 		$('.sb1')
 				.click(
-						function() {
+						function () {
 							$('.sb1').addClass('active');
 							$('.sb2').removeClass('active');
 							$('.sb3').removeClass('active');
@@ -1998,7 +1935,7 @@ to {
 
 		$(".sb2")
 				.click(
-						function() {
+						function () {
 							$('.sb2').addClass('active');
 							$('.sb1').removeClass('active');
 							$('.sb3').removeClass('active');
@@ -2006,14 +1943,14 @@ to {
 							$('.slider-area')
 									.css(
 											{
-												"background" : "url(https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/aa15e24852bf617ba4409f3a4ef01bf8_52388.jpg)"
+												"background" : "url(https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/0ef7d43343f7acaab5f0070eb27da89a_72013.jpg)"
 											});
 
 						});
 
 		$(".sb3")
 				.click(
-						function() {
+						function () {
 							$('.sb3').addClass('active');
 							$('.sb2').removeClass('active');
 							$('.sb1').removeClass('active');
@@ -2028,7 +1965,7 @@ to {
 
 		$(".sb4")
 				.click(
-						function() {
+						function () {
 							$('.sb4').addClass('active');
 							$('.sb2').removeClass('active');
 							$('.sb3').removeClass('active');
@@ -2036,9 +1973,95 @@ to {
 							$('.slider-area')
 									.css(
 											{
-												"background" : "url(https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/070251f41882f6b3ca199c2de70a49fb_61190.jpg)"
+												"background" : "url(https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/a32e8dffbd1fb8d891f3b2e06b36c5eb_54719.jpg)"
 											});
 						});
+		
+		let sb = "sb";
+	      let check = 2;
+	      
+	      var play = setInterval(function() {
+	         sb = sb + check;
+	         
+	         $('.'+sb).trigger('click');
+	         
+	         sb = "sb";
+	         if(check < 4) {
+	            check = check + 1;
+	         } else {
+	            check = 1;
+	         }
+
+	      }, 7000);
+		
+		$(".midbtn1").click(function() {
+			$(".mid1").css("display","");
+			$(".mid2").css("display","none");
+			$(".mid3").css("display","none");
+			$(".mid4").css("display","none");
+			$(this).addClass('active');
+			$(".midbtn2").removeClass('active');
+			$(".midbtn3").removeClass('active');
+			$(".midbtn4").removeClass('active');
+		});
+		
+		$(".midbtn2").click(function() {
+			$(".mid2").css("display","");
+			$(".mid1").css("display","none");
+			$(".mid3").css("display","none");
+			$(".mid4").css("display","none");
+			$(this).addClass('active');
+			$(".midbtn1").removeClass('active');
+			$(".midbtn3").removeClass('active');
+			$(".midbtn4").removeClass('active');
+		});
+		
+		$(".midbtn3").click(function() {
+			$(".mid3").css("display","");
+			$(".mid2").css("display","none");
+			$(".mid1").css("display","none");
+			$(".mid4").css("display","none");
+			$(this).addClass('active');
+			$(".midbtn2").removeClass('active');
+			$(".midbtn1").removeClass('active');
+			$(".midbtn4").removeClass('active');
+		});
+		
+		$(".midbtn4").click(function() {
+			$(".mid4").css("display","");
+			$(".mid2").css("display","none");
+			$(".mid3").css("display","none");
+			$(".mid1").css("display","none");
+			$(this).addClass('active');
+			$(".midbtn2").removeClass('active');
+			$(".midbtn3").removeClass('active');
+			$(".midbtn1").removeClass('active');
+		});
+		
+		let flag = 1;
+		
+		$(".left").click(function() {
+			$(".last"+flag).css("display","none");
+			flag = flag - 1;
+			if(flag < 1) {
+				flag = 6;
+			}
+			$(".last"+flag).css("display","");
+			$(".slider2_inx").html(flag);
+		});
+		
+		$(".right").click(function() {
+			$(".last"+flag).css("display","none");
+			flag = flag + 1;
+			if(flag > 6) {
+				flag = 1;
+			}
+			$(".last"+flag).css("display","");
+			$(".slider2_inx").html(flag);
+		});
+	
+		
+		
 	</script>
 
 </body>

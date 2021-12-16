@@ -1918,9 +1918,6 @@
 										<div class="mt10">
 											Good to Know
 											<span class="toggle_w">
-											<script>
-												
-											</script>
 												<span class="toggle_btn"></span>
 												<div class="toggle_content" style="width: 500px; display: none;">
 													<a href="#;" class="toggle_close">닫기</a>
