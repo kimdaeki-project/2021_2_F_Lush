@@ -930,10 +930,7 @@ thead {
 			$("#allAgree").prop("checked", result);	
 		});
 		
-		$(".ja-next").click(function(){
-			var popupX = (document.body.offsetWidth / 2) - (400 / 2);			
-			var popupY= (window.screen.height / 2) - (500 / 2);
-			
+		$(".ja-next").click(function(){			
 			if($("#allAgree").prop("checked")){
 				if(!$(".cellPhone").prop("checked")){
 					alert("본인인증 방법을 선택해주세요.");
