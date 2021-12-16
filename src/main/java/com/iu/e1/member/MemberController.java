@@ -38,6 +38,11 @@ public class MemberController {
       /* System.out.println(vo.getName()); */
       mv.setViewName("member/find_id2");
       return mv;
+   }  
+
+   @GetMapping("find_pw2")
+   public String find_id2() throws Exception {
+      return "member/find_id2";
    }
 
    @PostMapping("find_pw2")
@@ -47,12 +52,7 @@ public class MemberController {
       mv.setViewName("member/find_pw2");
       return mv;
    }
-
-   @GetMapping("find_pw2")
-   public String find_id2() throws Exception {
-      return "member/find_id2";
-   }
-
+   
    @GetMapping("find_pw")
    public String find_pw() throws Exception {
       return "member/find_pw";
@@ -174,28 +174,23 @@ public class MemberController {
    public ModelAndView mypage_updateCheck(MemberVO memberVO, ModelAndView mv) throws Exception {
       MemberVO vo = memberService.checkMember(memberVO);
       String id1 = memberVO.getId();
-
       String message = "";
       String url = "";
-
       if (vo == null) {
          message = "아이디와 비밀번호가 일지하지 않습니다";
          url = "/member/mypage_updateCheck";
          System.out.println("실패");
       } else {
          String id2 = vo.getId();
-
          if (id1.equals(id2)) {
             message = "본인 인증에 성공하였습니다";
             url = "/member/mypage_updatePage";
             System.out.println("성공");
          }
       }
-
       mv.addObject("message", message);
       mv.addObject("url", url);
       mv.setViewName("./member/extra");
-
       return mv;
    }
 
