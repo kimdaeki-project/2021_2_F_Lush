@@ -1629,7 +1629,7 @@
 								<div class="this">
 									<a href="/spa/list">LUSH SPA</a>
 									<div class="drop">
-										<a href="../product/productList">러쉬</a>
+										<a href="../product/list">러쉬</a>
 										<a href="/spa/list">LUSH SPA</a>
 									</div>
 								</div>
