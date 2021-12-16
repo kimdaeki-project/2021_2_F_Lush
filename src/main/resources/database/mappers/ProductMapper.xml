@@ -18,18 +18,9 @@
   		limit #{startRow}, #{perPage}
   	</select>
   	
-  	
-  	<select id="getTotalCount" resultType="Long" parameterType="Pager">
-  		select count(num) from product
-  		where
-  		<choose>
-  			<when test="kind == 'name'">name</when>
-  			<when test="kind == 'category'">category</when>  			
-  			<otherwise>hashTag</otherwise>
-  		</choose>
-  		like concat('%' ,#{search}, '%')
+  	<select id="productCordList" parameterType="ProductVO" resultType="ProductVO">
+  		select * from product where cord=#{cord}
   	</select>
-  	
   	
   	<select id="productSelect" parameterType="ProductVO" resultType="ProductVO">
   		select * from product where num=#{num}
@@ -46,4 +37,8 @@
   	<update id="productUpdate" parameterType="ProductVO">
   		update product set category=#{category}, name=#{name}, hashTag=#{hashTag}, price=#{price}, weight=#{weight}, photo=#{photo}, heart=#{heart} where num=#{num}
   	</update>
+  	
+  	<insert id="cartInsert" >
+  		
+  	</insert>
   </mapper>

@@ -5,11 +5,31 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.iu.e1.util.Pager2;
+
 @Service
 public class EventService {
 
    @Autowired
    private EventRepository eventRepository;
+   
+   public List<EventVO> getSelectFinishList(Pager2 pager2)throws Exception{
+	   pager2.makeRow();
+	   List<EventVO> ar = eventRepository.getSelectFinishList(pager2);
+	   pager2.makeNum(Long.valueOf(eventRepository.getfinishListCount()));
+	   return ar;
+   }
+   
+   public List<EventVO> setSelectFinishList(Pager2 pager2)throws Exception{
+	   pager2.makeRow();
+	   List<EventVO> ar = eventRepository.getSelectFinishList(pager2);
+	   System.out.println(pager2.getKind());
+	   System.out.println(pager2.getSearch());
+	   System.out.println(ar.size());
+	   pager2.makeNum(Long.valueOf(eventRepository.getfinishListCount()));
+	   return ar;
+   }
+
 
    public int setInsertEvent(EventVO eventVO) throws Exception {
       int result = eventRepository.setInsertEvent(eventVO);
@@ -31,17 +51,37 @@ public class EventService {
       return eventRepository.setUpdate(eventVO);
    }
 
-   public List<EventVO> getSelectEventList() throws Exception {
-      List<EventVO> ar = eventRepository.getSelectEventList();
+   public List<EventVO> getSelectEventList(Pager2 pager2) throws Exception {
+	  pager2.makeRow();
+      List<EventVO> ar = eventRepository.getSelectEventList(pager2);
+      pager2.makeNum(Long.valueOf(eventRepository.geteventListCount()));
 
       return ar;
    }
+   
+   public List<EventVO> setSelectEventList(Pager2 pager2) throws Exception {
+		  pager2.makeRow();
+	      List<EventVO> ar = eventRepository.getSelectEventList(pager2);
+	      pager2.makeNum(Long.valueOf(eventRepository.geteventListCount()));
 
-   public List<EventVO> getSelectWinnerList() throws Exception {
-      List<EventVO> ar = eventRepository.getSelectWinnerList();
+	      return ar;
+	   }
 
+   public List<EventVO> getSelectWinnerList(Pager2 pager2) throws Exception {
+	  pager2.makeRow();
+	  List<EventVO> ar = eventRepository.getSelectWinnerList(pager2);
+      pager2.makeNum(Long.valueOf(eventRepository.getCountWinnerList()));
+     
       return ar;
    }
+   
+   public List<EventVO> setSelectWinnerList(Pager2 pager2) throws Exception {
+		  pager2.makeRow();
+		  List<EventVO> ar = eventRepository.setSelectWinnerList(pager2);  
+	      pager2.makeNum(Long.valueOf(eventRepository.getCountWinnerList()));
+	     
+	      return ar;
+	   }
    
    public EventVO getSelectOne(EventVO eventVO) throws Exception {
       
@@ -49,4 +89,10 @@ public class EventService {
       
       return eventRepository.getSelectOne(eventVO);
       }
+   
+   public int getCountWinnerList()throws Exception{
+	   
+	   int result = eventRepository.getCountWinnerList();
+	   return result;
+   }
 }

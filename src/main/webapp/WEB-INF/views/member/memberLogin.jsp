@@ -5,6 +5,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <title>Insert title here</title>
 <style type="text/css">
 @font-face {
@@ -17,8 +19,8 @@
    src: url('/resources/fonts/NotoSansKR-Regular.otf') format('opentype');
 }
 
-body{
-   font-family: "notokrR",Malgun Gothic,"맑은 고딕",AppleGothic,Dotum,"돋움";
+body {
+   font-family: "notokrR", Malgun Gothic, "맑은 고딕", AppleGothic, Dotum, "돋움";
    line-height: 1.4;
 }
 
@@ -193,7 +195,7 @@ body{
 .member .box .save label.on {
    background: #fff
       url('https://www.lush.co.kr/data/skin/front/howling/img/etc/check-on.png')
-      no-repeat left top;   
+      no-repeat left top;
 }
 
 .member .box .btn {
@@ -663,7 +665,7 @@ button em {
                            <button type="submit" class="skinbtn point2 l-login">
                               <em>로그인</em>
                            </button>
-                           <div class="  login_menu">
+                           <div class="login_menu">
                               <button type="button" class="skinbtn " id="btnJoinMember">
                                  <em>회원가입</em>
                               </button>
@@ -725,19 +727,26 @@ button em {
                      </form>
                   </div>
                </div>
-
-
-
-
-
-
             </div>
          </div>
       </div>
    </div>
 
-<c:import url="../main/mainFooter.jsp"></c:import>
+   <c:import url="../main/mainFooter.jsp"></c:import>
 
-
+   <script type="text/javascript">
+      $("#btnJoinMember").click(function() {
+         window.location.href="/member/joinCheck";
+      });
+      
+      $("#btnFindId").click(function() {
+         window.location.href="/member/find_id";
+      });
+      
+      $("#btnFindPwd").click(function() {
+         window.location.href="/member/find_pw";
+      });         
+      
+   </script>
 </body>
 </html>
