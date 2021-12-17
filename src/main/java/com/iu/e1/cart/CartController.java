@@ -51,7 +51,8 @@ public class CartController {
       ModelAndView mv = new ModelAndView();
       int pprice = 0;
       int pamount = 0;
-      
+      int delivery = 2500;
+      int totalprice = 0;
       int sprice = 0;
       int samount = 0;
       
@@ -60,6 +61,7 @@ public class CartController {
             ar1.add(ar.get(i));
             System.out.println(ar.get(i).getPs_price());
             pprice = pprice + ar.get(i).getPs_price();
+            totalprice = pprice + delivery;
             pamount = pamount + ar.get(i).getPs_amount();
             System.out.println("p 성공");
             mv.addObject("memberVO", memberVO);
@@ -73,6 +75,7 @@ public class CartController {
       }
       
       System.out.println(pprice);
+      System.out.println(totalprice);
       System.out.println(pamount);
       
       System.out.println(sprice);
@@ -80,6 +83,7 @@ public class CartController {
       
       mv.addObject("pamount", pamount);
       mv.addObject("pprice", pprice);
+      mv.addObject("totalprice", totalprice);
       
       mv.addObject("samount", samount);
       mv.addObject("sprice", sprice);

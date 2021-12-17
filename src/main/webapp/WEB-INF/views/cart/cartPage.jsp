@@ -606,7 +606,7 @@ td{
                                  id="totalDeliveryCharge">2,500</strong></span> <span class="total"><img
                                  src="https://www.lush.co.kr/data/skin/front/howling/img/icon/total_new.png"
                                  alt="합계"><em class="tit">총 주문금액</em>￦<strong
-                                 id="totalSettlePrice">${pprice}</strong> </span>
+                                 id="totalSettlePrice">${totalprice}</strong> </span>
                            </p>
                            <div class="add_currency" style="display: none;">
                               <em id="totalSettlePriceAdd"></em>
@@ -893,8 +893,7 @@ td{
    <%-- <c:import url="../main/mainFooter.jsp"></c:import> --%>
    <script type="text/javascript"
       src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
-   <script>
-      
+   <script>   			   
       $('.dbutton').click(function(){
          const a = $('#cart_num').text();
          console.log(a);
@@ -920,7 +919,7 @@ td{
                   pg : 'kakaopay',
                   pay_method : 'card',
                   merchant_uid : 'merchant_' + new Date().getTime(),
-                  name : 'KH Books 도서 결제',
+                  name : 'Lush 상품 결제',
                   amount : c,
                   buyer_email : '${memberVO.email}',
                   buyer_name : '${memberVO.name}',
