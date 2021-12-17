@@ -9,11 +9,15 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <title>Insert title here</title>
+
 </head>
 <body>
-	<c:import url="./main/mainHeader.jsp"></c:import>
-	<c:import url="./main/mainMiddle.jsp"></c:import>
-	<c:import url="./main/mainFooter.jsp"></c:import>
+
+	
+		<c:import url="./main/mainHeader.jsp"></c:import>
+		<c:import url="./main/mainMiddle.jsp"></c:import>
+		<c:import url="./main/mainFooter.jsp"></c:import>
+
 	
 
 

@@ -179,6 +179,7 @@
 	height: 580px;
 	background-image:
 		url('https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/a4718ce4ff4a9a1a7d0dfda13cac6252_44894.jpg');
+	background-repeat: no-repeat;
 }
 
 .sliderBtn>active {
@@ -890,8 +891,174 @@ to {
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-								
-									<div class="mid1"									
+									<div class="mid1"
+										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
+										aria-hidden="false">
+										<div class="space">
+											<div class="box">
+
+												<div class="thumbnail"
+													data-image-magnify="/data/goods/16/03/18/174/174_magnify_072.jpg"
+													data-image-detail="/data/goods/16/03/18/174/174_detail_082.jpg"
+													data-image-list="/data/goods/16/03/18/174/174_list_06.jpg"
+													data-image-main="/data/goods/16/03/18/174/174_main_086.jpg"
+													data-image-add1="/data/goods/16/03/18/174/174_add1_098.jpg"
+													data-image-add2="/data/goods/16/03/18/174/174_add2_078.jpg">
+													<a
+														href="http://localhost/product/select?num=5">
+														<span class="prdimg"><img
+															src="https://www.lush.co.kr/data/goods/16/03/18/174/174_main_086.jpg"></span>
+													</a> <span class="choice -moslow"> <a
+														href="http://localhost/product/select?num=5"
+														target="_blank" class="btn-open-win -moslow" type="button"
+														data-goods-no="174"><span
+															class="ti ti-layout-media-center-alt -moslow"></span><span
+															class="hand icon-name">새창열기</span></a> <!--
+									<a class="wish btn-add-wish1 -moslow" data-goods-no="174" href="#jjimA"><span class="ti ti-heart -moslow"></span><span class="icon-name">찜하기</span></a>
+									<a href="#optionViewLayer" type="button" class="cart btn-open-layer btn-add-cart1 -moslow" data-mode="cartIn" data-goods-no="174"><span class="ti ti-bag -moslow"></span><span class="icon-name">장바구니</span></a>
+									-->
+													</span>
+												</div>
+												<div class="prdinfo">
+													<div class="conditions">
+														<span class="hot"> <img
+															src="http://localhost/product/select?num=5" alt="vegan"
+															title="vegan" class="middle">
+														</span>
+													</div>
+													<div class="txt">
+														<span class="brand"> <strong>[러쉬]</strong>
+														</span> <a
+															href="http://localhost/product/select?num=5">
+															<span class="prdName">인터갈락틱</span><span class="shotdesc">#배쓰밤
+																#환상적인우주느낌</span>
+														</a>
+													</div>
+													<div class="price gd-default">
+														<span class="cost"> <strong>￦ 17,000</strong>
+														</span>
+													</div>
+													<div class="display-field"></div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+									
+
+									<div class="mid1"
+										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
+										aria-hidden="false">
+										<div class="space">
+											<div class="box">
+
+												<div class="thumbnail"
+													data-image-magnify="/data/goods/17/08/16/246/246_magnify_074.jpg"
+													data-image-detail="/data/goods/17/08/16/246/246_detail_070.jpg"
+													data-image-list="/data/goods/17/08/16/246/246_list_060.jpg"
+													data-image-main="/data/goods/17/08/16/246/246_main_022.jpg"
+													data-image-add1="/data/goods/17/08/16/246/246_add1_070.jpg"
+													data-image-add2="/data/goods/17/08/16/246/246_add2_025.jpg">
+													<a
+														href="http://localhost/product/select?num=3">
+														<span class="prdimg"><img
+															src="https://lush.co.kr/data/goods/17/08/16/246/246_main_022.jpg"></span>
+													</a> <span class="choice -moslow"> <a
+														href="http://localhost/product/select?num=3"
+														target="_blank" class="btn-open-win -moslow" type="button"
+														data-goods-no="246"><span
+															class="ti ti-layout-media-center-alt -moslow"></span><span
+															class="hand icon-name">새창열기</span></a> <!--
+									<a class="wish btn-add-wish1 -moslow" data-goods-no="246" href="#jjimA"><span class="ti ti-heart -moslow"></span><span class="icon-name">찜하기</span></a>
+									<a href="#optionViewLayer" type="button" class="cart btn-open-layer btn-add-cart1 -moslow" data-mode="cartIn" data-goods-no="246"><span class="ti ti-bag -moslow"></span><span class="icon-name">장바구니</span></a>
+									-->
+													</span>
+												</div>
+												<div class="prdinfo">
+													<div class="conditions">
+														<span class="hot"> <img
+															src="http://localhost/product/select?num=3" alt="프레쉬"
+															title="프레쉬" class="middle"> <img
+															src="http://localhost/product/select?num=3" alt="vegan"
+															title="vegan" class="middle">
+														</span>
+													</div>
+													<div class="txt">
+														<span class="brand"> <strong>[러쉬]</strong>
+														</span> <a
+															href="http://localhost/product/select?num=3">
+															<span class="prdName">트와일라잇</span><span
+															class="shotdesc">#스테디셀러 #뒤돌아보는향 #재구매각</span>
+														</a>
+													</div>
+													<div class="price gd-default">
+														<span class="cost"> <strong>￦ 50,000</strong>
+														</span>
+													</div>
+													<div class="display-field"></div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="mid1"
+										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
+										aria-hidden="false">
+										<div class="space">
+											<div class="box">
+
+												<div class="thumbnail"
+													data-image-magnify="/data/goods/11/01/25/88/88_magnify_01.jpg"
+													data-image-detail="/data/goods/11/01/25/88/88_detail_056.jpg"
+													data-image-list="/data/goods/11/01/25/88/88_list_07.jpg"
+													data-image-main="/data/goods/11/01/25/88/88_main_058.jpg"
+													data-image-add1="/data/goods/11/01/25/88/88_add1_010.jpg"
+													data-image-add2="/data/goods/11/01/25/88/88_add2_098.jpg">
+													<a
+														href="http://localhost/product/select?num=4">
+														<span class="prdimg"><img
+															src="https://lush.co.kr/data/goods/11/01/25/88/88_main_058.jpg"></span>
+													</a> <span class="choice -moslow"> <a
+														href="http://localhost/product/select?num=4"
+														target="_blank" class="btn-open-win -moslow" type="button"
+														data-goods-no="88"><span
+															class="ti ti-layout-media-center-alt -moslow"></span><span
+															class="hand icon-name">새창열기</span></a> <!--
+									<a class="wish btn-add-wish1 -moslow" data-goods-no="88" href="#jjimA"><span class="ti ti-heart -moslow"></span><span class="icon-name">찜하기</span></a>
+									<a href="#optionViewLayer" type="button" class="cart btn-open-layer btn-add-cart1 -moslow" data-mode="cartIn" data-goods-no="88"><span class="ti ti-bag -moslow"></span><span class="icon-name">장바구니</span></a>
+									-->
+													</span>
+												</div>
+												<div class="prdinfo">
+													<div class="conditions">
+														<span class="hot"> <img
+															src="http://localhost/product/select?num=4" alt="국내제조"
+															title="국내제조" class="middle"> <img
+															src="http://localhost/product/select?num=4" alt="vegan"
+															title="vegan" class="middle">
+														</span>
+													</div>
+													<div class="txt">
+														<span class="brand"> <strong>[러쉬]</strong>
+														</span> <a
+															href="http://localhost/product/select?num=4">
+															<span class="prdName">챠콜</span><span class="shotdesc">#유명한숯비누
+																#바로그제품 #맑은피부</span>
+														</a>
+													</div>
+													<div class="price gd-default">
+														<span class="cost"> <strong>￦ 18,000</strong>
+														</span>
+													</div>
+													<div class="display-field"></div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="mid2"									
 										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
 										aria-hidden="false">
 										<div class="space">
@@ -938,172 +1105,6 @@ to {
 													</div>
 													<div class="price gd-default">
 														<span class="cost"> <strong>￦ 20,000</strong>
-														</span>
-													</div>
-													<div class="display-field"></div>
-
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="mid1"
-										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
-										aria-hidden="false">
-										<div class="space">
-											<div class="box">
-
-												<div class="thumbnail"
-													data-image-magnify="/data/goods/17/08/16/246/246_magnify_074.jpg"
-													data-image-detail="/data/goods/17/08/16/246/246_detail_070.jpg"
-													data-image-list="/data/goods/17/08/16/246/246_list_060.jpg"
-													data-image-main="/data/goods/17/08/16/246/246_main_022.jpg"
-													data-image-add1="/data/goods/17/08/16/246/246_add1_070.jpg"
-													data-image-add2="/data/goods/17/08/16/246/246_add2_025.jpg">
-													<a
-														href="../goods/goods_view.php?goodsNo=246&amp;mtn=%5E%7C%5E%5E%7C%5E">
-														<span class="prdimg"><img
-															src="https://lush.co.kr/data/goods/17/08/16/246/246_main_022.jpg"></span>
-													</a> <span class="choice -moslow"> <a
-														href="../goods/goods_view.php?goodsNo=246&amp;mtn=%5E%7C%5E%5E%7C%5E"
-														target="_blank" class="btn-open-win -moslow" type="button"
-														data-goods-no="246"><span
-															class="ti ti-layout-media-center-alt -moslow"></span><span
-															class="hand icon-name">새창열기</span></a> <!--
-									<a class="wish btn-add-wish1 -moslow" data-goods-no="246" href="#jjimA"><span class="ti ti-heart -moslow"></span><span class="icon-name">찜하기</span></a>
-									<a href="#optionViewLayer" type="button" class="cart btn-open-layer btn-add-cart1 -moslow" data-mode="cartIn" data-goods-no="246"><span class="ti ti-bag -moslow"></span><span class="icon-name">장바구니</span></a>
-									-->
-													</span>
-												</div>
-												<div class="prdinfo">
-													<div class="conditions">
-														<span class="hot"> <img
-															src="/data/icon/goods_icon/icon_fresh.png" alt="프레쉬"
-															title="프레쉬" class="middle"> <img
-															src="/data/icon/goods_icon/icon_vegan.png" alt="vegan"
-															title="vegan" class="middle">
-														</span>
-													</div>
-													<div class="txt">
-														<span class="brand"> <strong>[러쉬]</strong>
-														</span> <a
-															href="../goods/goods_view.php?goodsNo=246&amp;mtn=%5E%7C%5E%5E%7C%5E">
-															<span class="prdName">더티 보디 스프레이</span><span
-															class="shotdesc">#스테디셀러 #뒤돌아보는향 #재구매각</span>
-														</a>
-													</div>
-													<div class="price gd-default">
-														<span class="cost"> <strong>￦ 50,000</strong>
-														</span>
-													</div>
-													<div class="display-field"></div>
-
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="mid1"
-										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
-										aria-hidden="false">
-										<div class="space">
-											<div class="box">
-
-												<div class="thumbnail"
-													data-image-magnify="/data/goods/11/01/25/88/88_magnify_01.jpg"
-													data-image-detail="/data/goods/11/01/25/88/88_detail_056.jpg"
-													data-image-list="/data/goods/11/01/25/88/88_list_07.jpg"
-													data-image-main="/data/goods/11/01/25/88/88_main_058.jpg"
-													data-image-add1="/data/goods/11/01/25/88/88_add1_010.jpg"
-													data-image-add2="/data/goods/11/01/25/88/88_add2_098.jpg">
-													<a
-														href="../goods/goods_view.php?goodsNo=88&amp;mtn=%5E%7C%5E%5E%7C%5E">
-														<span class="prdimg"><img
-															src="https://lush.co.kr/data/goods/11/01/25/88/88_main_058.jpg"></span>
-													</a> <span class="choice -moslow"> <a
-														href="../goods/goods_view.php?goodsNo=88&amp;mtn=%5E%7C%5E%5E%7C%5E"
-														target="_blank" class="btn-open-win -moslow" type="button"
-														data-goods-no="88"><span
-															class="ti ti-layout-media-center-alt -moslow"></span><span
-															class="hand icon-name">새창열기</span></a> <!--
-									<a class="wish btn-add-wish1 -moslow" data-goods-no="88" href="#jjimA"><span class="ti ti-heart -moslow"></span><span class="icon-name">찜하기</span></a>
-									<a href="#optionViewLayer" type="button" class="cart btn-open-layer btn-add-cart1 -moslow" data-mode="cartIn" data-goods-no="88"><span class="ti ti-bag -moslow"></span><span class="icon-name">장바구니</span></a>
-									-->
-													</span>
-												</div>
-												<div class="prdinfo">
-													<div class="conditions">
-														<span class="hot"> <img
-															src="/data/icon/goods_icon/icon_local.png" alt="국내제조"
-															title="국내제조" class="middle"> <img
-															src="/data/icon/goods_icon/icon_vegan.png" alt="vegan"
-															title="vegan" class="middle">
-														</span>
-													</div>
-													<div class="txt">
-														<span class="brand"> <strong>[러쉬]</strong>
-														</span> <a
-															href="../goods/goods_view.php?goodsNo=88&amp;mtn=%5E%7C%5E%5E%7C%5E">
-															<span class="prdName">챠콜</span><span class="shotdesc">#유명한숯비누
-																#바로그제품 #맑은피부</span>
-														</a>
-													</div>
-													<div class="price gd-default">
-														<span class="cost"> <strong>￦ 18,000</strong>
-														</span>
-													</div>
-													<div class="display-field"></div>
-
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="mid2"
-										style="float: left; list-style: none; position: relative; width: 280px; margin-right: 20px;"
-										aria-hidden="false">
-										<div class="space">
-											<div class="box">
-
-												<div class="thumbnail"
-													data-image-magnify="/data/goods/16/03/18/174/174_magnify_072.jpg"
-													data-image-detail="/data/goods/16/03/18/174/174_detail_082.jpg"
-													data-image-list="/data/goods/16/03/18/174/174_list_06.jpg"
-													data-image-main="/data/goods/16/03/18/174/174_main_086.jpg"
-													data-image-add1="/data/goods/16/03/18/174/174_add1_098.jpg"
-													data-image-add2="/data/goods/16/03/18/174/174_add2_078.jpg">
-													<a
-														href="../goods/goods_view.php?goodsNo=174&amp;mtn=%5E%7C%5E%5E%7C%5E">
-														<span class="prdimg"><img
-															src="https://www.lush.co.kr/data/goods/16/03/18/174/174_main_086.jpg"></span>
-													</a> <span class="choice -moslow"> <a
-														href="../goods/goods_view.php?goodsNo=174&amp;mtn=%5E%7C%5E%5E%7C%5E"
-														target="_blank" class="btn-open-win -moslow" type="button"
-														data-goods-no="174"><span
-															class="ti ti-layout-media-center-alt -moslow"></span><span
-															class="hand icon-name">새창열기</span></a> <!--
-									<a class="wish btn-add-wish1 -moslow" data-goods-no="174" href="#jjimA"><span class="ti ti-heart -moslow"></span><span class="icon-name">찜하기</span></a>
-									<a href="#optionViewLayer" type="button" class="cart btn-open-layer btn-add-cart1 -moslow" data-mode="cartIn" data-goods-no="174"><span class="ti ti-bag -moslow"></span><span class="icon-name">장바구니</span></a>
-									-->
-													</span>
-												</div>
-												<div class="prdinfo">
-													<div class="conditions">
-														<span class="hot"> <img
-															src="/data/icon/goods_icon/icon_vegan.png" alt="vegan"
-															title="vegan" class="middle">
-														</span>
-													</div>
-													<div class="txt">
-														<span class="brand"> <strong>[러쉬]</strong>
-														</span> <a
-															href="../goods/goods_view.php?goodsNo=174&amp;mtn=%5E%7C%5E%5E%7C%5E">
-															<span class="prdName">인터갈락틱</span><span class="shotdesc">#배쓰밤
-																#환상적인우주느낌</span>
-														</a>
-													</div>
-													<div class="price gd-default">
-														<span class="cost"> <strong>￦ 17,000</strong>
 														</span>
 													</div>
 													<div class="display-field"></div>
@@ -1760,8 +1761,8 @@ to {
 							<div class="mySlides last1">
 								<ul class="slideList">
 									<li><a
-										href="https://lush.co.kr/goods/goods_view.php?goodsNo=85&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_review_herbalism_210128"><img
-											src="https://lush.co.kr/data/skin/front/howling/img/banner/989b90f38282fa8054dd6dfcd851b5b0_17526.jpg"
+										href="#"><img
+											src="https://lush.co.kr/data/skin/front/howling/img/banner/ecb0f342ba157e979b563230e4ea30c0_31163.jpg"
 											alt="허벌리즘 리뷰" title="허벌리즘 리뷰"> <label
 											for="slideInput06" class="left"></label><label
 											for="slideInput02" class="right"></label>
@@ -1774,8 +1775,8 @@ to {
 							<div class="mySlides last2" style="display:none;">
 								<ul class="slideList">
 									<li><a
-										href="https://lush.co.kr/goods/goods_view.php?goodsNo=1000000893&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_2bn_review_pansy_211111"><img
-											src="https://lush.co.kr/data/skin/front/howling/img/banner/6b48a921b85b73941297a439f2ddadaf_81975.jpg"
+										href="#"><img
+											src="https://lush.co.kr/data/skin/front/howling/img/banner/a66343424b23cf05d4030e16718640cd_46051.jpg"
 											alt="팬지 솔리드 퍼퓸 _ 리뷰" title="팬지 솔리드 퍼퓸 _ 리뷰"> <label
 											for="slideInput01" class="left"></label><label
 											for="slideInput03" class="right"></label> </a></li>
@@ -1786,8 +1787,8 @@ to {
 							<div class="mySlides last3" style="display:none;">
 								<ul class="slideList">
 									<li><a
-										href="https://lush.co.kr/goods/goods_view.php?goodsNo=246&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_Review_dirtyspray_200623"><img
-											src="https://lush.co.kr/data/skin/front/howling/img/banner/e75c8b20d4a0bbbfeef78f35b7e134e3_61468.jpg"
+										href="#"><img
+											src="https://lush.co.kr/data/skin/front/howling/img/banner/d914d3b7fa14c180605388a7b7addb4f_62624.jpg"
 											alt="더티 보디 스프레이_리뷰" title="더티 보디 스프레이_리뷰"> <label
 											for="slideInput02" class="lef3"></label><label
 											for="slideInput04" class="right"></label> </a></li>
@@ -1798,8 +1799,8 @@ to {
 							<div class="mySlides last4" style="display:none;">
 								<ul class="slideList">
 									<li><a
-										href="https://lush.co.kr/goods/goods_view.php?goodsNo=97&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_review_maskofmagnaminty_200824"><img
-											src="https://lush.co.kr/data/skin/front/howling/img/banner/030f2710b1fd96a3713d8349a9a78252_40109.jpg"
+										href="#"><img
+											src="https://lush.co.kr/data/skin/front/howling/img/banner/2af29a9f30fb145691145caaf403bd13_97181.jpg"
 											alt="마스크오브 매그너민티_리뷰" title="마스크오브 매그너민티_리뷰"> <label
 											for="slideInput03" class="left"></label><label
 											for="slideInput05" class="right"></label> </a></li>
@@ -1810,8 +1811,8 @@ to {
 							<div class="mySlides last5" style="display:none;">
 								<ul class="slideList">
 									<li><a
-										href="https://lush.co.kr/goods/goods_view.php?goodsNo=1000001781&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_review_limebounty_211111"><img
-											src="https://lush.co.kr/data/skin/front/howling/img/banner/d914d3b7fa14c180605388a7b7addb4f_62624.jpg"
+										href="#"><img
+											src="https://lush.co.kr/data/skin/front/howling/img/banner/6b48a921b85b73941297a439f2ddadaf_81975.jpg"
 											alt="라임 바운티_리뷰" title="라임 바운티_리뷰"> <label
 											for="slideInput04" class="left"></label><label
 											for="slideInput06" class="right"></label> </a></li>
@@ -1819,21 +1820,11 @@ to {
 
 							</div>
 
-							<div class="mySlides last6" style="display:none;">
-								<ul class="slideList">
-									<li><a
-										href="https://lush.co.kr/goods/goods_view.php?goodsNo=220&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_2bn_review_sleepy_211111"><img
-											src="https://lush.co.kr/data/skin/front/howling/img/banner/2af29a9f30fb145691145caaf403bd13_97181.jpg"
-											alt="슬리피 보디 로션 _리뷰" title="슬리피 보디 로션 _리뷰"> <label
-											for="slideInput05" class="left"></label><label
-											for="slideInput01" class="right"></label> </a></li>
-								</ul>
-
-							</div>
+						
 							
 							
 							<div class="slider_count slider2_count">
-								<em class="slider2_inx">1</em> / <span class="slider2_cou">6</span>
+								<em class="slider2_inx">1</em> / <span class="slider2_cou">5</span>
 							</div>
 
 
@@ -1850,7 +1841,7 @@ to {
 					<!-- 주석 <div><iframe width="610" height="560" src="https://www.youtube.com/embed/oggJtlwh2zk" frameborder="0" allowfullscreen></iframe></div> -->
 					<!-- 튜닝 : 메인동영상 -->
 					<a
-						href="https://www.lush.co.kr/animalfreetesting.php?utm_source=&amp;utm_medium=&amp;utm_campaign=PC_article_FAT_210819"><img
+						href="http://localhost/campaign/insert"><img
 						src="https://lush.co.kr/data/skin/front/howling/img/banner/eae8e90bf1150cd84c0aa557cb3a2bd2_44710.jpg"
 						alt="동물대체시험법 서명 캠페인" title="동물대체시험법 서명 캠페인"></a>
 				</div>
@@ -1892,7 +1883,7 @@ to {
 							<div class="slick-track" role="listbox"
 								style="opacity: 1; width: 380px;">
 								<a
-									href="https://www.lush.co.kr/goods/goods_view.php?goodsNo=1000001808&amp;utm_source=&amp;utm_medium=&amp;utm_campaign=PC_spa_tangled_210716"
+									href="http://localhost/spa/selectOne?num=28"
 									class="slick-slide slick-current slick-active"
 									data-slick-index="0" aria-hidden="false" tabindex="-1"
 									role="option" aria-describedby="slick-slide00"
@@ -2044,7 +2035,7 @@ to {
 			$(".last"+flag).css("display","none");
 			flag = flag - 1;
 			if(flag < 1) {
-				flag = 6;
+				flag = 5;
 			}
 			$(".last"+flag).css("display","");
 			$(".slider2_inx").html(flag);
@@ -2053,7 +2044,7 @@ to {
 		$(".right").click(function() {
 			$(".last"+flag).css("display","none");
 			flag = flag + 1;
-			if(flag > 6) {
+			if(flag > 5) {
 				flag = 1;
 			}
 			$(".last"+flag).css("display","");
