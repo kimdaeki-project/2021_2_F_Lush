@@ -4,6 +4,9 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface MemberRepository {
+	// 장바구니에 담기는 수량 가져오기
+	public int getCart(MemberVO memberVO) throws Exception;
+	
    // 회원정보변경을 위한 본인 확인
    public MemberVO checkMember(MemberVO memberVO) throws Exception;
    

@@ -20,6 +20,7 @@
   		<typeAlias type="com.iu.e1.cart.CartVO" alias="CartVO"/>
         <typeAlias type="com.iu.e1.payment.PaymentVO" alias="PaymentVO"/>
         <typeAlias type="java.lang.String" alias="String"/>
+        <typeAlias type="java.lang.Integer" alias="Integer"/>
         <typeAlias type="java.util.List" alias="List"/>
   		<typeAlias type="com.iu.e1.util.Pager2" alias="Pager2"/>
   		

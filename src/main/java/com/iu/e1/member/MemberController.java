@@ -116,6 +116,8 @@ public class MemberController {
    @PostMapping("memberLogin")
    public ModelAndView getLogin(MemberVO memberVO, HttpSession httpSession) throws Exception {
       memberVO = memberService.getLoign(memberVO);
+      int a = memberService.getCart(memberVO);
+      System.out.println(a+"bbb");
       ModelAndView mv = new ModelAndView();
       String message = "";
       String url = "";
@@ -125,6 +127,7 @@ public class MemberController {
          message = "로그인 완료 되었습니다";
          url = "/";
          httpSession.setAttribute("member", memberVO);
+         httpSession.setAttribute("count", a);
          System.out.println("성공");
                   
       } else {
@@ -133,8 +136,8 @@ public class MemberController {
          url = "./memberLogin";         
          System.out.println("실패");
          
-      }
-
+      }            
+      
       mv.addObject("message", message);
       mv.addObject("url", url);
       mv.setViewName("./member/extra");

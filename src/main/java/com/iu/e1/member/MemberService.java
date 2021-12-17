@@ -8,6 +8,11 @@ public class MemberService {
    @Autowired
    private MemberRepository memberRepository;
    
+   // 장바구니에 담긴 수량 가져오기
+   public int getCart(MemberVO memberVO) throws Exception{
+	   return memberRepository.getCart(memberVO);
+   }
+   
    // 회원정보변경을 위한 본인 확인
    public MemberVO checkMember(MemberVO memberVO) throws Exception{
       return memberRepository.checkMember(memberVO);
