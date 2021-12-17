@@ -3085,11 +3085,8 @@ button {
 					window.location.href="../cart/cartPage";
 				} else {
 					window.location.href="./list";
-				}
-				
-				
+				}								
 			}
-
 		});
 	});
 	
