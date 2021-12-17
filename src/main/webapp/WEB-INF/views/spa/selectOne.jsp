@@ -2335,6 +2335,9 @@
 			    		$('.cartClose').click(function(){
 			    			$('.layer-wrap2').toggleClass("dn");
 			    		})
+			    		$('.btn-close').click(function(){
+			    			$('.layer-wrap2').toggleClass("dn");
+			    		})
 			    	});
 					
 				</script>
